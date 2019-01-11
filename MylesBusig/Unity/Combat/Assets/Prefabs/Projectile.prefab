@@ -185,10 +185,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82663d2f5bfa5114daed11687ee44e75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
+  speed: 16
   track: 0
   target: {fileID: 0}
-  despawnTime: 1
+  despawnTime: 2
 --- !u!136 &136502044745472958
 CapsuleCollider:
   m_ObjectHideFlags: 1

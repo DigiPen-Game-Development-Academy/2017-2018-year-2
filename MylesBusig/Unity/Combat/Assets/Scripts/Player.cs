@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public enum FireMode
 {
@@ -29,6 +30,12 @@ public enum CameraMode
 	TopDown
 }
 
+public class Game
+{
+	public static int score = 0;
+	public static int highScore = 0;
+}
+
 [RequireComponent(typeof(Rigidbody))]
 public class Player : MonoBehaviour
 {
@@ -48,6 +55,8 @@ public class Player : MonoBehaviour
 	public Text fireModeTxt;
 	public Text directionTxt;
 	public Text cameraModeTxt;
+
+	public Text scoreTxt;
 
 	new public GameObject camera;
 	public float cameraDistance = 4.0f;
@@ -94,6 +103,8 @@ public class Player : MonoBehaviour
 				cameraMode = CameraMode.FirstPerson;
 
 				camera.transform.SetParent(transform);
+				camera.transform.localRotation = Quaternion.Euler(Vector3.zero);
+				camera.transform.localPosition = Vector3.zero;
 			}
 		}
 		if (Input.GetKeyDown(KeyCode.F))
@@ -117,8 +128,7 @@ public class Player : MonoBehaviour
 
 		if (cameraMode == CameraMode.FirstPerson)
 		{
-			camera.transform.localRotation = Quaternion.Euler(Vector3.zero);
-			camera.transform.localPosition = Vector3.zero;
+			//camera.transform.Rotate(Vector3.left, Input.GetAxis("Mouse Y") * sensitivity, Space.Self);
 
 			input = transform.TransformDirection(input);
 			newVelocity = new Vector3(0.0f, rigidbody.velocity.y, 0.0f) + (input * currentSpeed);
@@ -136,28 +146,41 @@ public class Player : MonoBehaviour
 		rigidbody.maxAngularVelocity = 0;
 		transform.Rotate(Vector3.up, Input.GetAxis("Mouse X") * sensitivity);
 
-		//Debug.Log("forward: " + transform.forward);
-
 		if (Input.GetMouseButton(0) && timeTillCanFire <= 0.0f)
 		{
-			//GameObject newProjectile = Instantiate(projectile, transform.position + (transform.forward * 2), transform.rotation * Quaternion.Euler(90.0f, 0.0f, 0.0f));
-			Shoot(transform.position, transform.forward);
-
+			Shoot(new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z), transform.forward);
+			
 			timeTillCanFire = maxFireRate;
 		}
 
 		fireModeTxt.text = "FireMode: " + fireMode;
 		directionTxt.text = "Direction: " + direction;
 		cameraModeTxt.text = "CameraMode: " + cameraMode;
+		scoreTxt.text = "Score: " + Game.score;
 	}
 
 	public GameObject Shoot(Vector3 position, Vector3 direction)
 	{
-		GameObject newProjectile = Instantiate(projectile, transform.position + (direction * projectileStartDistance), Quaternion.Euler(Vector3.Cross(Vector3.up, direction)) * Quaternion.Euler(90.0f, 0.0f, 0.0f));
-		
-		//Debug.Log("Rotation: " + (Quaternion.Euler(direction) * Quaternion.Euler(90.0f, 0.0f, 0.0f)));
-		Debug.Log("Direction: " + direction);
+		//0.0f, Mathf.Rad2Deg * Mathf.Atan2(direction.x, direction.z), 0.0f
+		GameObject newProjectile = Instantiate(projectile, position + (direction * projectileStartDistance), Quaternion.FromToRotation(Vector3.up, direction));
 
 		return newProjectile;
+	}
+
+	void OnCollisionEnter(Collision collision)
+	{
+		if (collision.gameObject.tag == "CanShoot")
+		{
+			SceneManager.LoadScene("End");
+		}
+	}
+
+	void OnTriggerEnter(Collider collision)
+	{
+		if (collision.gameObject.tag == "Collectable")
+		{
+			Game.score += collision.gameObject.GetComponent<Collectable>().score;
+			Destroy(collision.gameObject);
+		}
 	}
 }

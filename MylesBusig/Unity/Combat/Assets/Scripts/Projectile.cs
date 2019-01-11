@@ -23,4 +23,16 @@ public class Projectile : MonoBehaviour
 
 		Destroy(gameObject, despawnTime);
 	}
+
+	void OnCollisionEnter(Collision collision)
+	{
+		if (collision.gameObject.tag == "CanShoot")
+		{
+			Game.score += collision.gameObject.GetComponent<Shootable>().score;
+			Destroy(collision.gameObject);
+			Destroy(gameObject);
+		}
+		else
+			Destroy(gameObject);
+	}
 }
