@@ -5,6 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class Player : MonoBehaviour
 {
+    public Camera mouseCamera;
     new Rigidbody rigidbody;
 
     //fine tuning variables
@@ -13,6 +14,15 @@ public class Player : MonoBehaviour
     public float turnSpeed = 3;
     public float fireRate = 0.1f;
     public GameObject projectile;
+    public enum ShotPattern
+    {
+        Forward,
+        Vertical,
+        Horizontal,
+        Diagonal,
+        COUNT
+    }
+    public ShotPattern shotPattern;
 
     //non editable variables
     float secondsTillFire = 0;
@@ -55,16 +65,29 @@ public class Player : MonoBehaviour
         //count down till we can fire
         secondsTillFire -= Time.deltaTime;
         //check for input and cooldown
-        if (Input.GetMouseButton(0) && secondsTillFire <= 0)
+        if ((Input.GetMouseButton(0) || Input.GetMouseButton(1)) && secondsTillFire <= 0)
         {
             //reset the countdown
             secondsTillFire = fireRate;
 
             //create the projectile
-            GameObject created = Instantiate(projectile, transform.position + transform.forward * 2, transform.rotation * Quaternion.Euler(90, 0, 0));
-            
-            //launch the projectile
+            //GameObject created = Instantiate(projectile, transform.position + transform.forward * 2, transform.rotation * Quaternion.Euler(90, 0, 0));
 
+            //launch the projectile
+            Vector3 target = Input.mousePosition;
+            target.z = mouseCamera.transform.position.y;
+            target = mouseCamera.ScreenToWorldPoint(target);
+            Shoot(transform.position, (target - transform.position).normalized);
         }
+    }
+    GameObject Shoot(Vector3 Pos, Vector3 dir)
+    {
+        Quaternion rot = Quaternion.FromToRotation(Vector3.up, dir);
+
+        GameObject created = Instantiate(projectile, Pos + dir * 2, rot);
+
+        created.GetComponent<Projectile>().direction = dir;
+
+        return gameObject;
     }
 }
