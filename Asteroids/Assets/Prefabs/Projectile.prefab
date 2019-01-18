@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212583030945883736}
   - component: {fileID: 54974869125843942}
   - component: {fileID: 114716603297202166}
+  - component: {fileID: 65841364861266180}
   m_Layer: 0
   m_Name: Projectile
   m_TagString: Untagged
@@ -55,8 +56,20 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 48
   m_CollisionDetection: 0
+--- !u!65 &65841364861266180
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1529338144573938}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &114716603297202166
 MonoBehaviour:
   m_ObjectHideFlags: 1

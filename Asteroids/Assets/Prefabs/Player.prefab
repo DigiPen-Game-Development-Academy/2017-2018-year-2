@@ -82,7 +82,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
-  turnSpeed: 3
+  turnSpeed: 4
   accel: 3
   reverseAccel: 0.5
   decell: 1

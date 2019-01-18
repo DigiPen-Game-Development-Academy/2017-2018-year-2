@@ -41,16 +41,19 @@ public class AsteroidControllerScript : MonoBehaviour
                     // Give spawned asteroids random rotation
                     float z = Random.Range(-180, 180);
                     Quaternion rotation = Quaternion.Euler(0, 0, z);
+					
+					GameObject createdAsteroid = Instantiate(nextAsteroid, transform.position, rotation);
 
-                    GameObject createdAsteroid = Instantiate(nextAsteroid, transform.position, rotation);
-
-                    // Give spawned asteroids a random forward velocity
-                    float newVelocity = Random.Range(3, 6);
-                    createdAsteroid.GetComponent<Rigidbody>().velocity = -createdAsteroid.transform.up * newVelocity;
+					// Give spawned asteroids a random forward velocity
+					float newVelocity = Random.Range(3, 6);
+					createdAsteroid.GetComponent<Rigidbody>().velocity = -createdAsteroid.transform.up * newVelocity;
                 }
             }
             Destroy(gameObject);
         }
-    }
+
+		// Destroy the projectile
+		Destroy(other.gameObject);
+	}
 
 }
