@@ -4,41 +4,52 @@ using UnityEngine;
 
 public class AsteroidControllerScript : MonoBehaviour
 {
-    GameObject lAsteroid;
-    GameObject mAsteroid;
-    GameObject sAsteroid;
+    public GameObject nextAsteroid;
 
-    Rigidbody rigidbody;
-
-    float sizeTracker = 0;
     // Use this for initialization
     void Start()
     {
-        rigidbody = GetComponent<Rigidbody>();
+
     }
 
     // Update is called once per frame
     void Update()
     {
-
+            
     }
     void OnTriggerEnter(Collider other)
     {
         // If you collide with another asteroid
-        if(other.gameObject.tag == "Asteroids")
+        if (other.gameObject.tag == "Asteroids")
         {
             // Do nothing
             return;
         }
-        else
+        else // Else spawn two asteroids with a random direction and a forward velocity, then delete the old asteroid.
         {
-            float z = Random.Range(-Mathf.PI, Mathf.PI);
-            Quaternion rotation = Quaternion.Euler(0, 0, z);
-            Instantiate(mAsteroid, transform.position, rotation);
+            // If we didn't set a next asteroid, that means we are on the smallest asteroid
+            if (!nextAsteroid)
+            {
+                // So destroy the object
+                Destroy(gameObject);
+            }
+            else
+            {
+                // We aren't the smallest asteroid yet so split apart
+                for (int i = 0; i < 2; i++)
+                {
+                    // Give spawned asteroids random rotation
+                    float z = Random.Range(-180, 180);
+                    Quaternion rotation = Quaternion.Euler(0, 0, z);
 
-            float zvelocity = Random.Range(-5, 5);
-            float xvelocity = Random.Range(-5, 5);
-            rigidbody.velocity = new Vector3(zvelocity, xvelocity, 0);
+                    GameObject createdAsteroid = Instantiate(nextAsteroid, transform.position, rotation);
+
+                    // Give spawned asteroids a random forward velocity
+                    float newVelocity = Random.Range(3, 6);
+                    createdAsteroid.GetComponent<Rigidbody>().velocity = -createdAsteroid.transform.up * newVelocity;
+                }
+            }
+            Destroy(gameObject);
         }
     }
 
