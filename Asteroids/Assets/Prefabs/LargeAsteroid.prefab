@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 54977098636437176}
   - component: {fileID: 135845569866401008}
   - component: {fileID: 114469416961969344}
+  - component: {fileID: 114575510837193358}
   m_Layer: 0
   m_Name: LargeAsteroid
   m_TagString: Asteroids
@@ -71,6 +72,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextAsteroid: {fileID: 1833955788139556, guid: bbd458eb4dec5c240a3341367fa42719,
     type: 2}
+--- !u!114 &114575510837193358
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1946566448611882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 821a77c751b763b479d4e2608f59e027, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftConstraint: -11.75
+  rightConstraint: 11.75
+  upConstraint: 5.5
+  downConstraint: -5.5
 --- !u!135 &135845569866401008
 SphereCollider:
   m_ObjectHideFlags: 1
