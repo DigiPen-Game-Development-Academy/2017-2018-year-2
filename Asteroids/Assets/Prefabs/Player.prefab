@@ -82,10 +82,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 821a77c751b763b479d4e2608f59e027, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leftConstraint: -12
-  rightConstraint: 12
-  upConstraint: 5.5
-  downConstraint: -5.5
+  leftConstraint: -5
+  rightConstraint: 5
+  upConstraint: 5
+  downConstraint: -5
 --- !u!114 &114964369395611580
 MonoBehaviour:
   m_ObjectHideFlags: 1
