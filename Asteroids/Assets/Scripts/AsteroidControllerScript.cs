@@ -47,6 +47,8 @@ public class AsteroidControllerScript : MonoBehaviour
 					// Give spawned asteroids a random forward velocity
 					float newVelocity = Random.Range(3, 6);
 					createdAsteroid.GetComponent<Rigidbody>().velocity = -createdAsteroid.transform.up * newVelocity;
+
+                    Score.scoreValue += 15;
                 }
             }
             Destroy(gameObject);
