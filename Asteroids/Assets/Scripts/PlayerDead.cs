@@ -22,9 +22,9 @@ public class PlayerDead : MonoBehaviour
 		if (delayTime <= 0.0f)
 		{
 			if (Score.lives <= 0)
-				SceneManager.LoadScene(gameOverLevel, LoadSceneMode.Single);
+				SceneManager.LoadScene(gameOverLevel);
 			else
-				SceneManager.LoadScene(gameLevel, LoadSceneMode.Single);
+				SceneManager.LoadScene(gameLevel);
 		}
 	}
 }
