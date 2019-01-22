@@ -1,0 +1,30 @@
+Galaga (http://www.free80sarcade.com/galaga.php)
+
+Moving, Rigid for precise movements and aiming
+Can only move left and right
+Shooting
+Score, To keep track of how well your doing
+High Score, To compare your current score to your previous
+Enemy Movement
+	
+Galaga X (Bad) (https://www.miniclip.com/games/galaga-x/en/#t-c-f-C)
+
+Clunky movement
+Clunky animations
+Annoying auto shoot
+Slow moving enemies, takes no skill, easy to dodge
+Slightly confusing menu
+Confusing turret mechanics
+
+Deimos Rising
+
+Flying enemies but also ground enemies (turrets and tanks)
+Cannot progress to next level until defeated enough enemies
+Score multipliers
+Simple Menu
+Screen moves when close to edge
+Coins that give more points
+Some enemies blended in with background
+Smooth animations
+Multishot
+Can move left, right, up and down
