@@ -17,7 +17,7 @@ public class Health : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
-        healthMeter = healthMeter - 1;
+        //healthMeter = healthMeter - 1;
         health.text = "HEALTH:" + healthMeter;
 	}
 }
