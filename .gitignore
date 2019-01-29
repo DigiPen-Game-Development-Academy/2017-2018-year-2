@@ -36,3 +36,5 @@ sysinfo.txt
 *.unitypackage
 /OfficeDungeonCrawler/OfficeDungeonCrawler/Packages
 /OfficeDungeonCrawler/OfficeDungeonCrawler/ProjectSettings/ProjectVersion.txt
+/OfficeDungeonCrawler/OfficeDungeonCrawler/ProjectSettings/ProjectSettings.asset
+/OfficeDungeonCrawler/OfficeDungeonCrawler/ProjectSettings/ProjectVersion.txt
