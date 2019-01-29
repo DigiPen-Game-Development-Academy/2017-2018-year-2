@@ -35,3 +35,4 @@ sysinfo.txt
 *.apk
 *.unitypackage
 /OfficeDungeonCrawler/OfficeDungeonCrawler/Packages
+/OfficeDungeonCrawler/OfficeDungeonCrawler/ProjectSettings/ProjectVersion.txt
