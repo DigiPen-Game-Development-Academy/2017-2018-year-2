@@ -4,8 +4,12 @@ Contributors: N/A
 Last Edit: 1/29/2019
 */
 
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
 // Class used for memez
-class E
+public class E : MonoBehaviour
 {
 	// A very kewl variable
 	float coolVariable = 9001.0f;
