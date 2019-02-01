@@ -37,8 +37,8 @@ public class PlayerMovement : MonoBehaviour
         }
         if (Input.GetKey(Settings.KeyBinds.left)) 
         {
-            Velocity.y = -runSpeed;
-            direction.y = -1;
+            Velocity.x = -runSpeed;
+            direction.x = -1;
         }
         if (Input.GetKey(Settings.KeyBinds.right)) 
         {
@@ -68,7 +68,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
 
-
+        rb.velocity = Velocity;
 
     }
 }
