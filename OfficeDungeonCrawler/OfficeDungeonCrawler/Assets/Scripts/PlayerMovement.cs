@@ -17,7 +17,7 @@ public class PlayerMovement : MonoBehaviour
     bool frameDelayer = false;
     int rollDirection = 0;
 	private Rigidbody rb;
-    Vector3 direction = Vector3.down;
+    public Vector3 direction = Vector3.down;
 	// Use this for initialization
 	void Start ()
 	{
@@ -109,6 +109,53 @@ public class PlayerMovement : MonoBehaviour
             rollDirection = 4;
         }
         rb.velocity = velocity;
-        
+
+        var Velocity = new Vector3();
+        if (Input.GetKey(Settings.KeyBinds.up))
+        {
+            Velocity.y = runSpeed;
+            direction.y = 1;
+            direction.x = 0;
+        }
+        if (Input.GetKey(Settings.KeyBinds.down))
+        {
+            Velocity.y = -runSpeed;
+            direction.y = -1;
+            direction.x = 0;
+        }
+        if (Input.GetKey(Settings.KeyBinds.left))
+        {
+            Velocity.x = -runSpeed;
+            direction.x = -1;
+            direction.y = 0;
+        }
+        if (Input.GetKey(Settings.KeyBinds.right))
+        {
+            Velocity.x = runSpeed;
+            direction.x = 1;
+            direction.y = 0;
+        }
+
+        if (Input.GetKey(Settings.KeyBinds.up) && Input.GetKey(Settings.KeyBinds.left))
+        {
+            direction.y = 1;
+            direction.x = -1;
+        }
+        if (Input.GetKey(Settings.KeyBinds.up) && Input.GetKey(Settings.KeyBinds.right))
+        {
+            direction.y = 1;
+            direction.x = 1;
+        }
+        if (Input.GetKey(Settings.KeyBinds.down) && Input.GetKey(Settings.KeyBinds.left))
+        {
+            direction.y = -1;
+            direction.x = -1;
+        }
+        if (Input.GetKey(Settings.KeyBinds.down) && Input.GetKey(Settings.KeyBinds.right))
+        {
+            direction.y = -1;
+            direction.x = 1;
+        }
+
     }
 }

@@ -98,7 +98,8 @@ MonoBehaviour:
   directionVar: 1
   runSpeed: 1.5
   dashSpeed: 5
-  dashCooldown: 1.2
+  staminaCapacity: 30
+  staminaCapacitycap: 30
 --- !u!212 &212421118207432532
 SpriteRenderer:
   m_ObjectHideFlags: 1

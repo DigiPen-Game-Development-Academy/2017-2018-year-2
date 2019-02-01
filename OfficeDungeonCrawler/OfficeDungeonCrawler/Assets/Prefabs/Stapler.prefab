@@ -96,7 +96,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitbox: {fileID: 1274357521494908, guid: 9184b171418e98c4fad188b5afd5621e, type: 2}
-  attackDistance: 5
+  attackDistance: 1
   attackSpeed: 1
 --- !u!212 &212779598680844722
 SpriteRenderer:
