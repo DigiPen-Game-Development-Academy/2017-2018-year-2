@@ -10,7 +10,7 @@ public class EnemyMovement : MonoBehaviour
 	public float maxRaycastDistance = 7.5f;
 
 	// Target for the enemy will chase
-	public GameObject target;
+	GameObject target;
 
 	// The Rigidbody component
 	new Rigidbody rigidbody;
@@ -19,6 +19,7 @@ public class EnemyMovement : MonoBehaviour
 	{
 		// Get the Rigidbody component
 		rigidbody = GetComponent<Rigidbody>();
+        target = GameObject.FindGameObjectWithTag("Player");
 	}
 
 	void Update()
