@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 54739540971857880}
   - component: {fileID: 65778807618985722}
   - component: {fileID: 114709727378048926}
+  - component: {fileID: 114883571212207992}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -83,6 +84,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitbox: {fileID: 1274357521494908, guid: 9184b171418e98c4fad188b5afd5621e, type: 2}
   attackSpeed: 1
+--- !u!114 &114883571212207992
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1190466586900746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 076f7543ea6bf79448029e64cee047f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  directionVar: 1
+  runSpeed: 1.5
+  dashSpeed: 5
 --- !u!212 &212421118207432532
 SpriteRenderer:
   m_ObjectHideFlags: 1

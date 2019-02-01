@@ -17,6 +17,8 @@ public class PlayerAttack : MonoBehaviour
     // Private variable we can edit without effecting the public variable
     private float attackCooldown;
 
+    Vector3 spawnPos = new Vector3();
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,7 +29,8 @@ public class PlayerAttack : MonoBehaviour
     void Attack()
     {
         // Spawn hitbox in front of the player in the direction they are facing
-        Instantiate(hitbox, transform.position, transform.rotation);
+        Instantiate(hitbox, GetComponent<PlayerMovement>().direction + transform.position, transform.rotation);
+        
     }
     // Update is called once per frame
     void Update()
