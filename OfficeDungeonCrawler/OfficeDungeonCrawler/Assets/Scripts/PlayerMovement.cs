@@ -11,18 +11,21 @@ public class PlayerMovement : MonoBehaviour
 {
 	public int directionVar = 1;
 	public float runSpeed = 1.5f;
-	public float dashSpeed = 5.0f;
+	public float dashSpeed = 25.0f;
+    public float dashCooldown = 1.2f;
 	private Rigidbody rb;
     Vector3 direction = Vector3.down;
 	// Use this for initialization
 	void Start ()
 	{
 		rb = GetComponent<Rigidbody>();
+        
 	}
 	// Update is called once per frame
 	void Update ()
 	{
-
+        if(dashCooldown > 0) dashCooldown -= Time.deltaTime;
+        dashCooldown -= Time.deltaTime;
         var Velocity = new Vector3();
 		if(Input.GetKey(Settings.KeyBinds.up))
 		{
@@ -46,28 +49,34 @@ public class PlayerMovement : MonoBehaviour
             direction.x = 1;
         }
         //start of the dash code
-        if(Input.GetKey(Settings.KeyBinds.right) && Input.GetKey(Settings.KeyBinds.dash))
+        if(dashCooldown <= 0)
         {
-            Velocity.x = dashSpeed;
-            direction.x = 1;
+            if (Input.GetKey(Settings.KeyBinds.right) && Input.GetKey(Settings.KeyBinds.dash))
+            {
+                Velocity.x = dashSpeed;
+                direction.x = 1;
+                dashCooldown += 1.2f;
+            }
+            if (Input.GetKey(Settings.KeyBinds.left) && Input.GetKey(Settings.KeyBinds.dash))
+            {
+                Velocity.x = -dashSpeed;
+                direction.x = -1;
+                dashCooldown += 1.2f;
+            }
+            if (Input.GetKey(Settings.KeyBinds.up) && Input.GetKey(Settings.KeyBinds.dash))
+            {
+                Velocity.y = dashSpeed;
+                direction.y = 1;
+                dashCooldown += 1.2f;
+            }
+            if (Input.GetKey(Settings.KeyBinds.down) && Input.GetKey(Settings.KeyBinds.dash))
+            {
+                Velocity.y = -dashSpeed;
+                direction.y = -1;
+                dashCooldown += 1.2f;
+            }
         }
-        if (Input.GetKey(Settings.KeyBinds.left) && Input.GetKey(Settings.KeyBinds.dash))
-        {
-            Velocity.x = -dashSpeed;
-            direction.x = -1;
-        }
-        if (Input.GetKey(Settings.KeyBinds.up) && Input.GetKey(Settings.KeyBinds.dash))
-        {
-            Velocity.y = dashSpeed;
-            direction.y = 1;
-        }
-        if (Input.GetKey(Settings.KeyBinds.down) && Input.GetKey(Settings.KeyBinds.dash))
-        {
-            Velocity.y = -dashSpeed;
-            direction.y = -1;
-        }
-
-
+            
         rb.velocity = Velocity;
 
     }
