@@ -12,16 +12,16 @@ public class Settings : MonoBehaviour
 {
 	public class KeyBinds
 	{
-		public KeyCode up = KeyCode.W;
-		public KeyCode down = KeyCode.S;
-		public KeyCode left = KeyCode.A;
-		public KeyCode right = KeyCode.D;
+		public static KeyCode up = KeyCode.W;
+		public static KeyCode down = KeyCode.S;
+		public static KeyCode left = KeyCode.A;
+		public static KeyCode right = KeyCode.D;
 		
-		public KeyCode dash = KeyCode.LeftShift;
-
-		public KeyCode attack = KeyCode.Space;
-
-		public KeyCode previousItem = KeyCode.Q;
-		public KeyCode nextItem = KeyCode.E;
+		public static KeyCode dash = KeyCode.LeftShift;
+		
+		public static KeyCode attack = KeyCode.Space;
+		
+		public static KeyCode previousItem = KeyCode.Q;
+		public static KeyCode nextItem = KeyCode.E;
 	}
 }
