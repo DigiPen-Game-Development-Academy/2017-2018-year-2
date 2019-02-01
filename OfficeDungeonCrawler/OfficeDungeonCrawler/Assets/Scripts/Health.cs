@@ -21,7 +21,7 @@ public class Health : MonoBehaviour
 	void Update ()
     {
         //healthMeter = healthMeter - 1;
-        health.text = "HEALTH:" + healthMeter;
+        health.text = "HEALTH: " + healthMeter;
 
         //if player takes damage
         if (damaged)
