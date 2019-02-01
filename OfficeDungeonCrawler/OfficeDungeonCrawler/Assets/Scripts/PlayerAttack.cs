@@ -10,7 +10,7 @@ using UnityEngine;
 public class PlayerAttack : MonoBehaviour
 {
     // Stores the hitbox object we spawn
-    GameObject hitbox;
+    public GameObject hitbox;
 
     // Public variable we can edit in inspector
     public float attackSpeed;
@@ -33,7 +33,7 @@ public class PlayerAttack : MonoBehaviour
     void Update()
     {
         // check if the attack cooldown has run out
-        if (attackSpeed <= 0)
+        if (attackCooldown <= 0)
         {
             // If we recieve players input
             if (Input.GetKeyDown(KeyCode.Space))
