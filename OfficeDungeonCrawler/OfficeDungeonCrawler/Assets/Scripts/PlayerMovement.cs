@@ -11,7 +11,7 @@ public class PlayerMovement : MonoBehaviour
 {
 	public int directionVar = 1;
 	public float runSpeed = 1.5f;
-	public float dashSpeed = 18.0f;
+	public float dashSpeed = 25.0f;
     public float staminaCapacity = 30;
     public float staminaCapacitycap = 30;
     bool frameDelayer = false;
@@ -30,7 +30,6 @@ public class PlayerMovement : MonoBehaviour
         Vector3 velocity = Vector3.zero;
         if (frameDelayer)
         {
-
             if (rollDirection == 1)
             {
                 velocity.x = dashSpeed;
@@ -56,10 +55,12 @@ public class PlayerMovement : MonoBehaviour
                 staminaCapacity -= 1.0f;
             }
         }
+        //frameDelayer == false &&
         //this if stament halts the dash loop when stamina runs out
         if (staminaCapacity <= 0) frameDelayer = false;
+        if (staminaCapacity <= 0) rollDirection = 0;
         //this if stament adds to the current stamina when it isnt in the delayer loop and has space to fill
-        if (frameDelayer == false && staminaCapacity < staminaCapacitycap) staminaCapacity += Time.deltaTime;
+        if (staminaCapacity < staminaCapacitycap) staminaCapacity += Time.deltaTime;
         //this if stament checks if the dash delay loop is active if so it doesn't do it 
         if (frameDelayer == false)
         {
@@ -68,7 +69,6 @@ public class PlayerMovement : MonoBehaviour
             {
                 velocity.y += runSpeed;
                 direction.y = 1;
-                //rb.addforce(0,1,0);
             }
             if (Input.GetKey(Settings.KeyBinds.down))
             {
@@ -88,74 +88,27 @@ public class PlayerMovement : MonoBehaviour
         }
 
         ///these 4 if statements check if the player can and wants to dash and roll direction specifies where
-        if (Input.GetKey(Settings.KeyBinds.right) && Input.GetKey(Settings.KeyBinds.dash))
+        if (Input.GetKey(Settings.KeyBinds.right) && Input.GetKey(Settings.KeyBinds.dash) && staminaCapacity >= staminaCapacitycap)
         {
             frameDelayer = true;
             rollDirection = 1;
         }
-        if (Input.GetKey(Settings.KeyBinds.left) && Input.GetKey(Settings.KeyBinds.dash))
+        if (Input.GetKey(Settings.KeyBinds.left) && Input.GetKey(Settings.KeyBinds.dash) && staminaCapacity >= staminaCapacitycap)
         {
             frameDelayer = true;
             rollDirection = 2;
         }
-        if (Input.GetKey(Settings.KeyBinds.up) && Input.GetKey(Settings.KeyBinds.dash))
+        if (Input.GetKey(Settings.KeyBinds.up) && Input.GetKey(Settings.KeyBinds.dash) && staminaCapacity >= staminaCapacitycap)
         {
             frameDelayer = true;
             rollDirection = 3;
         }
-        if (Input.GetKey(Settings.KeyBinds.down) && Input.GetKey(Settings.KeyBinds.dash))
+        if (Input.GetKey(Settings.KeyBinds.down) && Input.GetKey(Settings.KeyBinds.dash) && staminaCapacity >= staminaCapacitycap)
         {
             frameDelayer = true;
             rollDirection = 4;
         }
         rb.velocity = velocity;
-
-        var Velocity = new Vector3();
-        if (Input.GetKey(Settings.KeyBinds.up))
-        {
-            Velocity.y = runSpeed;
-            direction.y = 1;
-            direction.x = 0;
-        }
-        if (Input.GetKey(Settings.KeyBinds.down))
-        {
-            Velocity.y = -runSpeed;
-            direction.y = -1;
-            direction.x = 0;
-        }
-        if (Input.GetKey(Settings.KeyBinds.left))
-        {
-            Velocity.x = -runSpeed;
-            direction.x = -1;
-            direction.y = 0;
-        }
-        if (Input.GetKey(Settings.KeyBinds.right))
-        {
-            Velocity.x = runSpeed;
-            direction.x = 1;
-            direction.y = 0;
-        }
-
-        if (Input.GetKey(Settings.KeyBinds.up) && Input.GetKey(Settings.KeyBinds.left))
-        {
-            direction.y = 1;
-            direction.x = -1;
-        }
-        if (Input.GetKey(Settings.KeyBinds.up) && Input.GetKey(Settings.KeyBinds.right))
-        {
-            direction.y = 1;
-            direction.x = 1;
-        }
-        if (Input.GetKey(Settings.KeyBinds.down) && Input.GetKey(Settings.KeyBinds.left))
-        {
-            direction.y = -1;
-            direction.x = -1;
-        }
-        if (Input.GetKey(Settings.KeyBinds.down) && Input.GetKey(Settings.KeyBinds.right))
-        {
-            direction.y = -1;
-            direction.x = 1;
-        }
 
     }
 }
