@@ -1,70 +1,128 @@
-﻿using System.Collections;
+﻿/*
+Author: Kevin P
+Contributors: Myles Busig
+Date Last Modified: 2/13/2019
+*/
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class Health : MonoBehaviour
 {
-    public int startingHealth = 10;
-    public int currentHealth;
-    public Slider healthSlider;
-    public Image damageImage;
-    public float flashSpeed = 5f;
-    public Color flashColour = new Color(1f, 0f, 0f, 0.1f);
+	// Max health of the entity
+	public float maxHealth = 10;
+	// Current health of the entity
+	public float currentHealth;
+	// Health bar used to display current health (if any)
+	public GameObject healthBarObj;
+	// The speed to change back to the normal color
+	public float colorChangeSpeed = 1.0f;
+	// The color when hurt
+	public Color hurtColor = new Color(1.0f, 0.0f, 0.0f, 1.0f);
+	// The color when healed
+	public Color healColor = new Color(0.0f, 1.0f, 0.0f, 1.0f);
+	// The normal color
+	public Color normalColor = new Color(1.0f, 1.0f, 1.0f, 1.0f);
+	// The object to spawn when the entity dies
+	public GameObject deathObject;
 
-    Animator anim;
-    PlayerMovement playerMovement;
-    PlayerAttack playerAttack;
-    bool isDead;
-    bool damaged;
+	// The SpriteRenderer of the entity
+	SpriteRenderer spriteRenderer;
+	// The Bar of the health bar
+	Bar healthBar;
 
-    // Use this for initialization
-    void Start()
-    {
-        anim = GetComponent<Animator>();
-        playerMovement = GetComponent<PlayerMovement>();
-        playerAttack = GetComponentInChildren<PlayerAttack>();
+	void Start()
+	{
+		// Get the SpriteRenderer component
+		spriteRenderer = GetComponent<SpriteRenderer>();
 
-        currentHealth = startingHealth;
-    }
+		// If the health bar is not null..
+		if (healthBarObj != null)
+		{
+			// Get the Bar component of the health bar
+			healthBar = healthBarObj.GetComponent<Bar>();
+		}
 
-    // Update is called once per frame
-    void Update()
-    {
-        //if player takes damage
-        if (damaged)
-        {
-            //player health depletes by 1
-            //startingHealth = startingHealth - 1;
-            damageImage.color = flashColour;
-        }
-        else
-        {
-            damageImage.color = Color.Lerp(damageImage.color, Color.clear, flashSpeed * Time.deltaTime);
-        }
-        damaged = false;
-    }
-    public void TakeDamage (int amount)
-    {
-        damaged = true;
+		// Set the current health to the max health
+		currentHealth = maxHealth;
 
-        currentHealth -= amount;
+		// Update the health bar
+		UpdateHealthBar();
+	}
 
-        healthSlider.value = currentHealth;
+	void Update()
+	{
+		// Used for testing
+		if (Input.GetKeyDown(KeyCode.Alpha0))
+			Heal(1.0f);
+		else if (Input.GetKeyDown(KeyCode.Alpha9))
+			Damage(1.0f);
 
-        if(currentHealth <= 0 && !isDead)
-        {
-            Death();
-        }
-    }
+		// Lerp back to the normal color
+		spriteRenderer.color = Color.Lerp(spriteRenderer.color, normalColor, Time.deltaTime * colorChangeSpeed);
+	}
 
-    void Death ()
-    {
-        isDead = true;
+	// Used to damage the entity
+	public void Damage(float amount)
+	{
+		// Decrease the current health
+		currentHealth -= amount;
 
-        anim.SetTrigger("Dead");
+		// Set the entity color
+		spriteRenderer.color = hurtColor;
 
-        playerMovement.enabled = false;
-        playerAttack.enabled = false;
-    }
+		// If the current health is less than 0..
+		if (currentHealth <= 0)
+		{
+			// Kill the entity
+			Death();
+		}
+
+		// Update the health bar
+		UpdateHealthBar();
+	}
+
+	// Used to heal the entity
+	public void Heal(float amount)
+	{
+		// Increase the currentHealth
+		currentHealth += amount;
+
+		// If the current health is greater than the max health
+		if (currentHealth > maxHealth)
+		{
+			// Set the current health to the max health
+			currentHealth = maxHealth;
+		}
+
+		// Set the entity color
+		spriteRenderer.color = healColor;
+
+		// Update the health bar
+		UpdateHealthBar();
+	}
+
+	// Used to update the health bar
+	public void UpdateHealthBar()
+	{
+		// If the health bar is not null
+		if (healthBar != null)
+		{
+			// Set the health bar max
+			healthBar.max = maxHealth;
+			// Set the health bar current
+			healthBar.current = currentHealth;
+		}
+	}
+
+	// Used to kill the entity
+	public void Death()
+	{
+		// Create the death entity
+		Instantiate(deathObject, transform.position, transform.rotation);
+		// Destroy the entity
+		Destroy(gameObject);
+	}
 }

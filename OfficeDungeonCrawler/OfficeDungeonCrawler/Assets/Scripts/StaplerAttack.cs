@@ -1,4 +1,10 @@
-﻿using System.Collections;
+﻿/*
+Author: Luke T
+Contributors: N/A
+Date Last Modified: 2/13/2019
+*/
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -10,14 +16,16 @@ public class StaplerAttack : MonoBehaviour
     public float attackDistance = 1;
     public float attackSpeed = 1;
     float attackCooldown;
-    // Use this for initialization
+	public float fastAttackChargeTime = 0.5f;
+	
+	public float longAttackChargeTime = 1.0f;
+	
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         attackCooldown = attackSpeed;
     }
-
-    // Update is called once per frame
+	
     void Update()
     {
         var distance = Vector3.Distance(transform.position, player.transform.position);

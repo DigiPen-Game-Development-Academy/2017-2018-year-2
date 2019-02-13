@@ -1,4 +1,10 @@
-﻿using System.Collections;
+﻿/*
+Author: Myles Busig
+Contributors: Luke T
+Date Last Modified: 
+*/
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
