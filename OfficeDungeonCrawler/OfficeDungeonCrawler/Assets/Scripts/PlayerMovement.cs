@@ -9,25 +9,75 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-	public int directionVar = 1;
-	public float runSpeed = 1.5f;
-	public float dashSpeed = 25.0f;
-    public float staminaCapacity = 30;
-    public float staminaCapacitycap = 30;
-    bool frameDelayer = false;
-    int rollDirection = 0;
-	private Rigidbody rb;
-    public Vector3 direction = Vector3.down;
-	// Use this for initialization
-	void Start ()
-	{
-		rb = GetComponent<Rigidbody>();
-        
-	}
+    /*	public int directionVar = 1;
+        public float runSpeed = 1.5f;
+        public float dashSpeed = 25.0f;
+        public float staminaCapacity = 30;
+        public float staminaCapacitycap = 30;
+        bool frameDelayer = false;
+        int rollDirection = 0;
+        private Rigidbody rb;
+        public Vector3 direction = Vector3.down;*/
+
+    float walkSpeed = 1;
+    float dashSpeed = 5;
+    float stamina = 3;
+    float dashTime = 0.5f;
+    float dashTimeRemaining = 0.0f;
+    Vector3 dashDirection = Vector3.zero;
+    double currentSpeed = 0.0;
+    // Use this for initialization
+    void Start()
+    {
+        Rigidbody rb = GetComponent<Rigidbody>();
+    }
     // Update is called once per frame
     void Update()
     {
-        Vector3 velocity = Vector3.zero;
+        Vector3 direction = Vector3.zero;
+        if (Input.GetKey(Settings.KeyBinds.down))
+        {
+            direction.y -= 1;
+        }
+        if (Input.GetKey(Settings.KeyBinds.up))
+        {
+            direction.y += 1;
+        }
+        if (Input.GetKey(Settings.KeyBinds.right))
+        {
+            direction.x += 1;
+        }
+        if (Input.GetKey(Settings.KeyBinds.left))
+        {
+            direction.x += -1;
+        }
+
+        currentSpeed = walkSpeed;
+
+        if (Input.GetKey(Settings.KeyBinds.dash) && stamina >= 25)
+        {
+            currentSpeed = dashSpeed;
+            dashDirection = Vector3.Normalize(direction);
+            dashTimeRemaining = dashTime;
+            stamina = 0;
+        }
+
+        if (dashTimeRemaining >= 0)
+            direction = dashDirection;
+
+
+
+
+
+
+
+
+
+
+
+
+
+        /*Vector3 velocity = Vector3.zero;
         if (frameDelayer)
         {
             if (rollDirection == 1)
@@ -98,7 +148,7 @@ public class PlayerMovement : MonoBehaviour
             frameDelayer = true;
             rollDirection = 2;
         }
-        if (Input.GetKey(Settings.KeyBinds.up) && Input.GetKey(Settings.KeyBinds.dash) && staminaCapacity >= staminaCapacitycap)
+        if (c && Input.GetKey(Settings.KeyBinds.dash) && staminaCapacity >= staminaCapacitycap)
         {
             frameDelayer = true;
             rollDirection = 3;
@@ -110,5 +160,6 @@ public class PlayerMovement : MonoBehaviour
         }
         rb.velocity = velocity;
 
+    }*/
     }
 }
