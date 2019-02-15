@@ -41,7 +41,7 @@ public class StaplerAttack : MonoBehaviour
 	public float attackDamage = 1.0f;
 	float timeTillAttack;
 
-	Vector3 attackPosition = Vector3.zero;
+	Vector2 attackPosition = Vector2.zero;
 
 	EnemyMovement enemyMovement;
 	GameObject player;
@@ -62,7 +62,7 @@ public class StaplerAttack : MonoBehaviour
 		if (player == null)
 			return;
 
-		float distance = Vector3.Distance(transform.position, player.transform.position);
+		float distance = Vector2.Distance(transform.position, player.transform.position);
 
 		timeTillAttack -= Time.deltaTime;
 
@@ -81,7 +81,7 @@ public class StaplerAttack : MonoBehaviour
 
 			if (timeTillAttack <= -attackChargeTime)
 			{
-				GameObject newHitbox = Instantiate(hitbox, Vector3.Lerp(attackPosition, player.transform.position, 0.5f), Quaternion.Euler(Vector3.zero));
+				GameObject newHitbox = Instantiate(hitbox, Vector2.Lerp(attackPosition, player.transform.position, 0.5f), Quaternion.Euler(Vector2.zero));
 
 				Hitbox hitboxComponent = newHitbox.GetComponent<Hitbox>();
 				hitboxComponent.isEnemy = true;
@@ -91,7 +91,7 @@ public class StaplerAttack : MonoBehaviour
 			}
 		}
 
-		//float distance = Vector3.Distance(transform.position, player.transform.position);
+		//float distance = Vector2.Distance(transform.position, player.transform.position);
 
 		//Debug.Log("Attack pos: " + attackPosition);
 
@@ -119,7 +119,7 @@ public class StaplerAttack : MonoBehaviour
 
 		//	if (timeTillLongAttack <= 0.0f)
 		//	{
-		//		GameObject newHitbox = Instantiate(hitbox, attackPosition, Quaternion.Euler(Vector3.zero));
+		//		GameObject newHitbox = Instantiate(hitbox, attackPosition, Quaternion.Euler(Vector2.zero));
 
 		//		timeTillLongCharge = longAttackCooldown;
 		//		timeTillLongAttack = longAttackChargeTime;
@@ -130,7 +130,7 @@ public class StaplerAttack : MonoBehaviour
 		//	}
 		//	else if (timeTillFastAttack <= 0.0f)
 		//	{
-		//		GameObject newHitbox = Instantiate(hitbox, attackPosition, Quaternion.Euler(Vector3.zero));
+		//		GameObject newHitbox = Instantiate(hitbox, attackPosition, Quaternion.Euler(Vector2.zero));
 
 		//		timeTillFastCharge = fastAttackCooldown;
 		//		timeTillFastAttack = fastAttackChargeTime;

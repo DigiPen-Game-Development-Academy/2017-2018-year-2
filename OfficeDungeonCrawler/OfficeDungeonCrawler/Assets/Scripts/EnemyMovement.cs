@@ -37,7 +37,7 @@ public class EnemyMovement : MonoBehaviour
 		// If the target is not set, return
 		if (target == null || !canMove)
 		{
-			rigidbody.velocity = Vector3.zero;
+			rigidbody.velocity = Vector2.zero;
 			return;
 		}
 
@@ -47,7 +47,7 @@ public class EnemyMovement : MonoBehaviour
 		Ray ray = new Ray(transform.position, target.transform.position - transform.position);
 
 		// Set velocity to zero
-		rigidbody.velocity = Vector3.zero;
+		rigidbody.velocity = Vector2.zero;
 
 		// Case a ray, if something was hit...
 		if (Physics.Raycast(ray, out hit, maxRaycastDistance))
@@ -56,14 +56,14 @@ public class EnemyMovement : MonoBehaviour
 			if (hit.transform.gameObject == target)
 			{
 				// Move towards the target
-				rigidbody.velocity = Vector3.Normalize(ray.direction) * speed;
+				rigidbody.velocity = ray.direction.normalized * speed;
 			}
 			else
-				rigidbody.velocity = Vector3.zero;
+				rigidbody.velocity = Vector2.zero;
 		}
 
-		//Vector3 targetPosition = new Vector3(Mathf.Round(target.transform.position.x), Mathf.Round(target.transform.position.y), target.transform.position.z);
-		//Vector3 position = new Vector3(Mathf.Round(transform.position.x), Mathf.Round(transform.position.y), transform.position.z);
+		//Vector2 targetPosition = new Vector2(Mathf.Round(target.transform.position.x), Mathf.Round(target.transform.position.y), target.transform.position.z);
+		//Vector2 position = new Vector2(Mathf.Round(transform.position.x), Mathf.Round(transform.position.y), transform.position.z);
 
 		//Tile startTile = new Tile(position);
 		//Tile endTile = new Tile(targetPosition);
@@ -137,21 +137,21 @@ public class EnemyMovement : MonoBehaviour
 		//Debug.Log("Position: " + currentTile);
 	}
 
-	//List<Tile> GetAdjacentPositions(Vector3 position)
+	//List<Tile> GetAdjacentPositions(Vector2 position)
 	//{
 	//	List<Tile> tiles = new List<Tile>();
 
-	//	List<Vector3> positions = new List<Vector3>()
+	//	List<Vector2> positions = new List<Vector2>()
 	//	{
-	//		position + new Vector3(-1.0f, 0.0f, 0.0f),
-	//		position + new Vector3(1.0f, 0.0f, 0.0f),
-	//		position + new Vector3(0.0f, -1.0f, 0.0f),
-	//		position + new Vector3(0.0f, 1.0f, 0.0f)
+	//		position + new Vector2(-1.0f, 0.0f, 0.0f),
+	//		position + new Vector2(1.0f, 0.0f, 0.0f),
+	//		position + new Vector2(0.0f, -1.0f, 0.0f),
+	//		position + new Vector2(0.0f, 1.0f, 0.0f)
 	//	};
 
-	//	foreach (Vector3 position_ in positions)
+	//	foreach (Vector2 position_ in positions)
 	//	{
-	//		if (!Physics.BoxCast(position_, new Vector3(0.5f, 0.5f, 0.5f), Vector3.zero))
+	//		if (!Physics.BoxCast(position_, new Vector2(0.5f, 0.5f, 0.5f), Vector2.zero))
 	//			tiles.Add(new Tile(position_));
 	//	}
 
@@ -160,13 +160,13 @@ public class EnemyMovement : MonoBehaviour
 
 	//class Tile
 	//{
-	//	public Vector3 position;
+	//	public Vector2 position;
 	//	public int distanceFromStart;
 	//	public int distanceToTarget;
 	//	public int score;
 	//	public Tile parent;
 
-	//	public Tile(Vector3 position_)
+	//	public Tile(Vector2 position_)
 	//	{
 	//		position = position_;
 	//	}

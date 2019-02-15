@@ -50,7 +50,7 @@ public class Bar : MonoBehaviour
 		currentColor.a = 1.0f;
 
 		// Scale the bar
-		transform.localScale = Vector3.Lerp(transform.localScale, new Vector3(currentSize, transform.localScale.y, transform.localScale.z), Time.deltaTime * changeSpeed);
+		transform.localScale = Vector2.Lerp(transform.localScale, new Vector2(currentSize, transform.localScale.y), Time.deltaTime * changeSpeed);
 
 		// Set the bar color
 		image.color = Color.Lerp(image.color, currentColor, Time.deltaTime * changeSpeed);

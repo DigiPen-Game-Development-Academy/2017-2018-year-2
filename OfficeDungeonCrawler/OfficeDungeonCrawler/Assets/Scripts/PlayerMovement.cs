@@ -17,14 +17,14 @@ public class PlayerMovement : MonoBehaviour
         bool frameDelayer = false;
         int rollDirection = 0;
         private Rigidbody2D rb;
-        public Vector3 direction = Vector3.down;*/
+        public Vector2 direction = Vector2.down;*/
 
     public float walkSpeed = 1;
     public float dashSpeed = 5;
     public float stamina = 3;
     public float dashTime = 0.5f;
     float dashTimeRemaining = 0.0f;
-    Vector3 dashDirection = Vector3.zero;
+    Vector2 dashDirection = Vector2.zero;
     double currentSpeed = 0.0;
     // Use this for initialization
     void Start()
@@ -34,7 +34,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 direction = Vector3.zero;
+        Vector2 direction = Vector2.zero;
         if (Input.GetKey(Settings.KeyBinds.down))
         {
             direction.y -= 1;
@@ -57,7 +57,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKey(Settings.KeyBinds.dash) && stamina >= 25)
         {
             currentSpeed = dashSpeed;
-            dashDirection = Vector3.Normalize(direction);
+            dashDirection = direction.normalized;
             dashTimeRemaining = dashTime;
             stamina = 0;
         }
@@ -77,7 +77,7 @@ public class PlayerMovement : MonoBehaviour
 
 
 
-        /*Vector3 velocity = Vector3.zero;
+        /*Vector2 velocity = Vector2.zero;
         if (frameDelayer)
         {
             if (rollDirection == 1)
