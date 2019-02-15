@@ -21,13 +21,13 @@ public class Hitbox : MonoBehaviour
         if (other.tag == "Player" && isEnemy)
         {
             // Subtract damage from the other objects health
-            other.gameObject.GetComponent<Health>().currentHealth -= damage;
+            other.gameObject.GetComponent<Health>().Damage(damage);
 
         }
         else if (other.tag == "Enemy" && !isEnemy) // Check if the object we collided with is the enemy and we are the player
         {
             // Subtract damage from the other objects health
-            other.gameObject.GetComponent<Health>().currentHealth -= damage;
+            other.gameObject.GetComponent<Health>().Damage(damage);
         }
         else
         {

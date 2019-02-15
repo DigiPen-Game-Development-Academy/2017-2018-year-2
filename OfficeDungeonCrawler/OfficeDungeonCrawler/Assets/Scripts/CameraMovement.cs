@@ -31,6 +31,9 @@ public class CameraMovement : MonoBehaviour
 	
 	void FixedUpdate()
 	{
+		if (target == null)
+			return;
+
 		Vector3 position = new Vector3(target.transform.position.x, target.transform.position.y, transform.position.z);
 		//if (type == CameraType.Directional)
 			//position += playerMovement.direction * directionMultiplier;

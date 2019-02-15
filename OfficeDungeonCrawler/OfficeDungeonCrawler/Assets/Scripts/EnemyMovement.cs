@@ -15,8 +15,12 @@ public class EnemyMovement : MonoBehaviour
 	// Max distance the raycast will search
 	public float maxRaycastDistance = 7.5f;
 
+	// Whether or not the enemy can move
+	[HideInInspector]
+	public bool canMove = true;
+
 	// Target for the enemy will chase
-	GameObject target;
+	public GameObject target;
 
 	// The Rigidbody component
 	new Rigidbody rigidbody;
@@ -31,8 +35,11 @@ public class EnemyMovement : MonoBehaviour
 	void Update()
 	{
 		// If the target is not set, return
-		if (target == null)
+		if (target == null || !canMove)
+		{
+			rigidbody.velocity = Vector3.zero;
 			return;
+		}
 
 		// The raycast information
 		RaycastHit hit;
@@ -51,6 +58,8 @@ public class EnemyMovement : MonoBehaviour
 				// Move towards the target
 				rigidbody.velocity = Vector3.Normalize(ray.direction) * speed;
 			}
+			else
+				rigidbody.velocity = Vector3.zero;
 		}
 
 		//Vector3 targetPosition = new Vector3(Mathf.Round(target.transform.position.x), Mathf.Round(target.transform.position.y), target.transform.position.z);

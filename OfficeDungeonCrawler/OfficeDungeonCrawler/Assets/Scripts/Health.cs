@@ -121,7 +121,8 @@ public class Health : MonoBehaviour
 	public void Death()
 	{
 		// Create the death entity
-		Instantiate(deathObject, transform.position, transform.rotation);
+		//if (deathObject != null)
+			//Instantiate(deathObject, transform.position, transform.rotation);
 		// Destroy the entity
 		Destroy(gameObject);
 	}
