@@ -16,6 +16,8 @@ public class PlayerAttack : MonoBehaviour
     public float attackSpeed;
     // Private variable we can edit without effecting the public variable
     private float attackCooldown;
+    // Public variable for how much damage the player does
+    public float attackDamage;
 
     Vector3 spawnPos = new Vector3();
 
@@ -24,6 +26,8 @@ public class PlayerAttack : MonoBehaviour
     {
         // Set the private variable to the public one
         attackCooldown = attackSpeed;
+        hitbox.GetComponent<Hitbox>().isEnemy = false;
+        hitbox.GetComponent<Hitbox>().damage = attackDamage;
     }
 
     void Attack()
