@@ -16,7 +16,7 @@ public class Settings : MonoBehaviour
 		public static KeyCode down = KeyCode.S;
 		public static KeyCode left = KeyCode.A;
 		public static KeyCode right = KeyCode.D;
-		
+        public static KeyCode openPocket = KeyCode.G;
 		public static KeyCode dash = KeyCode.LeftShift;
 		
 		public static KeyCode attack = KeyCode.Space;
