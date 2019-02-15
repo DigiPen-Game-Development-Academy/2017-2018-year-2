@@ -22,13 +22,13 @@ public class EnemyMovement : MonoBehaviour
 	// Target for the enemy will chase
 	public GameObject target;
 
-	// The Rigidbody component
-	new Rigidbody rigidbody;
+	// The Rigidbody2D component
+	new Rigidbody2D rigidbody;
 	
 	void Start()
 	{
-		// Get the Rigidbody component
-		rigidbody = GetComponent<Rigidbody>();
+		// Get the Rigidbody2D component
+		rigidbody = GetComponent<Rigidbody2D>();
         target = GameObject.FindGameObjectWithTag("Player");
 	}
 

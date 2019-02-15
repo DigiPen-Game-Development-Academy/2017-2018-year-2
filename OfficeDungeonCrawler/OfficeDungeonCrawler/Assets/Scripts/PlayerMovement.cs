@@ -16,20 +16,20 @@ public class PlayerMovement : MonoBehaviour
         public float staminaCapacitycap = 30;
         bool frameDelayer = false;
         int rollDirection = 0;
-        private Rigidbody rb;
+        private Rigidbody2D rb;
         public Vector3 direction = Vector3.down;*/
 
-    float walkSpeed = 1;
-    float dashSpeed = 5;
-    float stamina = 3;
-    float dashTime = 0.5f;
+    public float walkSpeed = 1;
+    public float dashSpeed = 5;
+    public float stamina = 3;
+    public float dashTime = 0.5f;
     float dashTimeRemaining = 0.0f;
     Vector3 dashDirection = Vector3.zero;
     double currentSpeed = 0.0;
     // Use this for initialization
     void Start()
     {
-        Rigidbody rb = GetComponent<Rigidbody>();
+        Rigidbody2D rb = GetComponent<Rigidbody2D>();
     }
     // Update is called once per frame
     void Update()
