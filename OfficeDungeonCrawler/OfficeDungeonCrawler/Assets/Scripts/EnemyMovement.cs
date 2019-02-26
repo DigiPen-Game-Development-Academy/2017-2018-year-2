@@ -41,25 +41,31 @@ public class EnemyMovement : MonoBehaviour
 			return;
 		}
 
-		// The raycast information
-		RaycastHit hit;
-		// Create a ray
-		Ray ray = new Ray(transform.position, target.transform.position - transform.position);
-
+		// Cast a ray
+		RaycastHit2D hit = Physics2D.Raycast(transform.position, target.transform.position - transform.position, maxRaycastDistance);
+		
 		// Set velocity to zero
 		rigidbody.velocity = Vector2.zero;
 
-		// Case a ray, if something was hit...
-		if (Physics.Raycast(ray, out hit, maxRaycastDistance))
+		// Cast a ray, if something was hit...
+		if (hit)
 		{
 			// If the ray hit the target (If the enemy can see the target)
 			if (hit.transform.gameObject == target)
 			{
 				// Move towards the target
-				rigidbody.velocity = ray.direction.normalized * speed;
+				rigidbody.velocity = (target.transform.position - transform.position).normalized * speed;
 			}
 			else
+			{
+				// Stop
 				rigidbody.velocity = Vector2.zero;
+			}
+		}
+		else
+		{
+			// Stop
+			rigidbody.velocity = Vector2.zero;
 		}
 
 		//Vector2 targetPosition = new Vector2(Mathf.Round(target.transform.position.x), Mathf.Round(target.transform.position.y), target.transform.position.z);

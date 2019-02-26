@@ -17,7 +17,7 @@ public class PlayerAttack : MonoBehaviour
     // Private variable we can edit without effecting the public variable
     private float attackCooldown;
     // Public variable for how much damage the player does
-    public float attackDamage;
+    public float attackDamage = 1.0f;
 
     Vector2 spawnPos = new Vector2();
 
@@ -32,10 +32,12 @@ public class PlayerAttack : MonoBehaviour
 
     void Attack()
     {
-        // Spawn hitbox in front of the player in the direction they are facing
-        //Instantiate(hitbox, GetComponent<PlayerMovement>().direction + transform.position, transform.rotation);
-        
-    }
+		// Spawn hitbox in front of the player in the direction they are facing
+		Hitbox newHitbox = Instantiate(hitbox, (Vector3)GetComponent<PlayerMovement>().currentDirection + transform.position, transform.rotation).GetComponent<Hitbox>();
+
+		newHitbox.damage = attackDamage;
+		newHitbox.isEnemy = false;
+	}
     // Update is called once per frame
     void Update()
     {

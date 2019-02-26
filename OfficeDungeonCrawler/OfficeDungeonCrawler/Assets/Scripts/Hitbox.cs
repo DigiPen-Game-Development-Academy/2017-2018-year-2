@@ -12,11 +12,13 @@ public class Hitbox : MonoBehaviour
     public float damage;
 	void Start ()
     {
-		
-	}
 
-    private void OnTriggerEnter(Collider other)
+	}
+	
+    void OnTriggerEnter2D(Collider2D other)
     {
+		Debug.Log("HIT OBJ: " + other.gameObject);
+
         // Check if the object we collided with is the player and we are the enemy
         if (other.tag == "Player" && isEnemy)
         {

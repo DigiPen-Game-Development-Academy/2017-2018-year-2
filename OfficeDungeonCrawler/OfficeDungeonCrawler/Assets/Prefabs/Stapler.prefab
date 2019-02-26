@@ -20,14 +20,14 @@ GameObject:
   m_Component:
   - component: {fileID: 4498622383667222}
   - component: {fileID: 212779598680844722}
-  - component: {fileID: 65882092405206586}
-  - component: {fileID: 54623883168598042}
   - component: {fileID: 114214171053381608}
   - component: {fileID: 114315257230960634}
   - component: {fileID: 114533964711421448}
+  - component: {fileID: 50364442244807436}
+  - component: {fileID: 61047147542544636}
   m_Layer: 0
   m_Name: Stapler
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -39,39 +39,57 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1904221187910892}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.56059825, y: 1.1750965, z: 0}
+  m_LocalPosition: {x: -2.22, y: 1.42, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &54623883168598042
-Rigidbody:
+--- !u!50 &50364442244807436
+Rigidbody2D:
+  serializedVersion: 4
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1904221187910892}
-  serializedVersion: 2
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
   m_Mass: 1
-  m_Drag: 0
+  m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 0
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
   m_Interpolate: 0
-  m_Constraints: 112
+  m_SleepingMode: 1
   m_CollisionDetection: 0
---- !u!65 &65882092405206586
-BoxCollider:
+  m_Constraints: 4
+--- !u!61 &61047147542544636
+BoxCollider2D:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1904221187910892}
+  m_Enabled: 1
+  m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0.049999997, y: 0.049999997, z: 0.049999997, w: 0.049999997}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.16, y: 0.16}
+    newSize: {x: 0.16, y: 0.16}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.16, y: 0.16, z: 0.2}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.16, y: 0.16}
+  m_EdgeRadius: 0
 --- !u!114 &114214171053381608
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -83,8 +101,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34c5425d4e7349c4294b926fc7dd4f3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1.5
+  speed: 1
   maxRaycastDistance: 7.5
+  canMove: 1
+  target: {fileID: 0}
 --- !u!114 &114315257230960634
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -97,11 +117,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitbox: {fileID: 1274357521494908, guid: 9184b171418e98c4fad188b5afd5621e, type: 2}
-  attackDistance: 1
-  attackSpeed: 1
+  attackDistance: 4
   fastAttackChargeTime: 0.5
+  fastAttackCooldown: 0.5
+  fastAttackDamage: 0.5
   longAttackChargeTime: 1
-  damage: 5
+  longAttackCooldown: 1.5
+  longAttackDamage: 2
+  attackCooldown: 1
+  attackChargeTime: 0.5
+  attackDamage: 1
 --- !u!114 &114533964711421448
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -113,7 +138,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5af4426cc9698574f9ea82f91b2ca017, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 10
+  maxHealth: 3
   currentHealth: 0
   healthBarObj: {fileID: 0}
   colorChangeSpeed: 1

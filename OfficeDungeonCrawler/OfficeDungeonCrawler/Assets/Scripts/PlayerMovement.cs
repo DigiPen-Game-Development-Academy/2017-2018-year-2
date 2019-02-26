@@ -1,7 +1,7 @@
 ﻿/*
 Author: Justin V
-Contributors: N/A
-Date Last Edited: 2/1/2019
+Contributors: Myles Busig
+Date Last Edited: 2/25/2019
 */
 using System.Collections;
 using System.Collections.Generic;
@@ -9,7 +9,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    /*	public int directionVar = 1;
+	/*	public int directionVar = 1;
         public float runSpeed = 1.5f;
         public float dashSpeed = 25.0f;
         public float staminaCapacity = 30;
@@ -19,65 +19,63 @@ public class PlayerMovement : MonoBehaviour
         private Rigidbody2D rb;
         public Vector2 direction = Vector2.down;*/
 
-    public float walkSpeed = 1;
-    public float dashSpeed = 5;
-    public float stamina = 3;
-    public float dashTime = 0.5f;
-    float dashTimeRemaining = 0.0f;
-    Vector2 dashDirection = Vector2.zero;
-    double currentSpeed = 0.0;
-    // Use this for initialization
-    void Start()
-    {
-        Rigidbody2D rb = GetComponent<Rigidbody2D>();
-    }
-    // Update is called once per frame
-    void Update()
-    {
-        Vector2 direction = Vector2.zero;
-        if (Input.GetKey(Settings.KeyBinds.down))
-        {
-            direction.y -= 1;
-        }
-        if (Input.GetKey(Settings.KeyBinds.up))
-        {
-            direction.y += 1;
-        }
-        if (Input.GetKey(Settings.KeyBinds.right))
-        {
-            direction.x += 1;
-        }
-        if (Input.GetKey(Settings.KeyBinds.left))
-        {
-            direction.x += -1;
-        }
+	public float walkSpeed = 1;
+	public float dashSpeed = 5;
+	float stamina = 3;
+	public float dashCooldown = 1.0f;
+	public float dashTime = 0.5f;
+	float dashTimeRemaining = 0.0f;
+	[HideInInspector]
+	public Vector2 dashDirection = Vector2.zero;
+	float currentSpeed = 0.0f;
+	[HideInInspector]
+	public Vector2 currentDirection = Vector2.down;
 
-        currentSpeed = walkSpeed;
+	Rigidbody2D rb;
 
-        if (Input.GetKey(Settings.KeyBinds.dash) && stamina >= 25)
-        {
-            currentSpeed = dashSpeed;
-            dashDirection = direction.normalized;
-            dashTimeRemaining = dashTime;
-            stamina = 0;
-        }
+	void Start()
+	{
+		rb = GetComponent<Rigidbody2D>();
 
-        if (dashTimeRemaining >= 0)
-            direction = dashDirection;
+		stamina = dashCooldown;
+	}
+	
+	void Update()
+	{
+		stamina += Time.deltaTime;
+		dashTimeRemaining -= Time.deltaTime;
 
+		Vector2 direction = Vector2.zero;
+		if (Input.GetKey(Settings.KeyBinds.down))
+			direction.y -= 1;
+		if (Input.GetKey(Settings.KeyBinds.up))
+			direction.y += 1;
+		if (Input.GetKey(Settings.KeyBinds.right))
+			direction.x += 1;
+		if (Input.GetKey(Settings.KeyBinds.left))
+			direction.x -= 1;
 
+		currentSpeed = walkSpeed;
 
+		if (Input.GetKey(Settings.KeyBinds.dash) && stamina >= dashCooldown)
+		{
+			dashDirection = direction;
+			dashTimeRemaining = dashTime;
+			stamina = 0;
+		}
 
+		if (dashTimeRemaining >= 0)
+		{
+			direction = dashDirection;
+			currentSpeed = dashSpeed;
+		}
 
+		rb.velocity = direction.normalized * currentSpeed;
 
+		if (direction != Vector2.zero)
+			currentDirection = direction.normalized;
 
-
-
-
-
-
-
-        /*Vector2 velocity = Vector2.zero;
+		/*Vector2 velocity = Vector2.zero;
         if (frameDelayer)
         {
             if (rollDirection == 1)
@@ -161,5 +159,5 @@ public class PlayerMovement : MonoBehaviour
         rb.velocity = velocity;
 
     }*/
-    }
+	}
 }
