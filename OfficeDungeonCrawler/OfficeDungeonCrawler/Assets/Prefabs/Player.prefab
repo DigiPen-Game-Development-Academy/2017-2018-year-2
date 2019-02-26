@@ -39,7 +39,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1190466586900746}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.0674298, y: 0.9299425, z: 0}
+  m_LocalPosition: {x: -2.15, y: 0.49, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -103,7 +103,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitbox: {fileID: 1274357521494908, guid: 9184b171418e98c4fad188b5afd5621e, type: 2}
   attackSpeed: 1
-  attackDamage: 0
+  attackDamage: 1
 --- !u!114 &114883571212207992
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -117,8 +117,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   walkSpeed: 1
   dashSpeed: 5
-  stamina: 3
+  dashCooldown: 1
   dashTime: 0.5
+  dashDirection: {x: 0, y: 0}
+  currentDirection: {x: 0, y: -1}
 --- !u!114 &114898050982018894
 MonoBehaviour:
   m_ObjectHideFlags: 1
