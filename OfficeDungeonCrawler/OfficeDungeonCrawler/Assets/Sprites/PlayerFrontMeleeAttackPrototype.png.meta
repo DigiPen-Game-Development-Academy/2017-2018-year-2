@@ -1,7 +1,22 @@
 fileFormatVersion: 2
 guid: 0d072bc1a0d75094c9c74fd4de4acdee
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: PlayerFrontMeleeAttackPrototype_0
+    21300002: PlayerFrontMeleeAttackPrototype_1
+    21300004: PlayerFrontMeleeAttackPrototype_2
+    21300006: PlayerFrontMeleeAttackPrototype_3
+    21300008: PlayerFrontMeleeAttackPrototype_4
+    21300010: PlayerFrontMeleeAttackPrototype_5
+    21300012: PlayerFrontMeleeAttackPrototype_6
+    21300014: PlayerFrontMeleeAttackPrototype_7
+    21300016: PlayerFrontMeleeAttackPrototype_8
+    21300018: PlayerFrontMeleeAttackPrototype_9
+    21300020: PlayerFrontMeleeAttackPrototype_10
+    21300022: PlayerFrontMeleeAttackPrototype_11
+    21300024: PlayerFrontMeleeAttackPrototype_12
+    21300026: PlayerFrontMeleeAttackPrototype_13
+    21300028: PlayerFrontMeleeAttackPrototype_14
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -31,7 +46,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -40,12 +55,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 200
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -69,9 +84,320 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: PlayerFrontMeleeAttackPrototype_0
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 10
+        width: 47
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 801a630fb23eca246887dac1971b12e5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerFrontMeleeAttackPrototype_1
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 9
+        width: 48
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6daccdf0cf506e645ba28d588eb09ba1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerFrontMeleeAttackPrototype_2
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 9
+        width: 51
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2161ca9504b36ce40ae854a4312fa5ef
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerFrontMeleeAttackPrototype_3
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 11
+        width: 44
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff7b6dff4e4968948939f4f91bde96d1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerFrontMeleeAttackPrototype_4
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 10
+        width: 42
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a547a44ac7635f14cb43a7c979eaf75c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerFrontMeleeAttackPrototype_5
+      rect:
+        serializedVersion: 2
+        x: 683
+        y: 10
+        width: 39
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22f71558b85f2e94b8c8c1b27a9362f3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerFrontMeleeAttackPrototype_6
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 8
+        width: 42
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0d91e89d70db634e9afe6290eb5a015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerFrontMeleeAttackPrototype_7
+      rect:
+        serializedVersion: 2
+        x: 939
+        y: 10
+        width: 41
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84a9f1f1881db0a4a80eef9f62c0102a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerFrontMeleeAttackPrototype_8
+      rect:
+        serializedVersion: 2
+        x: 1066
+        y: 10
+        width: 42
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2152c04bf7b089d4e8ead1d3718fd0bd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerFrontMeleeAttackPrototype_9
+      rect:
+        serializedVersion: 2
+        x: 1194
+        y: 10
+        width: 42
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c58b025cc7cc9d34f9d8c2cead925237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerFrontMeleeAttackPrototype_10
+      rect:
+        serializedVersion: 2
+        x: 1321
+        y: 10
+        width: 44
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff2d06fd2e9697a48a63d555abb00bbe
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerFrontMeleeAttackPrototype_11
+      rect:
+        serializedVersion: 2
+        x: 1449
+        y: 11
+        width: 45
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c06d761c57cdd884d954a3fdea064ea4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerFrontMeleeAttackPrototype_12
+      rect:
+        serializedVersion: 2
+        x: 1577
+        y: 10
+        width: 44
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99f34af136d974b42a65a4440dcf1466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerFrontMeleeAttackPrototype_13
+      rect:
+        serializedVersion: 2
+        x: 1706
+        y: 11
+        width: 43
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a328125bcfc4c5d4292f12db6930129c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerFrontMeleeAttackPrototype_14
+      rect:
+        serializedVersion: 2
+        x: 1834
+        y: 11
+        width: 43
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e356bd23ffc14774c956a6b925934c64
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

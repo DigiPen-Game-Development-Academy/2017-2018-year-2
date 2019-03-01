@@ -1,7 +1,22 @@
 fileFormatVersion: 2
 guid: c0cb1492f38f0e146be96b4bb8ffb884
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: PlayerFrontMeleeMOUSEAttackPrototype_0
+    21300002: PlayerFrontMeleeMOUSEAttackPrototype_1
+    21300004: PlayerFrontMeleeMOUSEAttackPrototype_2
+    21300006: PlayerFrontMeleeMOUSEAttackPrototype_3
+    21300008: PlayerFrontMeleeMOUSEAttackPrototype_4
+    21300010: PlayerFrontMeleeMOUSEAttackPrototype_5
+    21300012: PlayerFrontMeleeMOUSEAttackPrototype_6
+    21300014: PlayerFrontMeleeMOUSEAttackPrototype_7
+    21300016: PlayerFrontMeleeMOUSEAttackPrototype_8
+    21300018: PlayerFrontMeleeMOUSEAttackPrototype_9
+    21300020: PlayerFrontMeleeMOUSEAttackPrototype_10
+    21300022: PlayerFrontMeleeMOUSEAttackPrototype_11
+    21300024: PlayerFrontMeleeMOUSEAttackPrototype_12
+    21300026: PlayerFrontMeleeMOUSEAttackPrototype_13
+    21300028: PlayerFrontMeleeMOUSEAttackPrototype_14
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -31,7 +46,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -40,7 +55,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -69,9 +84,320 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: PlayerFrontMeleeMOUSEAttackPrototype_0
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 12
+        width: 26
+        height: 57
+      alignment: 9
+      pivot: {x: 0.49999955, y: 0.74021304}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6a11317bddb4f845b96fc6b0037bf22
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerFrontMeleeMOUSEAttackPrototype_1
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 10
+        width: 24
+        height: 58
+      alignment: 9
+      pivot: {x: 0.5, y: 0.73607147}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd034bd2d97715c4289eb550e3fc1ead
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerFrontMeleeMOUSEAttackPrototype_2
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 9
+        width: 21
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c4f26e0594086247b024fe048fc7e9e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerFrontMeleeMOUSEAttackPrototype_3
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 21
+        width: 30
+        height: 48
+      alignment: 9
+      pivot: {x: 0.6190613, y: 0.79765534}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15bab5ca1b3648641b9b869a3e6394ae
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerFrontMeleeMOUSEAttackPrototype_4
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 41
+        width: 30
+        height: 53
+      alignment: 9
+      pivot: {x: 0.44046834, y: 0.7808069}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d7e04d148178a54bbc11e4c968707d1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerFrontMeleeMOUSEAttackPrototype_5
+      rect:
+        serializedVersion: 2
+        x: 665
+        y: 68
+        width: 35
+        height: 47
+      alignment: 9
+      pivot: {x: 0.7551322, y: 0.15801272}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3303063d914d92546b99affb32157965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerFrontMeleeMOUSEAttackPrototype_6
+      rect:
+        serializedVersion: 2
+        x: 788
+        y: 71
+        width: 35
+        height: 32
+      alignment: 9
+      pivot: {x: 0.8571847, y: 0.23955107}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d206f8518e7270428a2cddfde3ae5a1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerFrontMeleeMOUSEAttackPrototype_7
+      rect:
+        serializedVersion: 2
+        x: 922
+        y: 43
+        width: 29
+        height: 47
+      alignment: 9
+      pivot: {x: 0.84897375, y: 0.70719373}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6ea0f1387138ec40bbc3f63db3ea1d3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerFrontMeleeMOUSEAttackPrototype_8
+      rect:
+        serializedVersion: 2
+        x: 1064
+        y: 38
+        width: 18
+        height: 54
+      alignment: 9
+      pivot: {x: 0.6984321, y: 0.7425339}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 533f24dbdab368342a7ef83dc787ad7b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerFrontMeleeMOUSEAttackPrototype_9
+      rect:
+        serializedVersion: 2
+        x: 1192
+        y: 39
+        width: 16
+        height: 51
+      alignment: 9
+      pivot: {x: 0.7232361, y: 0.6984367}
+      border: {x: 0, y: 1, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 320d5722f8d8dcb419c907d834854f78
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerFrontMeleeMOUSEAttackPrototype_10
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 41
+        width: 27
+        height: 56
+      alignment: 9
+      pivot: {x: 0.8748237, y: 0.7870248}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35ac0458320c3714e820cf70af733edf
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerFrontMeleeMOUSEAttackPrototype_11
+      rect:
+        serializedVersion: 2
+        x: 1664
+        y: 75
+        width: 57
+        height: 33
+      alignment: 9
+      pivot: {x: 0.9282034, y: 0.2654833}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf87d2c26842c96419e7ae425f3475a2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerFrontMeleeMOUSEAttackPrototype_12
+      rect:
+        serializedVersion: 2
+        x: 1842
+        y: 72
+        width: 20
+        height: 56
+      alignment: 9
+      pivot: {x: 0.2916382, y: 0.06414727}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32f62b8b8de255d4a991dd06b10e81b5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerFrontMeleeMOUSEAttackPrototype_13
+      rect:
+        serializedVersion: 2
+        x: 1973
+        y: 19
+        width: 43
+        height: 42
+      alignment: 9
+      pivot: {x: 0.14004304, y: 0.8543514}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb726e787ac7bb34b9279b22a8080e3c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerFrontMeleeMOUSEAttackPrototype_14
+      rect:
+        serializedVersion: 2
+        x: 2090
+        y: 0
+        width: 31
+        height: 54
+      alignment: 9
+      pivot: {x: 0.28875536, y: 0.9189224}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5696e3d36a9f9764dac9f5aee6789020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

@@ -1,7 +1,21 @@
 fileFormatVersion: 2
 guid: 907cf21ddc56480449078147608493ed
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: PlayerMeleeAttackSidePrototype_0
+    21300002: PlayerMeleeAttackSidePrototype_1
+    21300004: PlayerMeleeAttackSidePrototype_2
+    21300006: PlayerMeleeAttackSidePrototype_3
+    21300008: PlayerMeleeAttackSidePrototype_4
+    21300010: PlayerMeleeAttackSidePrototype_5
+    21300012: PlayerMeleeAttackSidePrototype_6
+    21300014: PlayerMeleeAttackSidePrototype_7
+    21300016: PlayerMeleeAttackSidePrototype_8
+    21300018: PlayerMeleeAttackSidePrototype_9
+    21300020: PlayerMeleeAttackSidePrototype_10
+    21300022: PlayerMeleeAttackSidePrototype_11
+    21300024: PlayerMeleeAttackSidePrototype_12
+    21300026: PlayerMeleeAttackSidePrototype_13
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -31,7 +45,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -40,7 +54,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -69,9 +83,300 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: PlayerMeleeAttackSidePrototype_0
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 6
+        width: 25
+        height: 54
+      alignment: 9
+      pivot: {x: 0.25967804, y: 0.3984144}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1ca520280094fc46a46006770c83228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerMeleeAttackSidePrototype_1
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 6
+        width: 19
+        height: 54
+      alignment: 9
+      pivot: {x: 0.37626448, y: 0.40325183}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c30fd5d833e040e4687b983c6265daf2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerMeleeAttackSidePrototype_2
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 6
+        width: 20
+        height: 53
+      alignment: 9
+      pivot: {x: 0.5914276, y: 0.3964977}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73b9f0a46517fa1449c2541f1e48b663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerMeleeAttackSidePrototype_3
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 6
+        width: 25
+        height: 54
+      alignment: 9
+      pivot: {x: 0.69852847, y: 0.40325183}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfe8f4195f1c00f4c9a6d7e333b4bf26
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerMeleeAttackSidePrototype_4
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 6
+        width: 25
+        height: 55
+      alignment: 9
+      pivot: {x: 0.8239136, y: 0.39551193}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 952d372b750d413468ba84e1af70431a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerMeleeAttackSidePrototype_5
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 6
+        width: 25
+        height: 55
+      alignment: 9
+      pivot: {x: 0.70897704, y: 0.39551193}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84639fb9fee935941bb14079224d6e46
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerMeleeAttackSidePrototype_6
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 6
+        width: 25
+        height: 55
+      alignment: 9
+      pivot: {x: 0.6776306, y: 0.3907625}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c97816dbadb81bf41affb30d82f53714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerMeleeAttackSidePrototype_7
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 6
+        width: 25
+        height: 55
+      alignment: 9
+      pivot: {x: 0.5835913, y: 0.4002614}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eae131dfaa7b36448a336205d2e47c2a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerMeleeAttackSidePrototype_8
+      rect:
+        serializedVersion: 2
+        x: 526
+        y: 6
+        width: 25
+        height: 55
+      alignment: 9
+      pivot: {x: 0.53134763, y: 0.40501088}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67dfcf51a1d24794ca957c7a9c614455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerMeleeAttackSidePrototype_9
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 6
+        width: 23
+        height: 54
+      alignment: 9
+      pivot: {x: 0.3409981, y: 0.40325183}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a74f9ceca7ae78449b1ee0014932355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerMeleeAttackSidePrototype_10
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 6
+        width: 20
+        height: 54
+      alignment: 9
+      pivot: {x: 0.22572021, y: 0.3984144}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7120003020ee35d4986c47af8d4e70c9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerMeleeAttackSidePrototype_11
+      rect:
+        serializedVersion: 2
+        x: 727
+        y: 6
+        width: 27
+        height: 53
+      alignment: 9
+      pivot: {x: 0.37422916, y: 0.41128373}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0245ce957b21b84cb12f7998c0c211a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerMeleeAttackSidePrototype_12
+      rect:
+        serializedVersion: 2
+        x: 791
+        y: 6
+        width: 23
+        height: 52
+      alignment: 9
+      pivot: {x: 0.44321343, y: 0.4196246}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39e195ed001807248938de0f1e9559c3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerMeleeAttackSidePrototype_13
+      rect:
+        serializedVersion: 2
+        x: 855
+        y: 6
+        width: 19
+        height: 53
+      alignment: 9
+      pivot: {x: 0.5549959, y: 0.41128373}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d19dcb712b7b5b439aa5f77c2a77e0d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
