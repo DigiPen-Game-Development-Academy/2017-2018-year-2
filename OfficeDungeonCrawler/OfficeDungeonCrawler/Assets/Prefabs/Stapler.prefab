@@ -117,7 +117,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitbox: {fileID: 1274357521494908, guid: 9184b171418e98c4fad188b5afd5621e, type: 2}
-  attackDistance: 4
+  attackDistance: 2
   fastAttackChargeTime: 0.5
   fastAttackCooldown: 0.5
   fastAttackDamage: 0.5
