@@ -31,19 +31,49 @@ public class PlayerMovement : MonoBehaviour
 	[HideInInspector]
 	public Vector2 currentDirection = Vector2.down;
 
+	public string walkLeft = "WalkLeft";
+	public string walkRight = "WalkRight";
+	public string walkUp = "WalkUp";
+	public string walkDown = "WalkDown";
+
+	public string dashLeft = "DashLeft";
+	public string dashRight = "DashRight";
+	public string dashUp = "DashUp";
+	public string dashDown = "DashDown";
+
+	public string idleLeft = "Idle";
+	public string idleRight = "Idle";
+	public string idleUp = "Idle";
+	public string idleDown = "Idle";
+
+	public AudioClip walkSound1;
+	public AudioClip walkSound2;
+	public AudioClip walkSound3;
+	public AudioClip dashSound;
+
+	public float walkSoundDelay = 1.0f;
+	float timeTillPlaySound = 0.0f;
+
+	SpriteRenderer spriteRenderer;
+	Animator animator;
+	AudioSource audioSource;
 	Rigidbody2D rb;
 
 	void Start()
 	{
 		rb = GetComponent<Rigidbody2D>();
+		animator = GetComponent<Animator>();
+		audioSource = GetComponent<AudioSource>();
+		spriteRenderer = GetComponent<SpriteRenderer>();
 
 		stamina = dashCooldown;
 	}
-	
+
 	void Update()
 	{
 		stamina += Time.deltaTime;
 		dashTimeRemaining -= Time.deltaTime;
+		timeTillPlaySound -= Time.deltaTime;
 
 		Vector2 direction = Vector2.zero;
 		if (Input.GetKey(Settings.KeyBinds.down))
@@ -74,6 +104,93 @@ public class PlayerMovement : MonoBehaviour
 
 		if (direction != Vector2.zero)
 			currentDirection = direction.normalized;
+
+		if (direction.x == -1/* && dashTimeRemaining > 0*/)
+		{
+			//Debug.Log("DASH LEFT SPRITE");
+			//animator.Play(dashLeft);
+			animator.SetBool("MovingLeft", true);
+			animator.SetBool("MovingRight", false);
+			animator.SetBool("MovingUp", false);
+			animator.SetBool("MovingDown", false);
+			spriteRenderer.flipX = true;
+		}
+		if (direction.x == 1/* && dashTimeRemaining > 0*/)
+		{
+			//Debug.Log("DASH RIGHT SPRITE");
+			//animator.Play(dashRight);
+			animator.SetBool("MovingLeft", false);
+			animator.SetBool("MovingRight", true);
+			animator.SetBool("MovingUp", false);
+			animator.SetBool("MovingDown", false);
+			spriteRenderer.flipX = false;
+
+		}
+		if (direction.y == -1/* && dashTimeRemaining > 0*/)
+		{
+			//Debug.Log("DASH DOWN SPRITE");
+			//animator.Play(dashDown);
+			animator.SetBool("MovingLeft", false);
+			animator.SetBool("MovingRight", false);
+			animator.SetBool("MovingUp", false);
+			animator.SetBool("MovingDown", true);
+			spriteRenderer.flipX = false;
+		}
+		if (direction.y == 1/* && dashTimeRemaining > 0*/)
+		{
+			//Debug.Log("DASH UP SPRITE");
+			//animator.Play(dashUp);
+			animator.SetBool("MovingLeft", false);
+			animator.SetBool("MovingRight", false);
+			animator.SetBool("MovingUp", true);
+			animator.SetBool("MovingDown", false);
+			spriteRenderer.flipX = false;
+		}
+
+		//if (direction.x == -1 && dashTimeRemaining <= 0)
+		//{
+		//	//Debug.Log("WALK LEFT SPRITE");
+		//	//animator.Play(walkLeft);
+		//}
+		//if (direction.x == 1 && dashTimeRemaining <= 0)
+		//{
+		//	//Debug.Log("WALK RIGHT SPRITE");
+		//	//animator.Play(walkRight);
+		//}
+		//if (direction.y == -1 && dashTimeRemaining <= 0)
+		//{
+		//	//Debug.Log("WALK DOWN SPRITE");
+		//	//animator.Play(walkDown);
+		//}
+		//if (direction.y == 1 && dashTimeRemaining <= 0)
+		//{
+		//	//Debug.Log("WALK UP SPRITE");
+		//	//animator.Play(walkUp);
+		//}
+
+		if (direction.x == 0 && direction.y == 0)
+		{
+			//Debug.Log("IDLE SPRITE");
+			animator.SetBool("MovingLeft", false);
+			animator.SetBool("MovingRight", false);
+			animator.SetBool("MovingUp", false);
+			animator.SetBool("MovingDown", false);
+		}
+		else
+		{
+			if (timeTillPlaySound <= 0.0f)
+			{
+				timeTillPlaySound = walkSoundDelay;
+				int snd = Mathf.RoundToInt(Random.Range(1.0f, 3.0f));
+				float vol = Random.Range(0.5f, 0.8f);
+				if (snd == 1)
+					audioSource.PlayOneShot(walkSound1, vol);
+				else if (snd == 2)
+					audioSource.PlayOneShot(walkSound2, vol);
+				else if (snd == 3)
+					audioSource.PlayOneShot(walkSound3, vol);
+			}
+		}
 
 		/*Vector2 velocity = Vector2.zero;
         if (frameDelayer)
