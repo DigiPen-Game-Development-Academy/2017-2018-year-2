@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: UpperCubicleWall
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: 21300000, guid: e931aa006f5401d4b9470c5e1d27d9b7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 466b69f294cea1f43929208467e5b89a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1

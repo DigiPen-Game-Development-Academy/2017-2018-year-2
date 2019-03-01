@@ -122,6 +122,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8389293dd27c43f4192884df4485e1bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  max: 10
+  current: 0
+  width: 2
+  changeSpeed: 2
+  lowColor: {r: 1, g: 0, b: 0, a: 1}
+  highColor: {r: 0, g: 1, b: 0, a: 1}
 --- !u!222 &222987277666515580
 CanvasRenderer:
   m_ObjectHideFlags: 1
@@ -181,8 +187,8 @@ RectTransform:
   m_Father: {fileID: 224166778547607922}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -262, y: 171.8}
-  m_SizeDelta: {x: 182.2, y: 36.4}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 100.899994, y: 171.8}
+  m_SizeDelta: {x: 182.20001, y: 36.4}
+  m_Pivot: {x: 0, y: 0.5}
