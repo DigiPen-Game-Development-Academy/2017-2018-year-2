@@ -11,13 +11,19 @@ public class HealthPickup : MonoBehaviour
     {
 		
 	}
-	
-	// Update is called once per frame
-	void Update ()
+    private void OnCollisionEnter(Collision collision)
     {
-		/*if(Oncollide == true)
+        if (collision.gameObject.name == "Player")
         {
-            this.remove();
-        }*/
+            Destroy(this);
+
+            GameObject.Find("Player").Health + 1;
+        }
+    }
+
+    // Update is called once per frame
+    void Update ()
+    {
+        OnCollisionEnter();
 	}
 }
