@@ -24,6 +24,6 @@ public class HealthPickup : MonoBehaviour
     // Update is called once per frame
     void Update ()
     {
-        OnCollisionEnter();
+        collider();
 	}
 }
