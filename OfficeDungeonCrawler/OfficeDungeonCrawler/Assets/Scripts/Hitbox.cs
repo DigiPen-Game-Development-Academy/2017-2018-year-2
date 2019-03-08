@@ -10,6 +10,8 @@ public class Hitbox : MonoBehaviour
 {
     public bool isEnemy;
     public float damage;
+    public float knockbackMultiplier;
+    public float knockbackDuration;
 	void Start ()
     {
 
@@ -30,6 +32,15 @@ public class Hitbox : MonoBehaviour
         {
             // Subtract damage from the other objects health
             other.gameObject.GetComponent<Health>().Damage(damage);
+
+            other.gameObject.GetComponent<EnemyMovement>().canMoveKnockback = false;
+            other.gameObject.GetComponent<EnemyMovement>().canMoveAfterKnockback = knockbackDuration;
+
+            //
+            Vector2 knockbackDirection = GameObject.FindGameObjectWithTag("Player").transform.position - other.gameObject.transform.position;
+
+            // Add knockback effect to the enemy
+            other.gameObject.GetComponent<Rigidbody2D>().velocity = -knockbackDirection.normalized * knockbackMultiplier;
         }
         else
         {

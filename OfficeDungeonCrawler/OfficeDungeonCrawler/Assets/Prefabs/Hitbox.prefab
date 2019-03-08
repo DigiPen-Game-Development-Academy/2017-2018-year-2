@@ -101,7 +101,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isEnemy: 0
-  damage: 0
+  damage: 1
+  knockbackMultiplier: 5
+  knockbackDuration: 0.25
 --- !u!114 &114886382259108586
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -113,7 +115,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1db4658ff1e3c494e87801255a5a699e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deathTimer: 0.5
+  deathTimer: 0.1
 --- !u!212 &212760057517738312
 SpriteRenderer:
   m_ObjectHideFlags: 1
