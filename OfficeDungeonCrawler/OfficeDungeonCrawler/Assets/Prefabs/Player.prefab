@@ -264,8 +264,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5af4426cc9698574f9ea82f91b2ca017, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 10
-  currentHealth: 10
+  maxHealth: 15
+  currentHealth: 15
   healthBarObj: {fileID: 0}
   colorChangeSpeed: 1
   hurtColor: {r: 1, g: 0, b: 0, a: 1}

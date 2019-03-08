@@ -18,6 +18,8 @@ public class EnemyMovement : MonoBehaviour
 	// Whether or not the enemy can move
 	[HideInInspector]
 	public bool canMove = true;
+    public bool canMoveKnockback = true;
+    public float canMoveAfterKnockback = 0;
 
 	// Target for the enemy will chase
 	public GameObject target;
@@ -34,11 +36,23 @@ public class EnemyMovement : MonoBehaviour
 
 	void Update()
 	{
+        if(canMoveAfterKnockback <= 0)
+        {
+            canMoveKnockback = true;
+        }
+        else
+        {
+            canMoveAfterKnockback -= Time.deltaTime;
+        }
+        if(!canMoveKnockback)
+        {
+            return;
+        }
 		// If the target is not set, return
 		if (target == null || !canMove)
 		{
 			rigidbody.velocity = Vector2.zero;
-			return;
+            return;
 		}
 
 		// Cast a ray
