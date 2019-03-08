@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ItemPickup : MonoBehaviour
+public class HealthPickup : MonoBehaviour
 {
     public string itemID;
     public int itemAmount;
@@ -16,9 +16,9 @@ public class ItemPickup : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            collision.gameObject.GetComponent<Inventory>().GiveItem(itemID, itemAmount);
+            
 
-            Destroy(gameObject);
+            collision.gameObject.GetComponent<Inventory>().GiveItem(itemID, itemAmount);
         }
     }
 
