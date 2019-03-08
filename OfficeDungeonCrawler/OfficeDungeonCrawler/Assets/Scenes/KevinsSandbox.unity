@@ -349,6 +349,51 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114132044488758390, guid: e92353e4dc4ac3e4696add8a2d39b668,
+        type: 2}
+      propertyPath: m_UiScaleMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114132044488758390, guid: e92353e4dc4ac3e4696add8a2d39b668,
+        type: 2}
+      propertyPath: m_ScreenMatchMode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114132044488758390, guid: e92353e4dc4ac3e4696add8a2d39b668,
+        type: 2}
+      propertyPath: m_ReferencePixelsPerUnit
+      value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 223530270182801034, guid: e92353e4dc4ac3e4696add8a2d39b668,
+        type: 2}
+      propertyPath: m_RenderMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 223530270182801034, guid: e92353e4dc4ac3e4696add8a2d39b668,
+        type: 2}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 519420031}
+    - target: {fileID: 224760039614845148, guid: e92353e4dc4ac3e4696add8a2d39b668,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 100.900024
+      objectReference: {fileID: 0}
+    - target: {fileID: 224760039614845148, guid: e92353e4dc4ac3e4696add8a2d39b668,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 318
+      objectReference: {fileID: 0}
+    - target: {fileID: 224760039614845148, guid: e92353e4dc4ac3e4696add8a2d39b668,
+        type: 2}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224760039614845148, guid: e92353e4dc4ac3e4696add8a2d39b668,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e92353e4dc4ac3e4696add8a2d39b668, type: 2}
   m_IsPrefabAsset: 0
