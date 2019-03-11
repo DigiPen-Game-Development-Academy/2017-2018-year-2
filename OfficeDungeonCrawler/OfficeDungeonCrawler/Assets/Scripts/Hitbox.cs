@@ -1,7 +1,7 @@
 ﻿/*
 Author: Luke Taranowski
 Contributors: N/A
-Date Last Modified: 2/15/2019
+Date Last Modified: 3/8/2019
 */
 
 using UnityEngine;
@@ -12,6 +12,7 @@ public class Hitbox : MonoBehaviour
     public float damage;
     public float knockbackMultiplier;
     public float knockbackDuration;
+    public GameObject enemyDamagedParticleEffect;
 	void Start ()
     {
 
@@ -36,7 +37,11 @@ public class Hitbox : MonoBehaviour
             other.gameObject.GetComponent<EnemyMovement>().canMoveKnockback = false;
             other.gameObject.GetComponent<EnemyMovement>().canMoveAfterKnockback = knockbackDuration;
 
-            //
+            Vector3 spawnPosition = new Vector3(other.gameObject.transform.position.x, other.gameObject.transform.position.y, other.gameObject.transform.position.z + 10);
+            // Spawn the particle effect
+            Instantiate(enemyDamagedParticleEffect, spawnPosition, other.gameObject.transform.rotation);
+
+            // calculate the angle of attack
             Vector2 knockbackDirection = GameObject.FindGameObjectWithTag("Player").transform.position - other.gameObject.transform.position;
 
             // Add knockback effect to the enemy
