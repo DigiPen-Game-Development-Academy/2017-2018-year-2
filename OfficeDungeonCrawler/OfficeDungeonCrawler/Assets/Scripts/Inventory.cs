@@ -21,16 +21,22 @@ public class Inventory : MonoBehaviour
 
 	void Start()
 	{
-		GiveItem("test1", 1);
-		GiveItem("test2", 1);
-		GiveItem("test3", 1);
-		GiveItem("test4", 1);
-		GiveItem("test5", 1);
+		//GiveItem("test1", 1);
+		//GiveItem("test2", 1);
+		//GiveItem("test3", 1);
+		//GiveItem("test4", 1);
+		//GiveItem("test5", 1);
 	}
-	
+
+	int it = 0;
+
 	void Update()
 	{
-		Debug.Log("Slot: " + selectedSlot);
+		if (Input.GetKeyDown(KeyCode.R))
+		{
+			GiveItem(itemBases[it].id, 1);
+			++it;
+		}
 
 		if (Input.GetKeyDown(KeyCode.Q))
 		{
@@ -46,7 +52,7 @@ public class Inventory : MonoBehaviour
 			else
 				selectedSlot = 0;
 		}
-
+		
 		for (int i = 0; i < slotBackgrounds.Count; ++i)
 		{
 			if (i == selectedSlot)
@@ -64,18 +70,28 @@ public class Inventory : MonoBehaviour
 
 		for (int i = 0; i < slots.Count; ++i)
 		{
-			slots[i].GetComponent<Image>().sprite = items[i].sprite;
+			Image image = slots[i].GetComponent<Image>();
+
+			if (i < items.Count)
+			{
+				image.sprite = items[i].sprite;
+				image.color = new Color(image.color.r, image.color.g, image.color.b, 1.0f);
+			}
+			else
+			{
+				image.color = new Color(image.color.r, image.color.g, image.color.b, 0.0f);
+			}
 		}
 	}
 
-	public void GiveItem(string id, int count)
+	public bool GiveItem(string id, int count)
 	{
 		foreach (Item item in items)
 		{
 			if (item.id == id)
 			{
 				item.count += count;
-				return;
+				return true;
 			}
 		}
 
@@ -91,15 +107,18 @@ public class Inventory : MonoBehaviour
 			if (newItem == null)
 			{
 				Debug.Log("No item with id " + id + " exists!");
-				return;
+				return false;
 			}
 
 			newItem.count = count;
 
 			items.Add(newItem);
+
+			return true;
 		}
-		else
-			Debug.Log("Inventory full!");
+
+		Debug.Log("Inventory full!");
+		return false;
 	}
 
 	public void RemoveItem(string id, int count)

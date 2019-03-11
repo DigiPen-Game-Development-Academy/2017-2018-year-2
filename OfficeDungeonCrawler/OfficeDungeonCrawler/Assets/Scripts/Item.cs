@@ -15,21 +15,17 @@ public enum ItemType
 public class Item
 {
 	public string id;
-	public string name;
 	public ItemType itemType = ItemType.NoUse;
 
 	public Sprite sprite;
-
-	public int maxCount = 1;
+	
 	public int count = 1;
 	public float damage = 1.0f;
 	public float health = 1.0f;
 
-	public Item(string id_, string name_, int maxCount_, ItemType itemType_, float amount_, Sprite sprite_)
+	public Item(string id_, ItemType itemType_, float amount_, Sprite sprite_)
 	{
 		id = id_;
-		name = name_;
-		maxCount = maxCount_;
 		itemType = itemType_;
 		sprite = sprite_;
 
@@ -39,11 +35,9 @@ public class Item
 			health = amount_;
 	}
 
-	public Item(string id_, string name_, int maxCount_, ItemType itemType_, float damage_, float health_, Sprite sprite_)
+	public Item(string id_, ItemType itemType_, float damage_, float health_, Sprite sprite_)
 	{
 		id = id_;
-		name = name_;
-		maxCount = maxCount_;
 		itemType = itemType_;
 		sprite = sprite_;
 		
@@ -53,6 +47,6 @@ public class Item
 
 	public Item Clone()
 	{
-		return new Item(id, name, maxCount, itemType, damage, health, sprite);
+		return new Item(id, itemType, damage, health, sprite);
 	}
 }
