@@ -19,26 +19,34 @@ public class PlayerAttack : MonoBehaviour
     // Public variable for how much damage the player does
     public float attackDamage = 1.0f;
 
-    Vector2 spawnPos = new Vector2();
+	new public GameObject camera;
 
-    // Start is called before the first frame update
+	Camera cameraComponent;
+
+    Vector2 spawnPos = new Vector2();
+	
     void Start()
     {
         // Set the private variable to the public one
         attackCooldown = attackSpeed;
         hitbox.GetComponent<Hitbox>().isEnemy = false;
         hitbox.GetComponent<Hitbox>().damage = attackDamage;
+		cameraComponent = camera.GetComponent<Camera>();
     }
 
     void Attack()
     {
+		Vector3 position = cameraComponent.ScreenToWorldPoint(Input.mousePosition);
+
+		Debug.Log("Position: " + position);
+
 		// Spawn hitbox in front of the player in the direction they are facing
 		Hitbox newHitbox = Instantiate(hitbox, (Vector3)GetComponent<PlayerMovement>().currentDirection + transform.position, transform.rotation).GetComponent<Hitbox>();
 
 		newHitbox.damage = attackDamage;
 		newHitbox.isEnemy = false;
 	}
-    // Update is called once per frame
+
     void Update()
     {
         // check if the attack cooldown has run out
