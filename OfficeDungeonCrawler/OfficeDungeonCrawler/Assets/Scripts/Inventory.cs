@@ -13,6 +13,7 @@ public class Inventory : MonoBehaviour
 
 	public List<GameObject> slots = new List<GameObject>();
 	public List<GameObject> slotBackgrounds = new List<GameObject>();
+	public List<GameObject> slotCounts = new List<GameObject>();
 
 	public Sprite slotBackgroundSelected;
 	public Sprite slotBackgroundDeselected;
@@ -80,6 +81,23 @@ public class Inventory : MonoBehaviour
 			else
 			{
 				image.color = new Color(image.color.r, image.color.g, image.color.b, 0.0f);
+			}
+		}
+
+		for (int i = 0; i < slotCounts.Count; ++i)
+		{
+			Text text = slotCounts[i].GetComponent<Text>();
+
+			if (i < items.Count)
+			{
+				if (items[i].count == 1)
+					text.text = "";
+				else
+					text.text = items[i].count.ToString();				
+			}
+			else
+			{
+				text.text = "";
 			}
 		}
 	}
