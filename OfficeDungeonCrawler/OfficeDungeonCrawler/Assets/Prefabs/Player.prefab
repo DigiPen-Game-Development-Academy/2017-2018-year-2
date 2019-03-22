@@ -27,6 +27,8 @@ GameObject:
   - component: {fileID: 61614440038452446}
   - component: {fileID: 95341502653432316}
   - component: {fileID: 82610715678498424}
+  - component: {fileID: 114839789041650520}
+  - component: {fileID: 114767603162018166}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -217,9 +219,105 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitbox: {fileID: 1274357521494908, guid: 9184b171418e98c4fad188b5afd5621e, type: 2}
-  attackSpeed: 1
+  attackSpeed: 0.5
   attackDamage: 1
   camera: {fileID: 0}
+--- !u!114 &114767603162018166
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1190466586900746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3223c591a92faeb489ec4a0da9ccab66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  items: []
+  itemBases:
+  - id: test1
+    itemType: 0
+    sprite: {fileID: 21300000, guid: eef5549d3b5d08e418248f1d9532bd57, type: 3}
+    count: 0
+    damage: 0
+    health: 0
+  - id: test2
+    itemType: 0
+    sprite: {fileID: 21300000, guid: 21c1126588cd3b34abe7b9e297b6192e, type: 3}
+    count: 0
+    damage: 0
+    health: 0
+  - id: test3
+    itemType: 0
+    sprite: {fileID: 21300000, guid: 5a2e2bd23b4a1f741b53ffd781e2f5f2, type: 3}
+    count: 0
+    damage: 0
+    health: 0
+  - id: test4
+    itemType: 0
+    sprite: {fileID: 21300000, guid: ee6d5ca31fe0f4a4780b8ca06e3f98f7, type: 3}
+    count: 0
+    damage: 0
+    health: 0
+  - id: test5
+    itemType: 0
+    sprite: {fileID: 21300000, guid: 5c05168c5c92708409d701065c1b2a71, type: 3}
+    count: 0
+    damage: 0
+    health: 0
+  - id: test6
+    itemType: 0
+    sprite: {fileID: 21300000, guid: 3d67495c2eca37949bc5eb0165ea65b6, type: 3}
+    count: 0
+    damage: 0
+    health: 0
+  selectedSlot: 0
+  slots:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  slotBackgrounds:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  slotCounts:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  slotCountBGs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  slotBackgroundSelected: {fileID: 21300000, guid: c2d15577a42c4214491ddf5b7c43543f,
+    type: 3}
+  slotBackgroundDeselected: {fileID: 21300002, guid: c2d15577a42c4214491ddf5b7c43543f,
+    type: 3}
+  slotBackgroundDeselectedL: {fileID: 21300004, guid: c2d15577a42c4214491ddf5b7c43543f,
+    type: 3}
+  slotBackgroundDeselectedR: {fileID: 21300006, guid: c2d15577a42c4214491ddf5b7c43543f,
+    type: 3}
+--- !u!114 &114839789041650520
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1190466586900746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7b8323e5e1d6ec4bb16f555c0de05a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hearts: []
+  heart: {fileID: 0}
+  halfHeart: {fileID: 0}
 --- !u!114 &114883571212207992
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -231,10 +329,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 076f7543ea6bf79448029e64cee047f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkSpeed: 2.5
-  dashSpeed: 5
-  dashCooldown: 1
-  dashTime: 0.5
+  walkSpeed: 8
+  dashSpeed: 10
+  dashCooldown: 0.5
+  dashTime: 0.2
+  dashLerpTime: 0.025
+  dashLerpSpeed: 2
   dashDirection: {x: 0, y: 0}
   currentDirection: {x: 0, y: -1}
   walkLeft: WalkLeft
@@ -269,8 +369,8 @@ MonoBehaviour:
   itemDrops: []
   itemDropCounts: 
   dropDistance: 0.5
-  maxHealth: 15
-  currentHealth: 15
+  maxHealth: 10
+  currentHealth: 10
   healthBarObj: {fileID: 0}
   colorChangeSpeed: 1
   hurtColor: {r: 1, g: 0, b: 0, a: 1}

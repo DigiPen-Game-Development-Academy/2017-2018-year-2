@@ -25,6 +25,8 @@ public class PlayerMovement : MonoBehaviour
 	public float dashCooldown = 1.0f;
 	public float dashTime = 0.5f;
 	float dashTimeRemaining = 0.0f;
+	public float dashLerpTime = 0.1f;
+	public float dashLerpSpeed = 2.0f;
 	[HideInInspector]
 	public Vector2 dashDirection = Vector2.zero;
 	float currentSpeed = 0.0f;
@@ -99,6 +101,9 @@ public class PlayerMovement : MonoBehaviour
 			direction = dashDirection;
 			currentSpeed = dashSpeed;
 		}
+
+		if (dashTimeRemaining <= dashLerpTime)
+			currentSpeed /= dashLerpSpeed;
 
 		rb.velocity = direction.normalized * currentSpeed;
 
