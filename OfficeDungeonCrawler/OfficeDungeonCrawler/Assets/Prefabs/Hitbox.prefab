@@ -102,8 +102,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isEnemy: 0
   damage: 1
-  knockbackMultiplier: 5
-  knockbackDuration: 0.25
+  knockbackMultiplier: 2
+  knockbackDuration: 0.1
   enemyDamagedParticleEffect: {fileID: 1152532101312958, guid: dc2b1bcd691f3ca4c9c754e36113570e,
     type: 2}
 --- !u!114 &114886382259108586

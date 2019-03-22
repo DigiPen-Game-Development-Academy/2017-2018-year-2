@@ -14,28 +14,6 @@ public class StaplerAttack : MonoBehaviour
 
 	public float attackDistance = 1;
 
-	[HideInInspector]
-	public float fastAttackChargeTime = 0.5f;
-	[HideInInspector]
-	public float fastAttackCooldown = 0.5f;
-	[HideInInspector]
-	public float fastAttackDamage = 0.5f;
-	[HideInInspector]
-	float timeTillFastCharge = 0.0f;
-	[HideInInspector]
-	float timeTillFastAttack = 0.0f;
-
-	[HideInInspector]
-	public float longAttackChargeTime = 1.0f;
-	[HideInInspector]
-	public float longAttackCooldown = 1.5f;
-	[HideInInspector]
-	public float longAttackDamage = 2.0f;
-	[HideInInspector]
-	float timeTillLongCharge = 0.0f;
-	[HideInInspector]
-	float timeTillLongAttack = 0.0f;
-
 	public float attackCooldown = 1.0f;
 	public float attackChargeTime = 0.5f;
 	public float attackDamage = 1.0f;
@@ -50,9 +28,6 @@ public class StaplerAttack : MonoBehaviour
 	{
 		player = GameObject.FindGameObjectWithTag("Player");
 		enemyMovement = GetComponent<EnemyMovement>();
-
-		timeTillFastAttack = fastAttackCooldown;
-		timeTillLongAttack = longAttackCooldown;
 
 		timeTillAttack = attackCooldown;
 	}
@@ -90,6 +65,8 @@ public class StaplerAttack : MonoBehaviour
 				timeTillAttack = attackCooldown;
 			}
 		}
+		else
+			timeTillAttack = attackChargeTime;
 
 		//float distance = Vector2.Distance(transform.position, player.transform.position);
 
