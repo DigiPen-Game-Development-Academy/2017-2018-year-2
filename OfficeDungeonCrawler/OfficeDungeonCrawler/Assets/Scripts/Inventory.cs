@@ -14,6 +14,7 @@ public class Inventory : MonoBehaviour
 	public List<GameObject> slots = new List<GameObject>();
 	public List<GameObject> slotBackgrounds = new List<GameObject>();
 	public List<GameObject> slotCounts = new List<GameObject>();
+	public List<GameObject> slotCountBGs = new List<GameObject>();
 
 	public Sprite slotBackgroundSelected;
 	public Sprite slotBackgroundDeselected;
@@ -87,17 +88,25 @@ public class Inventory : MonoBehaviour
 		for (int i = 0; i < slotCounts.Count; ++i)
 		{
 			Text text = slotCounts[i].GetComponent<Text>();
+			Text textBG = slotCountBGs[i].GetComponent<Text>();
 
 			if (i < items.Count)
 			{
 				if (items[i].count == 1)
+				{
 					text.text = "";
+					textBG.text = "";
+				}
 				else
-					text.text = items[i].count.ToString();				
+				{
+					text.text = items[i].count.ToString();
+					textBG.text = items[i].count.ToString();
+				}
 			}
 			else
 			{
 				text.text = "";
+				textBG.text = "";
 			}
 		}
 	}

@@ -11,6 +11,11 @@ using UnityEngine.UI;
 
 public class Health : MonoBehaviour
 {
+	public GameObject itemDrop;
+	public List<string> itemDrops = new List<string>();
+	public List<int> itemDropCounts = new List<int>();
+	public float dropDistance = 0.5f;
+
 	// Max health of the entity
 	public float maxHealth = 10;
 	// Current health of the entity
@@ -120,6 +125,14 @@ public class Health : MonoBehaviour
 	// Used to kill the entity
 	public void Death()
 	{
+		for (int i = 0; i < itemDrops.Count; ++i)
+		{
+			ItemPickup drop = Instantiate(itemDrop, transform.position + new Vector3(Random.Range(-dropDistance, dropDistance), Random.Range(-dropDistance, dropDistance)), transform.rotation).GetComponent<ItemPickup>();
+
+			drop.itemID = itemDrops[i];
+			drop.itemAmount = itemDropCounts[i];
+		}
+
 		// Create the death entity
 		//if (deathObject != null)
 			//Instantiate(deathObject, transform.position, transform.rotation);

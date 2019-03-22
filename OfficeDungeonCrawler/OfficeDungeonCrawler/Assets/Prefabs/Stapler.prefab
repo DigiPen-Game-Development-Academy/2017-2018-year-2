@@ -120,12 +120,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitbox: {fileID: 1274357521494908, guid: 9184b171418e98c4fad188b5afd5621e, type: 2}
   attackDistance: 2
-  fastAttackChargeTime: 0.5
-  fastAttackCooldown: 0.5
-  fastAttackDamage: 0.5
-  longAttackChargeTime: 1
-  longAttackCooldown: 1.5
-  longAttackDamage: 2
   attackCooldown: 1
   attackChargeTime: 0.5
   attackDamage: 1
@@ -140,6 +134,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5af4426cc9698574f9ea82f91b2ca017, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemDrop: {fileID: 1431077138254094, guid: ba8917fbb29f17c47968193c9ae06cb0, type: 2}
+  itemDrops:
+  - test1
+  - test2
+  itemDropCounts: 0600000007000000
+  dropDistance: 0.5
   maxHealth: 3
   currentHealth: 0
   healthBarObj: {fileID: 0}
