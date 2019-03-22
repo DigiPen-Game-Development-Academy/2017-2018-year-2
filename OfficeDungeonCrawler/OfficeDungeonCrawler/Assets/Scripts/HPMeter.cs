@@ -25,18 +25,21 @@ public class HPMeter : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
-        for (int i = 0; i < slots.Count; ++i)
+        //if (UnityEditor.Build.Player.collision = FindObjectOfType<StaplerAttack>)
         {
-            Image image = slots[i].GetComponent<Image>();
+            for (int i = 0; i < slots.Count; ++i)
+            {
+                Image image = slots[i].GetComponent<Image>();
 
-            if (i < health.Count)
-            {
-                image.sprite = health[i].sprite;
-                image.color = new Color(image.color.r, image.color.g, image.color.b, 1.0f);
-            }
-            else
-            {
-                image.color = new Color(image.color.r, image.color.g, image.color.b, 0.0f);
+                if (i < health.Count)
+                {
+                    image.sprite = health[i].sprite;
+                    image.color = new Color(image.color.r, image.color.g, image.color.b, 1.0f);
+                }
+                else
+                {
+                    image.color = new Color(image.color.r, image.color.g, image.color.b, 0.0f);
+                }
             }
         }
     }
