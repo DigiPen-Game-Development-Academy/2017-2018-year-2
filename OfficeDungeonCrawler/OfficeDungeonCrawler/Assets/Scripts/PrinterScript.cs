@@ -1,7 +1,7 @@
 ﻿/*
 Author; Luke Taranowski
 Contributers;
-Last Edited: 3/19/2019
+Last Edited: 3/22/2019
 */
 using System.Collections;
 using System.Collections.Generic;
@@ -18,6 +18,10 @@ public class PrinterScript : MonoBehaviour
     public float firerate;
     public float attackDamage;
     public float turnSpeedInDegrees;
+
+    public Sprite sprite1;
+    public Sprite sprite2;
+    public Sprite sprite3;
 
     float timer;
 
@@ -44,7 +48,19 @@ public class PrinterScript : MonoBehaviour
 
             if (timer <= 0)
             {
-                GameObject newProjectile = Instantiate(projectile, transform.position + transform.right, transform.rotation);
+                Sprite spriteToSpawn = sprite1;
+
+                int randomNumber = Random.Range(0, 6);
+                if (randomNumber < 2)
+                    spriteToSpawn = sprite1;
+                if (randomNumber > 2 && randomNumber < 4)
+                    spriteToSpawn = sprite2;
+                if (randomNumber > 4)
+                    spriteToSpawn = sprite3;
+
+                Quaternion rotation = transform.rotation;
+                GameObject newProjectile = Instantiate(projectile, transform.position + transform.right, rotation *= Quaternion.Euler(0, 0, 90));
+                newProjectile.GetComponent<SpriteRenderer>().sprite = spriteToSpawn;
                 newProjectile.GetComponent<Rigidbody2D>().velocity = transform.right * projectileSpeed;
 
                 timer = firerate;
