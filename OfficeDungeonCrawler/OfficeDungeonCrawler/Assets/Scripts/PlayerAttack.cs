@@ -37,11 +37,14 @@ public class PlayerAttack : MonoBehaviour
     void Attack()
     {
 		Vector3 position = cameraComponent.ScreenToWorldPoint(Input.mousePosition);
+		position.z = 0;
 
-		Debug.Log("Position: " + position);
+		Vector3 direction = Vector3.Normalize(position - transform.position);
+
+		Debug.Log("Dir: " + direction);
 
 		// Spawn hitbox in front of the player in the direction they are facing
-		Hitbox newHitbox = Instantiate(hitbox, (Vector3)GetComponent<PlayerMovement>().currentDirection + transform.position, transform.rotation).GetComponent<Hitbox>();
+		Hitbox newHitbox = Instantiate(hitbox, transform.position + direction, transform.rotation).GetComponent<Hitbox>();
 
 		newHitbox.damage = attackDamage;
 		newHitbox.isEnemy = false;
@@ -53,7 +56,7 @@ public class PlayerAttack : MonoBehaviour
         if (attackCooldown <= 0)
         {
             // If we recieve players input
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetMouseButtonDown(0))
             {
                 // Run the script with attack code
                 Attack();
