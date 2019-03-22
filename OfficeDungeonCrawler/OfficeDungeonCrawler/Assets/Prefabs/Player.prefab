@@ -27,7 +27,6 @@ GameObject:
   - component: {fileID: 61614440038452446}
   - component: {fileID: 95341502653432316}
   - component: {fileID: 82610715678498424}
-  - component: {fileID: 114839789041650520}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -221,20 +220,6 @@ MonoBehaviour:
   attackSpeed: 1
   attackDamage: 1
   camera: {fileID: 0}
---- !u!114 &114839789041650520
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1190466586900746}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a7b8323e5e1d6ec4bb16f555c0de05a8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hearts: []
-  heart: {fileID: 0}
-  halfHeart: {fileID: 0}
 --- !u!114 &114883571212207992
 MonoBehaviour:
   m_ObjectHideFlags: 1
