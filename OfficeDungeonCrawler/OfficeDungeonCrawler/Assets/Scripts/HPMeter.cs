@@ -1,6 +1,6 @@
 ﻿/*
 Author: Kevin P
-Contributors: 
+Contributors: Myles B
 Date Last Modified: 3/22/2019
 */
 
@@ -11,51 +11,46 @@ using UnityEngine.UI;
 
 public class HPMeter : MonoBehaviour
 {
-    [HideInInspector]
-    public List<Item> health = new List<Item>();
-
-    public List<GameObject> slots = new List<GameObject>();
+    public List<GameObject> hearts = new List<GameObject>();
+    Health health;
+    public Sprite heart;
+    public Sprite halfHeart;
 
     // Use this for initialization
-    void Start ()
+    void Start()
     {
-		
-	}
-	
-	// Update is called once per frame
-	void Update ()
-    {
-        //if (UnityEditor.Build.Player.collision = FindObjectOfType<StaplerAttack>)
-        {
-            for (int i = 0; i < slots.Count; ++i)
-            {
-                Image image = slots[i].GetComponent<Image>();
-
-                if (i < health.Count)
-                {
-                    image.sprite = health[i].sprite;
-                    image.color = new Color(image.color.r, image.color.g, image.color.b, 1.0f);
-                }
-                else
-                {
-                    image.color = new Color(image.color.r, image.color.g, image.color.b, 0.0f);
-                }
-            }
-        }
+        health = GetComponent<Health>();
     }
 
-    public void LoseHP(string id, int count)
+    // Update is called once per frame
+    void Update()
     {
-        foreach (Item hP in health)
+        for (int i = 0; i < hearts.Count; i++)
         {
-            if (hP.id == id)
+            Debug.Log((i * 2) + " < " + health.currentHealth);
+
+            Image image = hearts[i].GetComponent<Image>();
+
+            // full heart
+            if (i * 2 < health.currentHealth - 1)
             {
-                hP.count -= count;
-
-                if (hP.count <= 0)
-                    health.Remove(hP);
-
-                return;
+                Debug.Log("Index: " + i + " is ful");
+                image.sprite = heart;
+                image.color = Color.white;
+            }
+            // half heart
+            else if (i * 2 < health.currentHealth)
+            {
+                Debug.Log("Index: " + i + " is half ful");
+                image.sprite = halfHeart;
+                image.color = Color.white;
+            }
+            // no heart
+            else
+            {
+                Debug.Log("Index: " + i + " is not ful");
+               image.sprite = null;
+                image.color = Color.clear;
             }
         }
     }
