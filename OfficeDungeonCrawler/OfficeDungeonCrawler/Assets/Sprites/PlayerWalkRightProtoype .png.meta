@@ -71,7 +71,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -82,7 +82,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -95,12 +95,12 @@ TextureImporter:
       name: PlayerWalkRightProtoype _0
       rect:
         serializedVersion: 2
-        x: 23
+        x: 19
         y: 5
-        width: 19
-        height: 54
+        width: 26
+        height: 56
       alignment: 9
-      pivot: {x: 0.3278142, y: 0.39267233}
+      pivot: {x: 0.38290083, y: 0.3893862}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -115,12 +115,12 @@ TextureImporter:
       name: PlayerWalkRightProtoype _1
       rect:
         serializedVersion: 2
-        x: 87
+        x: 84
         y: 4
-        width: 19
-        height: 55
+        width: 26
+        height: 56
       alignment: 9
-      pivot: {x: 0.3086829, y: 0.40756327}
+      pivot: {x: 0.34237787, y: 0.40482882}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -135,12 +135,12 @@ TextureImporter:
       name: PlayerWalkRightProtoype _2
       rect:
         serializedVersion: 2
-        x: 148
+        x: 146
         y: 4
-        width: 22
+        width: 26
         height: 56
       alignment: 9
-      pivot: {x: 0.43390864, y: 0.41326758}
+      pivot: {x: 0.41571984, y: 0.42229587}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -155,12 +155,12 @@ TextureImporter:
       name: PlayerWalkRightProtoype _3
       rect:
         serializedVersion: 2
-        x: 211
+        x: 210
         y: 5
-        width: 23
-        height: 54
+        width: 26
+        height: 56
       alignment: 9
-      pivot: {x: 0.41044152, y: 0.39267233}
+      pivot: {x: 0.39313683, y: 0.39258352}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -177,10 +177,10 @@ TextureImporter:
         serializedVersion: 2
         x: 279
         y: 6
-        width: 19
-        height: 52
+        width: 26
+        height: 56
       alignment: 9
-      pivot: {x: 0.35970107, y: 0.36583254}
+      pivot: {x: 0.19535007, y: 0.33920214}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -197,10 +197,10 @@ TextureImporter:
         serializedVersion: 2
         x: 335
         y: 6
-        width: 27
-        height: 53
+        width: 26
+        height: 56
       alignment: 9
-      pivot: {x: 0.5224395, y: 0.38407806}
+      pivot: {x: 0.5177307, y: 0.3669951}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -215,12 +215,12 @@ TextureImporter:
       name: PlayerWalkRightProtoype _6
       rect:
         serializedVersion: 2
-        x: 404
-        y: 4
-        width: 22
+        x: 403
+        y: 3
+        width: 26
         height: 56
       alignment: 9
-      pivot: {x: 0.4118791, y: 0.38946682}
+      pivot: {x: 0.3830496, y: 0.4362904}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -237,10 +237,10 @@ TextureImporter:
         serializedVersion: 2
         x: 467
         y: 5
-        width: 23
-        height: 54
+        width: 26
+        height: 56
       alignment: 9
-      pivot: {x: 0.45785522, y: 0.39491618}
+      pivot: {x: 0.40680403, y: 0.38622546}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

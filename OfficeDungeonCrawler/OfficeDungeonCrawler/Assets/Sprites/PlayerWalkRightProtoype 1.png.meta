@@ -1,13 +1,15 @@
 fileFormatVersion: 2
-guid: 16b9a70a8888d5f41ba9d3294c7b2c26
+guid: 8141ef8112d118042829f1d40c95d277
 TextureImporter:
   fileIDToRecycleName:
-    21300000: PlayerIdleBackPrototype_0
-    21300002: PlayerIdleBackPrototype_1
-    21300004: PlayerIdleBackPrototype_2
-    21300006: PlayerIdleBackPrototype_3
-    21300008: PlayerIdleBackPrototype_4
-    21300010: PlayerIdleBackPrototype_5
+    21300000: PlayerWalkRightProtoype 1_0
+    21300002: PlayerWalkRightProtoype 1_1
+    21300004: PlayerWalkRightProtoype 1_2
+    21300006: PlayerWalkRightProtoype 1_3
+    21300008: PlayerWalkRightProtoype 1_4
+    21300010: PlayerWalkRightProtoype 1_5
+    21300012: PlayerWalkRightProtoype 1_6
+    21300014: PlayerWalkRightProtoype 1_7
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -90,12 +92,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PlayerIdleBackPrototype_0
+      name: PlayerWalkRightProtoype 1_0
       rect:
         serializedVersion: 2
-        x: 21
-        y: 6
-        width: 22
+        x: 23
+        y: 5
+        width: 19
         height: 54
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -104,18 +106,58 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 961ef9e9ad9786b479f0b7f6a48d3628
+      spriteID: 7c8345cd93fbd0f4584568b410edb486
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerIdleBackPrototype_1
+      name: PlayerWalkRightProtoype 1_1
       rect:
         serializedVersion: 2
-        x: 85
-        y: 6
+        x: 87
+        y: 4
+        width: 19
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa32ebb711d31264e8763e77c1516aff
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerWalkRightProtoype 1_2
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 5
         width: 22
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e97aab428caa90478eede2b8437caf2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerWalkRightProtoype 1_3
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 5
+        width: 23
         height: 54
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -124,19 +166,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 610d3d07da81b0442b9dbf63884ae473
+      spriteID: bb7d5feb38331b7439ea17cc2cb81e21
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerIdleBackPrototype_2
+      name: PlayerWalkRightProtoype 1_4
       rect:
         serializedVersion: 2
-        x: 149
-        y: 6
-        width: 22
-        height: 54
+        x: 279
+        y: 5
+        width: 19
+        height: 53
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -144,58 +186,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 574f86b702b2ed54e870f308998305a3
+      spriteID: 40b909faa57a0b945ba85c7e4240ca36
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerIdleBackPrototype_3
-      rect:
-        serializedVersion: 2
-        x: 213
-        y: 6
-        width: 22
-        height: 54
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1a1ebeff13d935644876a88a46453493
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PlayerIdleBackPrototype_4
-      rect:
-        serializedVersion: 2
-        x: 277
-        y: 6
-        width: 22
-        height: 54
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8579653c7800b0f40a13724cffc70c6d
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PlayerIdleBackPrototype_5
+      name: PlayerWalkRightProtoype 1_5
       rect:
         serializedVersion: 2
         x: 341
-        y: 6
-        width: 22
+        y: 5
+        width: 21
         height: 54
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -204,7 +206,47 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dc92c8a0ef4e6594bad8b69542bf5919
+      spriteID: 999cdf2ce0702754494ed58c23edbe7d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerWalkRightProtoype 1_6
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 5
+        width: 22
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 170feae7002021944a1f6a33e3ad39ac
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerWalkRightProtoype 1_7
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 5
+        width: 23
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e8f683d2f40da4488e4e6065fccaf54
       vertices: []
       indices: 
       edges: []
@@ -212,7 +254,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: cc6269c059f107d4b98b3845db09ebc7
+    spriteID: 55b2cd840ffc0804fbc24517a85302f7
     vertices: []
     indices: 
     edges: []

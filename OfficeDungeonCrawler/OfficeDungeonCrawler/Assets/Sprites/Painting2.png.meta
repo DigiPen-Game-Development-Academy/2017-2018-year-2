@@ -1,10 +1,7 @@
 fileFormatVersion: 2
-guid: 3d545fb841a63ff4186c385eaa94c31a
+guid: 1a8d715b0528da84da8159705f88360e
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: PlayerIdleLeftProtoype_0
-    21300002: PlayerIdleLeftProtoype_1
-    21300004: PlayerIdleLeftProtoype_2
+  fileIDToRecycleName: {}
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -43,7 +40,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -66,7 +63,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -77,7 +74,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -85,71 +82,11 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: PlayerIdleLeftProtoype_0
-      rect:
-        serializedVersion: 2
-        x: 22
-        y: 6
-        width: 19
-        height: 55
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 36161d34d6653ae4e8b03d38c0cd922e
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PlayerIdleLeftProtoype_1
-      rect:
-        serializedVersion: 2
-        x: 86
-        y: 6
-        width: 19
-        height: 55
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4e05993888a6c60449cfd92f68dd9e0f
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PlayerIdleLeftProtoype_2
-      rect:
-        serializedVersion: 2
-        x: 150
-        y: 6
-        width: 19
-        height: 55
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 45a68888ecca7474e871c06796e5fec2
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: c63a5cb736be57843b5ed4a8e829032e
+    spriteID: dd474100913394947a28de906e293224
     vertices: []
     indices: 
     edges: []
