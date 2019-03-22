@@ -12,18 +12,47 @@ public class PrinterScript : MonoBehaviour
     public GameObject projectile;
     GameObject player;
 
+    public float projectileSpeed;
+    public float projectileLifespan;
     public float detectionRange;
     public float firerate;
+    public float attackDamage;
+    public float turnSpeedInDegrees;
+
+    float timer;
+
+
+
 
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        projectile.GetComponent<Hitbox>().isEnemy = true;
+        projectile.GetComponent<Hitbox>().damage = attackDamage;
+        projectile.GetComponent<TimedDeath>().deathTimer = projectileLifespan;
+        timer = firerate;
     }
 
     void Update()
     {
-        Quaternion rotation = Quaternion.LookRotation(player.transform.position - transform.position, transform.TransformDirection(Vector3.right));
-        transform.rotation = new Quaternion(0, 0, rotation.z, rotation.w);
+        if (Vector2.Distance(transform.position, player.transform.position) <= detectionRange)
+        {
+            Vector3 difference = player.transform.position - transform.position;
+            Vector3 newRotation = Vector3.RotateTowards(transform.right, difference, Mathf.Deg2Rad * turnSpeedInDegrees * Time.deltaTime, Vector3.Distance(transform.position, player.transform.position));
+            transform.right = newRotation;
 
+
+            if (timer <= 0)
+            {
+                GameObject newProjectile = Instantiate(projectile, transform.position + transform.right, transform.rotation);
+                newProjectile.GetComponent<Rigidbody2D>().velocity = transform.right * projectileSpeed;
+
+                timer = firerate;
+            }
+            else
+            {
+                timer -= Time.deltaTime;
+            }
+        }
     }
 }
