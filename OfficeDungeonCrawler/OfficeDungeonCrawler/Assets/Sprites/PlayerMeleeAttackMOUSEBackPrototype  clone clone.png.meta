@@ -1,22 +1,25 @@
 fileFormatVersion: 2
-guid: 39f7db45eacfca546adb3c47e956bb2f
+guid: 8288c1514cecd9b4186151192f4b63e2
 TextureImporter:
   fileIDToRecycleName:
-    21300000: PlayerFrontMeleeMOUSEAttackPrototype_0
-    21300002: PlayerFrontMeleeMOUSEAttackPrototype_1
-    21300004: PlayerFrontMeleeMOUSEAttackPrototype_2
-    21300006: PlayerFrontMeleeMOUSEAttackPrototype_3
-    21300008: PlayerFrontMeleeMOUSEAttackPrototype_4
-    21300010: PlayerFrontMeleeMOUSEAttackPrototype_5
-    21300012: PlayerFrontMeleeMOUSEAttackPrototype_6
-    21300014: PlayerFrontMeleeMOUSEAttackPrototype_7
-    21300016: PlayerFrontMeleeMOUSEAttackPrototype_8
-    21300018: PlayerFrontMeleeMOUSEAttackPrototype_9
-    21300020: PlayerFrontMeleeMOUSEAttackPrototype_10
-    21300022: PlayerFrontMeleeMOUSEAttackPrototype_11
-    21300024: PlayerFrontMeleeMOUSEAttackPrototype_12
-    21300026: PlayerFrontMeleeMOUSEAttackPrototype_13
-    21300028: PlayerFrontMeleeMOUSEAttackPrototype_14
+    21300000: PlayerMeleeAttackMOUSEBackPrototype  clone clone_0
+    21300002: PlayerMeleeAttackMOUSEBackPrototype  clone clone_1
+    21300004: PlayerMeleeAttackMOUSEBackPrototype  clone clone_2
+    21300006: PlayerMeleeAttackMOUSEBackPrototype  clone clone_3
+    21300008: PlayerMeleeAttackMOUSEBackPrototype  clone clone_4
+    21300010: PlayerMeleeAttackMOUSEBackPrototype  clone clone_5
+    21300012: PlayerMeleeAttackMOUSEBackPrototype  clone clone_6
+    21300014: PlayerMeleeAttackMOUSEBackPrototype  clone clone_7
+    21300016: PlayerMeleeAttackMOUSEBackPrototype  clone clone_8
+    21300018: PlayerMeleeAttackMOUSEBackPrototype  clone clone_9
+    21300020: PlayerMeleeAttackMOUSEBackPrototype  clone clone_10
+    21300022: PlayerMeleeAttackMOUSEBackPrototype  clone clone_11
+    21300024: PlayerMeleeAttackMOUSEBackPrototype  clone clone_12
+    21300026: PlayerMeleeAttackMOUSEBackPrototype  clone clone_13
+    21300028: PlayerMeleeAttackMOUSEBackPrototype  clone clone_14
+    21300030: PlayerMeleeAttackMOUSEBackPrototype  clone clone_15
+    21300032: PlayerMeleeAttackMOUSEBackPrototype  clone clone_16
+    21300034: PlayerMeleeAttackMOUSEBackPrototype  clone clone_17
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -78,7 +81,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -89,7 +92,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -99,301 +102,361 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PlayerFrontMeleeMOUSEAttackPrototype_0
+      name: PlayerMeleeAttackMOUSEBackPrototype  clone clone_0
       rect:
         serializedVersion: 2
-        x: 34
-        y: 12
-        width: 26
-        height: 57
+        x: 36
+        y: 8
+        width: 8
+        height: 21
       alignment: 9
-      pivot: {x: 0.49999955, y: 0.74021304}
+      pivot: {x: 0.6003556, y: 0.88995695}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c6a11317bddb4f845b96fc6b0037bf22
+      spriteID: 5ce635f4bfa7d144aabeed9cce447e95
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerFrontMeleeMOUSEAttackPrototype_1
+      name: PlayerMeleeAttackMOUSEBackPrototype  clone clone_1
       rect:
         serializedVersion: 2
-        x: 163
-        y: 10
+        x: 100
+        y: 8
+        width: 8
+        height: 21
+      alignment: 9
+      pivot: {x: 0.6204262, y: 0.8593721}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e1747e5bdc39cc4ea18e6ea52f7be7c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerMeleeAttackMOUSEBackPrototype  clone clone_2
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 8
+        width: 8
+        height: 21
+      alignment: 9
+      pivot: {x: 0.6404972, y: 0.8134948}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97487248846dd8b4fad518adc264d5b6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerMeleeAttackMOUSEBackPrototype  clone clone_3
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 11
+        width: 5
+        height: 17
+      alignment: 9
+      pivot: {x: 0.33942565, y: 1.0006021}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c76fb4b2e771eae43bba1025a6a4a000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerMeleeAttackMOUSEBackPrototype  clone clone_4
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 20
         width: 24
-        height: 58
+        height: 13
       alignment: 9
-      pivot: {x: 0.5, y: 0.73607147}
+      pivot: {x: 0.21230952, y: 0.6358672}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fd034bd2d97715c4289eb550e3fc1ead
+      spriteID: b1ec0d96d29bfdf4299d8b1b71115bec
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerFrontMeleeMOUSEAttackPrototype_2
+      name: PlayerMeleeAttackMOUSEBackPrototype  clone clone_5
       rect:
         serializedVersion: 2
-        x: 292
+        x: 355
+        y: 36
+        width: 11
+        height: 28
+      alignment: 9
+      pivot: {x: 0.41241178, y: 0.13871588}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a5539da690b66b468c26ec556e02f54
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerMeleeAttackMOUSEBackPrototype  clone clone_6
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 36
+        width: 29
+        height: 24
+      alignment: 9
+      pivot: {x: 0.8377507, y: 0.15878725}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e26200945475faf479cc032577386343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerMeleeAttackMOUSEBackPrototype  clone clone_7
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 25
+        width: 23
+        height: 22
+      alignment: 9
+      pivot: {x: 0.9886913, y: 0.63137555}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c28fedfd40f5b1a48ade2ebc73e99128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerMeleeAttackMOUSEBackPrototype  clone clone_8
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 12
+        width: 12
+        height: 27
+      alignment: 9
+      pivot: {x: 0.9817047, y: 0.8925055}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8249c9b21d3c6044491ac2fc609caa59
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerMeleeAttackMOUSEBackPrototype  clone clone_9
+      rect:
+        serializedVersion: 2
+        x: 601
         y: 9
-        width: 21
-        height: 57
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2c4f26e0594086247b024fe048fc7e9e
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PlayerFrontMeleeMOUSEAttackPrototype_3
-      rect:
-        serializedVersion: 2
-        x: 419
-        y: 21
-        width: 30
-        height: 48
+        width: 6
+        height: 28
       alignment: 9
-      pivot: {x: 0.6190613, y: 0.79765534}
+      pivot: {x: 0.76760864, y: 1.0161196}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 15bab5ca1b3648641b9b869a3e6394ae
+      spriteID: a1d6d515fb40745419cff2bb4a82a80a
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerFrontMeleeMOUSEAttackPrototype_4
-      rect:
-        serializedVersion: 2
-        x: 548
-        y: 41
-        width: 30
-        height: 53
-      alignment: 9
-      pivot: {x: 0.44046834, y: 0.7808069}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3d7e04d148178a54bbc11e4c968707d1
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PlayerFrontMeleeMOUSEAttackPrototype_5
+      name: PlayerMeleeAttackMOUSEBackPrototype  clone clone_10
       rect:
         serializedVersion: 2
         x: 665
-        y: 68
-        width: 35
-        height: 47
+        y: 9
+        width: 6
+        height: 28
       alignment: 9
-      pivot: {x: 0.7551322, y: 0.15801272}
+      pivot: {x: 0.7408447, y: 0.9931808}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3303063d914d92546b99affb32157965
+      spriteID: 9ac82ea14138a9a40b2a132b0faec2c8
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerFrontMeleeMOUSEAttackPrototype_6
+      name: PlayerMeleeAttackMOUSEBackPrototype  clone clone_11
       rect:
         serializedVersion: 2
-        x: 788
-        y: 71
-        width: 35
-        height: 32
+        x: 713
+        y: 29
+        width: 26
+        height: 16
       alignment: 9
-      pivot: {x: 0.8571847, y: 0.23955107}
+      pivot: {x: 1.0187637, y: 0.8311763}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6d206f8518e7270428a2cddfde3ae5a1
+      spriteID: 7584276970f8e114e9ef609fe95db54a
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerFrontMeleeMOUSEAttackPrototype_7
+      name: PlayerMeleeAttackMOUSEBackPrototype  clone clone_12
       rect:
         serializedVersion: 2
-        x: 922
-        y: 43
-        width: 29
-        height: 47
-      alignment: 9
-      pivot: {x: 0.84897375, y: 0.70719373}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a6ea0f1387138ec40bbc3f63db3ea1d3
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PlayerFrontMeleeMOUSEAttackPrototype_8
-      rect:
-        serializedVersion: 2
-        x: 1064
-        y: 38
-        width: 18
-        height: 54
-      alignment: 9
-      pivot: {x: 0.6984321, y: 0.7425339}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 533f24dbdab368342a7ef83dc787ad7b
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PlayerFrontMeleeMOUSEAttackPrototype_9
-      rect:
-        serializedVersion: 2
-        x: 1192
-        y: 39
-        width: 16
-        height: 51
-      alignment: 9
-      pivot: {x: 0.7232361, y: 0.6984367}
-      border: {x: 0, y: 1, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 320d5722f8d8dcb419c907d834854f78
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PlayerFrontMeleeMOUSEAttackPrototype_10
-      rect:
-        serializedVersion: 2
-        x: 1560
+        x: 779
         y: 41
-        width: 27
-        height: 56
-      alignment: 9
-      pivot: {x: 0.8748237, y: 0.7870248}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 35ac0458320c3714e820cf70af733edf
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PlayerFrontMeleeMOUSEAttackPrototype_11
-      rect:
-        serializedVersion: 2
-        x: 1664
-        y: 75
-        width: 57
-        height: 33
-      alignment: 9
-      pivot: {x: 0.9282034, y: 0.2654833}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cf87d2c26842c96419e7ae425f3475a2
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PlayerFrontMeleeMOUSEAttackPrototype_12
-      rect:
-        serializedVersion: 2
-        x: 1842
-        y: 72
-        width: 20
-        height: 56
-      alignment: 9
-      pivot: {x: 0.2916382, y: 0.06414727}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 32f62b8b8de255d4a991dd06b10e81b5
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PlayerFrontMeleeMOUSEAttackPrototype_13
-      rect:
-        serializedVersion: 2
-        x: 1973
-        y: 19
-        width: 43
-        height: 42
-      alignment: 9
-      pivot: {x: 0.14004304, y: 0.8543514}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cb726e787ac7bb34b9279b22a8080e3c
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PlayerFrontMeleeMOUSEAttackPrototype_14
-      rect:
-        serializedVersion: 2
-        x: 2090
-        y: 0
         width: 31
-        height: 54
+        height: 15
       alignment: 9
-      pivot: {x: 0.28875536, y: 0.9189224}
+      pivot: {x: 0.9920674, y: 0.27520066}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5696e3d36a9f9764dac9f5aee6789020
+      spriteID: b94a9b0d422980c428a6a485c9e16099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerMeleeAttackMOUSEBackPrototype  clone clone_13
+      rect:
+        serializedVersion: 2
+        x: 868
+        y: 37
+        width: 12
+        height: 27
+      alignment: 9
+      pivot: {x: 0.8746541, y: 0.0063937153}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9903082d6f308ed4db60ff2debf18271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerMeleeAttackMOUSEBackPrototype  clone clone_14
+      rect:
+        serializedVersion: 2
+        x: 938
+        y: 36
+        width: 5
+        height: 13
+      alignment: 9
+      pivot: {x: 0.33940428, y: 0.030639354}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8eefec8b0211e1429e6457a2ab8c179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerMeleeAttackMOUSEBackPrototype  clone clone_15
+      rect:
+        serializedVersion: 2
+        x: 998
+        y: 14
+        width: 5
+        height: 11
+      alignment: 9
+      pivot: {x: 0.4999756, y: 1.0401006}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f753ee83b05f634486e7f979271e1ae
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerMeleeAttackMOUSEBackPrototype  clone clone_16
+      rect:
+        serializedVersion: 2
+        x: 1058
+        y: 7
+        width: 7
+        height: 17
+      alignment: 9
+      pivot: {x: 1.0505197, y: 0.9911569}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98a92fe3bd6e7d747a5713ad0ac11d9a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerMeleeAttackMOUSEBackPrototype  clone clone_17
+      rect:
+        serializedVersion: 2
+        x: 1126
+        y: 4
+        width: 5
+        height: 19
+      alignment: 9
+      pivot: {x: 0.564209, y: 1.0070646}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1cfbf6a51c415f4da225195fb2063a4
       vertices: []
       indices: 
       edges: []
@@ -401,7 +464,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 9a3e29d3d52fe0946b7819a754ba0e6e
+    spriteID: 744e415a6531cc843b6c6a704e812863
     vertices: []
     indices: 
     edges: []
