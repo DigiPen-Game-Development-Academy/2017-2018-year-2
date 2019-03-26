@@ -27,29 +27,29 @@ public class HPMeter : MonoBehaviour
     {
         for (int i = 0; i < hearts.Count; i++)
         {
-            Debug.Log((i * 2) + " < " + health.currentHealth);
+            //Debug.Log((i * 2) + " < " + health.currentHealth);
 
             Image image = hearts[i].GetComponent<Image>();
 
             // full heart
             if (i * 2 < health.currentHealth - 1)
             {
-                Debug.Log("Index: " + i + " is ful");
+                //Debug.Log("Index: " + i + " is ful");
                 image.sprite = heart;
                 image.color = Color.white;
             }
             // half heart
             else if (i * 2 < health.currentHealth)
             {
-                Debug.Log("Index: " + i + " is half ful");
+                //Debug.Log("Index: " + i + " is half ful");
                 image.sprite = halfHeart;
                 image.color = Color.white;
             }
             // no heart
             else
             {
-                Debug.Log("Index: " + i + " is not ful");
-               image.sprite = null;
+                //Debug.Log("Index: " + i + " is not ful");
+                image.sprite = null;
                 image.color = Color.clear;
             }
         }
