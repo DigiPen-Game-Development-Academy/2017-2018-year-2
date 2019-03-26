@@ -18,8 +18,16 @@ public class PlayerAttack : MonoBehaviour
     private float attackCooldown;
     // Public variable for how much damage the player does
     public float attackDamage = 1.0f;
+	public float attackAnimTime = 0.5f;
+	float timeTillResetAnim = 0.0f;
+
+	PlayerMovement playerMovement;
+
+	Animator animator;
 
 	new public GameObject camera;
+
+	public float movePauseTime = 0.2f;
 
 	Camera cameraComponent;
 
@@ -32,6 +40,8 @@ public class PlayerAttack : MonoBehaviour
         hitbox.GetComponent<Hitbox>().isEnemy = false;
         hitbox.GetComponent<Hitbox>().damage = attackDamage;
 		cameraComponent = camera.GetComponent<Camera>();
+		animator = GetComponent<Animator>();
+		playerMovement = GetComponent<PlayerMovement>();
     }
 
     void Attack()
@@ -48,10 +58,21 @@ public class PlayerAttack : MonoBehaviour
 
 		newHitbox.damage = attackDamage;
 		newHitbox.isEnemy = false;
+
+		playerMovement.timeTillCanMove = movePauseTime;
+
+		timeTillResetAnim = attackAnimTime;
+
+		animator.SetBool("Melee", true);
 	}
 
     void Update()
     {
+		timeTillResetAnim -= Time.deltaTime;
+
+		if (timeTillResetAnim <= 0.0f)
+			animator.SetBool("Melee", false);
+
         // check if the attack cooldown has run out
         if (attackCooldown <= 0)
         {

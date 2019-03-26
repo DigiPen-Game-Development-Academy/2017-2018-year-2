@@ -56,6 +56,9 @@ public class PlayerMovement : MonoBehaviour
 	public float walkSoundDelay = 1.0f;
 	float timeTillPlaySound = 0.0f;
 
+	[HideInInspector]
+	public float timeTillCanMove = 0.0f;
+
 	SpriteRenderer spriteRenderer;
 	Animator animator;
 	AudioSource audioSource;
@@ -76,6 +79,9 @@ public class PlayerMovement : MonoBehaviour
 		stamina += Time.deltaTime;
 		dashTimeRemaining -= Time.deltaTime;
 		timeTillPlaySound -= Time.deltaTime;
+		timeTillCanMove -= Time.deltaTime;
+
+		Debug.Log("TimeTillCanMove: " + timeTillCanMove);
 
 		Vector2 direction = Vector2.zero;
 		if (Input.GetKey(Settings.KeyBinds.down))
@@ -105,7 +111,10 @@ public class PlayerMovement : MonoBehaviour
 		if (dashTimeRemaining <= dashLerpTime)
 			currentSpeed /= dashLerpSpeed;
 
-		rb.velocity = direction.normalized * currentSpeed;
+		if (timeTillCanMove <= 0.0f)
+			rb.velocity = direction.normalized * currentSpeed;
+		else
+			rb.velocity = Vector2.zero;
 
 		if (direction != Vector2.zero)
 			currentDirection = direction.normalized;
