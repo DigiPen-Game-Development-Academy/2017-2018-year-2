@@ -31,9 +31,6 @@ public class PrinterScript : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        projectile.GetComponent<Hitbox>().isEnemy = true;
-        projectile.GetComponent<Hitbox>().damage = attackDamage;
-        projectile.GetComponent<TimedDeath>().deathTimer = projectileLifespan;
         timer = firerate;
     }
 
@@ -60,6 +57,11 @@ public class PrinterScript : MonoBehaviour
 
                 Quaternion rotation = transform.rotation;
                 GameObject newProjectile = Instantiate(projectile, transform.position + transform.right, rotation *= Quaternion.Euler(0, 0, 90));
+
+                newProjectile.GetComponent<Hitbox>().isEnemy = true;
+                newProjectile.GetComponent<Hitbox>().damage = attackDamage;
+                newProjectile.GetComponent<TimedDeath>().deathTimer = projectileLifespan;
+
                 newProjectile.GetComponent<SpriteRenderer>().sprite = spriteToSpawn;
                 newProjectile.GetComponent<Rigidbody2D>().velocity = transform.right * projectileSpeed;
 
