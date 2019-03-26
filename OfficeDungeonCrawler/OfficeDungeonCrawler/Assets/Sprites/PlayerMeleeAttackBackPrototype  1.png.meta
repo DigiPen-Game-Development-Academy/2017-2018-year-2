@@ -1,24 +1,25 @@
 fileFormatVersion: 2
-guid: 3baeec999a1669241b10a967314800e4
+guid: c45fc71da80e19748bcd928ee8c8f107
 TextureImporter:
   fileIDToRecycleName:
-    21300000: EvilStaplerNoEyes Chomp_0
-    21300002: EvilStaplerNoEyes Chomp_1
-    21300004: EvilStaplerNoEyes Chomp_2
-    21300006: EvilStaplerNoEyes Chomp_3
-    21300008: EvilStaplerNoEyes Chomp_4
-    21300010: EvilStaplerNoEyes Chomp_5
-    21300012: EvilStaplerNoEyes Chomp_6
-    21300014: EvilStaplerNoEyes Chomp_7
-    21300016: EvilStaplerNoEyes Chomp_8
-    21300018: EvilStaplerNoEyes Chomp_9
-    21300020: EvilStaplerNoEyes Chomp_10
-    21300022: EvilStaplerNoEyes Chomp_11
-    21300024: EvilStaplerNoEyes Chomp_12
-    21300026: EvilStaplerNoEyes Chomp_13
-    21300028: EvilStaplerNoEyes Chomp_14
-    21300030: EvilStaplerNoEyes Chomp_15
-    21300032: EvilStaplerNoEyes Chomp_16
+    21300000: PlayerMeleeAttackBackPrototype  1_0
+    21300002: PlayerMeleeAttackBackPrototype  1_1
+    21300004: PlayerMeleeAttackBackPrototype  1_2
+    21300006: PlayerMeleeAttackBackPrototype  1_3
+    21300008: PlayerMeleeAttackBackPrototype  1_4
+    21300010: PlayerMeleeAttackBackPrototype  1_5
+    21300012: PlayerMeleeAttackBackPrototype  1_6
+    21300014: PlayerMeleeAttackBackPrototype  1_7
+    21300016: PlayerMeleeAttackBackPrototype  1_8
+    21300018: PlayerMeleeAttackBackPrototype  1_9
+    21300020: PlayerMeleeAttackBackPrototype  1_10
+    21300022: PlayerMeleeAttackBackPrototype  1_11
+    21300024: PlayerMeleeAttackBackPrototype  1_12
+    21300026: PlayerMeleeAttackBackPrototype  1_13
+    21300028: PlayerMeleeAttackBackPrototype  1_14
+    21300030: PlayerMeleeAttackBackPrototype  1_15
+    21300032: PlayerMeleeAttackBackPrototype  1_16
+    21300034: PlayerMeleeAttackBackPrototype  1_17
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -101,341 +102,361 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: EvilStaplerNoEyes Chomp_0
+      name: PlayerMeleeAttackBackPrototype  1_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 32
-        height: 32
+        x: 21
+        y: 6
+        width: 22
+        height: 54
       alignment: 9
-      pivot: {x: 0.17997898, y: 0.2660062}
+      pivot: {x: 0.33185387, y: 0.013383371}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ddb45fb15e7c3bd4e9ba4080fa0351fd
+      spriteID: 32cf3c629c66b6149bb7e3bb7eaed017
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: EvilStaplerNoEyes Chomp_1
+      name: PlayerMeleeAttackBackPrototype  1_1
       rect:
         serializedVersion: 2
-        x: 32
-        y: 0
-        width: 32
-        height: 32
+        x: 85
+        y: 6
+        width: 22
+        height: 54
       alignment: 9
-      pivot: {x: 0.18686116, y: 0.259124}
+      pivot: {x: 0.33185232, y: 0.006296723}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 86e40404fe9413d4982c4776f6fbb8a1
+      spriteID: b9da81f2cfd0d154fb392b59b6a5f9e6
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: EvilStaplerNoEyes Chomp_2
+      name: PlayerMeleeAttackBackPrototype  1_2
       rect:
         serializedVersion: 2
-        x: 64
-        y: 0
-        width: 32
-        height: 32
+        x: 149
+        y: 6
+        width: 22
+        height: 54
       alignment: 9
-      pivot: {x: 0.19030213, y: 0.25568292}
+      pivot: {x: 0.3202577, y: 0.008658939}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4bd7dcd1d4f1eeb4297bbbdf3e618034
+      spriteID: 69f7ffd83454a0c4984a61725f8e8c64
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: EvilStaplerNoEyes Chomp_3
+      name: PlayerMeleeAttackBackPrototype  1_3
       rect:
         serializedVersion: 2
-        x: 96
-        y: 0
-        width: 32
-        height: 32
+        x: 214
+        y: 6
+        width: 20
+        height: 54
       alignment: 9
-      pivot: {x: 0.18341994, y: 0.25568292}
+      pivot: {x: 0.32779464, y: 0.006296723}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: adefccd17c1d06346b8a482ea66f0c00
+      spriteID: 3416ee61fb0839f459f7f1db25365d99
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: EvilStaplerNoEyes Chomp_4
+      name: PlayerMeleeAttackBackPrototype  1_4
       rect:
         serializedVersion: 2
-        x: 128
-        y: 0
-        width: 32
-        height: 32
+        x: 278
+        y: 6
+        width: 19
+        height: 55
       alignment: 9
-      pivot: {x: 0.17653799, y: 0.22127208}
+      pivot: {x: 0.33215815, y: 0.003676822}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f8789616c3425c94488355fab445372f
+      spriteID: 8630a11e44dda6549b4370cf081c3152
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: EvilStaplerNoEyes Chomp_5
+      name: PlayerMeleeAttackBackPrototype  1_5
       rect:
         serializedVersion: 2
-        x: 160
-        y: 0
-        width: 32
-        height: 32
+        x: 343
+        y: 6
+        width: 19
+        height: 54
       alignment: 9
-      pivot: {x: 0.1834197, y: 0.22127208}
+      pivot: {x: 0.26502267, y: 0.008658939}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3682f9f1eb5cb2a4d93f0bb1051e4d0b
+      spriteID: b577e6d6e6b9e8b4e94f8562fdbafe57
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: EvilStaplerNoEyes Chomp_6
+      name: PlayerMeleeAttackBackPrototype  1_6
       rect:
         serializedVersion: 2
-        x: 192
-        y: 0
-        width: 32
-        height: 32
+        x: 408
+        y: 6
+        width: 19
+        height: 53
       alignment: 9
-      pivot: {x: 0.1834197, y: 0.21783099}
+      pivot: {x: 0.21802561, y: 0.013829204}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ec5ade442858643448c32c85c7045be9
+      spriteID: b92e4a79f7748c144ae19b274c0e4047
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: EvilStaplerNoEyes Chomp_7
+      name: PlayerMeleeAttackBackPrototype  1_7
       rect:
         serializedVersion: 2
-        x: 224
-        y: 0
-        width: 32
-        height: 32
+        x: 472
+        y: 6
+        width: 19
+        height: 53
       alignment: 9
-      pivot: {x: 0.17997885, y: 0.21094882}
+      pivot: {x: 0.27173495, y: 0.006608846}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: be7210ba71113444db428325db053384
+      spriteID: d782b674080898b478d14bbe648e6192
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: EvilStaplerNoEyes Chomp_8
+      name: PlayerMeleeAttackBackPrototype  1_8
       rect:
         serializedVersion: 2
-        x: 256
-        y: 0
-        width: 32
-        height: 32
+        x: 536
+        y: 6
+        width: 19
+        height: 53
       alignment: 9
-      pivot: {x: 0.19374275, y: 0.22471316}
+      pivot: {x: 0.27844882, y: 0.009015632}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d8672068bfed7c64f8376647e8761013
+      spriteID: 2ce539fb3f8488a4cb9df098a3271140
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: EvilStaplerNoEyes Chomp_9
+      name: PlayerMeleeAttackBackPrototype  1_9
       rect:
         serializedVersion: 2
-        x: 288
-        y: 0
-        width: 32
-        height: 32
+        x: 600
+        y: 6
+        width: 19
+        height: 53
       alignment: 9
-      pivot: {x: 0.1903019, y: 0.22471316}
+      pivot: {x: 0.27173495, y: 0.006608846}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2445213938708914caa833eabf95b462
+      spriteID: 279f39a16b253184299f4c1cc1765b17
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: EvilStaplerNoEyes Chomp_10
+      name: PlayerMeleeAttackBackPrototype  1_10
       rect:
         serializedVersion: 2
-        x: 320
-        y: 0
-        width: 32
-        height: 32
+        x: 664
+        y: 6
+        width: 19
+        height: 53
       alignment: 9
-      pivot: {x: 0.1903019, y: 0.25568292}
+      pivot: {x: 0.2650211, y: 0.006608846}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 31ba046523b95a541a7bf41362f124c4
+      spriteID: 228110d28253ef34f846ced3ca330216
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: EvilStaplerNoEyes Chomp_11
+      name: PlayerMeleeAttackBackPrototype  1_11
       rect:
         serializedVersion: 2
-        x: 352
-        y: 0
-        width: 32
-        height: 32
+        x: 728
+        y: 6
+        width: 19
+        height: 53
       alignment: 9
-      pivot: {x: 0.15933228, y: 0.24880075}
+      pivot: {x: 0.23309326, y: 0.018280102}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 85c10e879a0ca9e4db4c9fe03b164ce6
+      spriteID: 21140be60053ac44cb7193edd61504ea
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: EvilStaplerNoEyes Chomp_12
+      name: PlayerMeleeAttackBackPrototype  1_12
       rect:
         serializedVersion: 2
-        x: 384
-        y: 0
-        width: 32
-        height: 32
+        x: 792
+        y: 6
+        width: 19
+        height: 54
       alignment: 9
-      pivot: {x: 0.1455679, y: 0.24880075}
+      pivot: {x: 0.21468313, y: 0.0077707414}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7a413de4aa9fa3b49ab4cc12adb032a3
+      spriteID: 111a9d36aff1b5d4b8330a6998619bbb
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: EvilStaplerNoEyes Chomp_13
+      name: PlayerMeleeAttackBackPrototype  1_13
       rect:
         serializedVersion: 2
-        x: 416
-        y: 0
-        width: 32
-        height: 32
+        x: 855
+        y: 6
+        width: 23
+        height: 53
       alignment: 9
-      pivot: {x: 0.16277313, y: 0.2384775}
+      pivot: {x: 0.21868631, y: 0.014980649}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4a1f4a4a750ef99448b897056a82d482
+      spriteID: 37440242bd737ce4282e899e76e49761
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: EvilStaplerNoEyes Chomp_14
+      name: PlayerMeleeAttackBackPrototype  1_14
       rect:
         serializedVersion: 2
-        x: 448
-        y: 0
-        width: 32
-        height: 32
+        x: 917
+        y: 6
+        width: 24
+        height: 53
       alignment: 9
-      pivot: {x: 0.15933228, y: 0.24880075}
+      pivot: {x: 0.2959849, y: 0.011681197}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a4cca45a92273174bb8ae9a397290e00
+      spriteID: 68ae11f7672ae9c40989b26f971a2b65
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: EvilStaplerNoEyes Chomp_15
+      name: PlayerMeleeAttackBackPrototype  1_15
       rect:
         serializedVersion: 2
-        x: 480
-        y: 0
-        width: 32
-        height: 32
+        x: 981
+        y: 6
+        width: 21
+        height: 54
       alignment: 9
-      pivot: {x: 0.16277313, y: 0.25224185}
+      pivot: {x: 0.36676607, y: 0.011009092}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 18e80f56e607a064eaea33359e434d6c
+      spriteID: 781f3c5054cf7534a8b828c125856b4b
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: EvilStaplerNoEyes Chomp_16
+      name: PlayerMeleeAttackBackPrototype  1_16
       rect:
         serializedVersion: 2
-        x: 512
-        y: 0
-        width: 32
-        height: 32
+        x: 1045
+        y: 6
+        width: 21
+        height: 54
       alignment: 9
-      pivot: {x: 0.15245056, y: 0.25224185}
+      pivot: {x: 0.36676317, y: 0.0142474435}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 15edc7f8dff754947ba36117a73bf68e
+      spriteID: e5795a0f69289cb4a8f4362fa32a22b7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerMeleeAttackBackPrototype  1_17
+      rect:
+        serializedVersion: 2
+        x: 1109
+        y: 6
+        width: 22
+        height: 54
+      alignment: 9
+      pivot: {x: 0.34897682, y: 0.020724146}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5a6e08a775cd9e4388ab5da4f6f1509
       vertices: []
       indices: 
       edges: []
@@ -443,7 +464,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: edf10b320ad4f794ea68d4f639b4bda0
+    spriteID: a1268f5f394c23848b30fcf762326705
     vertices: []
     indices: 
     edges: []
