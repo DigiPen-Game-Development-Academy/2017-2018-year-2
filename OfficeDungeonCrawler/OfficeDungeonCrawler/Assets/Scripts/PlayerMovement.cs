@@ -81,8 +81,6 @@ public class PlayerMovement : MonoBehaviour
 		timeTillPlaySound -= Time.deltaTime;
 		timeTillCanMove -= Time.deltaTime;
 
-		Debug.Log("TimeTillCanMove: " + timeTillCanMove);
-
 		Vector2 direction = Vector2.zero;
 		if (Input.GetKey(Settings.KeyBinds.down))
 			direction.y -= 1;
