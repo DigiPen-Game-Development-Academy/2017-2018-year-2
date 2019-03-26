@@ -203,6 +203,7 @@ GameObject:
   - component: {fileID: 622006045}
   - component: {fileID: 622006044}
   - component: {fileID: 622006049}
+  - component: {fileID: 622006050}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -222,18 +223,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitbox: {fileID: 0}
+  splashHitbox: {fileID: 0}
   attackDistance: 1
-  fastAttackChargeTime: 0.5
-  fastAttackCooldown: 0.5
-  fastAttackDamage: 0.5
-  longAttackChargeTime: 1
-  longAttackCooldown: 1.5
-  longAttackDamage: 2
-  cantGetUp: 0
   attackCooldown: 999999.9
   attackChargeTime: 1
   attackDamage: 20
-  splashdamage: 2.5
+  splashAttackDamage: 1
 --- !u!50 &622006045
 Rigidbody2D:
   serializedVersion: 4
@@ -326,6 +321,29 @@ MonoBehaviour:
   canMoveKnockback: 1
   canMoveAfterKnockback: 0
   target: {fileID: 0}
+--- !u!114 &622006050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 622006043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5af4426cc9698574f9ea82f91b2ca017, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemDrop: {fileID: 0}
+  itemDrops: []
+  itemDropCounts: 
+  dropDistance: 0.5
+  maxHealth: 10
+  currentHealth: 0
+  healthBarObj: {fileID: 0}
+  colorChangeSpeed: 1
+  hurtColor: {r: 1, g: 0, b: 0, a: 1}
+  healColor: {r: 0, g: 1, b: 0, a: 1}
+  normalColor: {r: 1, g: 1, b: 1, a: 1}
+  deathObject: {fileID: 0}
 --- !u!1001 &1240625662
 Prefab:
   m_ObjectHideFlags: 0
