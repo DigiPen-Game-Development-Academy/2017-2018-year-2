@@ -290,12 +290,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  slotCountBGs:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   slotBackgroundSelected: {fileID: 21300000, guid: c2d15577a42c4214491ddf5b7c43543f,
     type: 3}
   slotBackgroundDeselected: {fileID: 21300002, guid: c2d15577a42c4214491ddf5b7c43543f,
@@ -315,9 +309,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7b8323e5e1d6ec4bb16f555c0de05a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hearts: []
-  heart: {fileID: 0}
-  halfHeart: {fileID: 0}
+  hearts:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  heart: {fileID: 21300000, guid: 4580fc57c1ab4104b888006e86ad1e00, type: 3}
+  halfHeart: {fileID: 21300002, guid: 4580fc57c1ab4104b888006e86ad1e00, type: 3}
 --- !u!114 &114883571212207992
 MonoBehaviour:
   m_ObjectHideFlags: 1
