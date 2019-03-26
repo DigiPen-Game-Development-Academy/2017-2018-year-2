@@ -14,7 +14,7 @@ public class FridgeAttack : MonoBehaviour
     public GameObject splashHitbox;
 
     public float attackDistance = 1;
-    public float refridgerator = 6.0;
+    public float refridgerator = 6.0f;
     public float attackCooldown = 1.0f;
     public float attackChargeTime = 0.5f;
     public float attackDamage = 1.0f;
