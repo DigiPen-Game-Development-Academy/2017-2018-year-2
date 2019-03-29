@@ -33,8 +33,10 @@ public class Health : MonoBehaviour
     public Color healColor = new Color(0.0f, 1.0f, 0.0f, 1.0f);
 	// The normal color
 	public Color normalColor = new Color(1.0f, 1.0f, 1.0f, 1.0f);
-	// The object to spawn when the entity dies
-	public GameObject deathObject;
+    // The normal screen color
+    public Color normalScreenColor = new Color(1.0f, 1.0f, 1.0f, 0.0f);
+    // The object to spawn when the entity dies
+    public GameObject deathObject;
     // two variables are used for passing to the screen shake script.
     public float shakeDuration = 0;
     public float shakeIntensity = 0;
@@ -78,7 +80,8 @@ public class Health : MonoBehaviour
 
 		// Lerp back to the normal color
 		spriteRenderer.color = Color.Lerp(spriteRenderer.color, normalColor, Time.deltaTime * colorChangeSpeed);
-	}
+        damageScreen.GetComponent<SpriteRenderer>().color = Color.Lerp(damageScreen.GetComponent<SpriteRenderer>().color, normalScreenColor, Time.deltaTime * colorChangeSpeed);
+    }
 
 	// Used to damage the entity
 	public void Damage(float amount)
