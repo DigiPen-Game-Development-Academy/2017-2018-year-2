@@ -26,8 +26,10 @@ public class Health : MonoBehaviour
 	public float colorChangeSpeed = 1.0f;
 	// The color when hurt
 	public Color hurtColor = new Color(1.0f, 0.0f, 0.0f, 1.0f);
-	// The color when healed
-	public Color healColor = new Color(0.0f, 1.0f, 0.0f, 1.0f);
+    // The screen color when hurt
+    public Color hurtScreenColor = new Color(1.0f, 1.0f, 0.0f, 85.0f);
+    // The color when healed
+    public Color healColor = new Color(0.0f, 1.0f, 0.0f, 1.0f);
 	// The normal color
 	public Color normalColor = new Color(1.0f, 1.0f, 1.0f, 1.0f);
 	// The object to spawn when the entity dies
@@ -40,6 +42,7 @@ public class Health : MonoBehaviour
 
     public AudioClip hurtSound;
     AudioSource audioSource;
+    public GameObject damageScreen;
 
     void Start()
 	{
@@ -83,6 +86,7 @@ public class Health : MonoBehaviour
 
 		// Set the entity color
 		spriteRenderer.color = hurtColor;
+        damageScreen.GetComponent<SpriteRenderer>().color = hurtScreenColor;
 
         audioSource.PlayOneShot(hurtSound, vol);
 
