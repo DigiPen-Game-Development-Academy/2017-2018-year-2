@@ -27,6 +27,7 @@ public class Hitbox : MonoBehaviour
         {
             // Subtract damage from the other objects health
             other.gameObject.GetComponent<Health>().Damage(damage);
+            other.gameObject.GetComponent<PlayerMovement>().timeTillCanMove = other.gameObject.GetComponent<PlayerMovement>().pauseOnHurt;
 
         }
         else if (other.tag == "Enemy" && !isEnemy) // Check if the object we collided with is the enemy and we are the player

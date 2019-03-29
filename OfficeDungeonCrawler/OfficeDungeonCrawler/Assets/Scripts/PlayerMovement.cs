@@ -21,7 +21,8 @@ public class PlayerMovement : MonoBehaviour
 
 	public float walkSpeed = 1;
 	public float dashSpeed = 5;
-	float stamina = 3;
+    public float pauseOnHurt = 1;
+    float stamina = 3;
 	public float dashCooldown = 1.0f;
 	public float dashTime = 0.5f;
 	float dashTimeRemaining = 0.0f;
@@ -79,9 +80,8 @@ public class PlayerMovement : MonoBehaviour
 		stamina += Time.deltaTime;
 		dashTimeRemaining -= Time.deltaTime;
 		timeTillPlaySound -= Time.deltaTime;
-		timeTillCanMove -= Time.deltaTime;
 
-		Vector2 direction = Vector2.zero;
+        Vector2 direction = Vector2.zero;
 		if (Input.GetKey(Settings.KeyBinds.down))
 			direction.y -= 1;
 		if (Input.GetKey(Settings.KeyBinds.up))
@@ -104,18 +104,18 @@ public class PlayerMovement : MonoBehaviour
 		{
 			direction = dashDirection;
 			currentSpeed = dashSpeed;
-            gameObject.GetComponent<PlayerAttack>().canAttack = false;
 		}
-        if (dashTimeRemaining < 0) gameObject.GetComponent<PlayerAttack>().canAttack = true;
-        if (dashTimeRemaining <= dashLerpTime)
-            currentSpeed /= dashLerpSpeed;
-        
+
+		if (dashTimeRemaining <= dashLerpTime)
+			currentSpeed /= dashLerpSpeed;
+
 		if (timeTillCanMove <= 0.0f)
 			rb.velocity = direction.normalized * currentSpeed;
 		else
 			rb.velocity = Vector2.zero;
+            timeTillCanMove -= Time.deltaTime;
 
-		if (direction != Vector2.zero)
+        if (direction != Vector2.zero)
 			currentDirection = direction.normalized;
 
 		if (direction.x == -1/* && dashTimeRemaining > 0*/)

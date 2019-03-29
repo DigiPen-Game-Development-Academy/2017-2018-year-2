@@ -223,7 +223,8 @@ MonoBehaviour:
   attackDamage: 1
   attackAnimTime: 0.5
   camera: {fileID: 0}
-  movePauseTime: 0.2
+  movePauseTime: 0
+  canAttack: 1
   canAttack: 1
 --- !u!114 &114767603162018166
 MonoBehaviour:
@@ -331,11 +332,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 076f7543ea6bf79448029e64cee047f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkSpeed: 8
-  dashSpeed: 10
-  dashCooldown: 1
-  dashTime: 0.2
-  dashLerpTime: 0.025
+  walkSpeed: 10
+  dashSpeed: 15
+  pauseOnHurt: 0.35
+  dashCooldown: 0.75
+  dashTime: 0.175
+  dashLerpTime: 0.02
   dashLerpSpeed: 2
   dashDirection: {x: 0, y: 0}
   currentDirection: {x: 0, y: -1}
@@ -373,8 +375,8 @@ MonoBehaviour:
   itemDrops: []
   itemDropCounts: 
   dropDistance: 0.5
-  maxHealth: 10
-  currentHealth: 10
+  maxHealth: 1000000
+  currentHealth: 1000000
   healthBarObj: {fileID: 0}
   colorChangeSpeed: 1
   hurtColor: {r: 1, g: 0, b: 0, a: 1}
