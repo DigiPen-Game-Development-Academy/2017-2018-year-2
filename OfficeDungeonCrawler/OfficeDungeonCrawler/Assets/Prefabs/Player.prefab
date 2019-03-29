@@ -43,7 +43,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1190466586900746}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.71, y: -0.37, z: 0}
+  m_LocalPosition: {x: -6.48, y: 4.33, z: 0}
   m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -81,7 +81,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.37}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -92,7 +92,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.4, y: 1.5}
+  m_Size: {x: 0.4, y: 1}
   m_EdgeRadius: 0
 --- !u!82 &82610715678498424
 AudioSource:
@@ -332,7 +332,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   walkSpeed: 8
   dashSpeed: 10
-  dashCooldown: 0.5
+  dashCooldown: 1
   dashTime: 0.2
   dashLerpTime: 0.025
   dashLerpSpeed: 2
@@ -350,10 +350,10 @@ MonoBehaviour:
   idleRight: Idle
   idleUp: Idle
   idleDown: Idle
-  walkSound1: {fileID: 8300000, guid: ce5b896f6e16b2c448a8e1082d029713, type: 3}
-  walkSound2: {fileID: 8300000, guid: b1da657914661b9408a300e918f390bf, type: 3}
-  walkSound3: {fileID: 8300000, guid: ce5b896f6e16b2c448a8e1082d029713, type: 3}
-  dashSound: {fileID: 0}
+  walkSound1: {fileID: 8300000, guid: 2e82463da95f988479f30de1c1ced569, type: 3}
+  walkSound2: {fileID: 8300000, guid: 6ea24849dae1d0f42bd13871fdfc5d98, type: 3}
+  walkSound3: {fileID: 8300000, guid: a29d4e9175ef18f40a1bcf4bdd3bef5f, type: 3}
+  dashSound: {fileID: 8300000, guid: 21b1aa89d6b10f648a8e367f65c8e3a2, type: 3}
   walkSoundDelay: 0.35
   timeTillCanMove: 0
 --- !u!114 &114898050982018894
