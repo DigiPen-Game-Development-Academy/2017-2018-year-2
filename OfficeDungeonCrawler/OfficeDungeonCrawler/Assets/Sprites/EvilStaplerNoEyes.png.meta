@@ -1,7 +1,16 @@
 fileFormatVersion: 2
 guid: 688ceadef84d6d640af51e50e1ac5eb6
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: EvilStaplerNoEyes_0
+    21300002: EvilStaplerNoEyes_1
+    21300004: EvilStaplerNoEyes_2
+    21300006: EvilStaplerNoEyes_3
+    21300008: EvilStaplerNoEyes_4
+    21300010: EvilStaplerNoEyes_5
+    21300012: EvilStaplerNoEyes_6
+    21300014: EvilStaplerNoEyes_7
+    21300016: EvilStaplerNoEyes_8
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -31,7 +40,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -40,7 +49,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -63,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -74,7 +83,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -82,7 +91,187 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: EvilStaplerNoEyes_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 9
+        width: 29
+        height: 17
+      alignment: 9
+      pivot: {x: 0.016459929, y: 0.39623052}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b475d2896017d9b4788a2806025628b6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilStaplerNoEyes_1
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 9
+        width: 29
+        height: 16
+      alignment: 9
+      pivot: {x: 0.019031525, y: 0.41256744}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b72a99d9fadd96b47802e241637d6e56
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilStaplerNoEyes_2
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 9
+        width: 29
+        height: 15
+      alignment: 9
+      pivot: {x: 0.025238562, y: 0.37690857}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b46d8966c5570cf4f99071ca0eff7e36
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilStaplerNoEyes_3
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 9
+        width: 29
+        height: 15
+      alignment: 9
+      pivot: {x: 0.01876568, y: 0.33627802}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89e961d163f4cf14b8e2b5bdbb4bd68a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilStaplerNoEyes_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 10
+        width: 30
+        height: 14
+      alignment: 9
+      pivot: {x: 0.016548665, y: 0.3251347}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da92c2338bda4694d8ad4c38ff648512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilStaplerNoEyes_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 10
+        width: 30
+        height: 14
+      alignment: 9
+      pivot: {x: 0.01637675, y: 0.3541565}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ad344d186cb3d548b66238f1ae5f3b0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilStaplerNoEyes_6
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 10
+        width: 30
+        height: 14
+      alignment: 9
+      pivot: {x: 0.016548665, y: 0.36701426}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0dfa9d77c9068504789870976dc7e2cf
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilStaplerNoEyes_7
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 10
+        width: 30
+        height: 14
+      alignment: 9
+      pivot: {x: 0.016377259, y: 0.332482}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09344c67d25ac3845965d79162bb815d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilStaplerNoEyes_8
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 9
+        width: 29
+        height: 16
+      alignment: 9
+      pivot: {x: 0.013622415, y: 0.40228134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d12670fc054f09a4f80aacecdaff8ead
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
