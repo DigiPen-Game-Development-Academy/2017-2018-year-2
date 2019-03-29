@@ -20,7 +20,7 @@ public class PlayerAttack : MonoBehaviour
     public float attackDamage = 1.0f;
 	public float attackAnimTime = 0.5f;
 	float timeTillResetAnim = 0.0f;
-
+  
 	PlayerMovement playerMovement;
 
 	Animator animator;
@@ -32,7 +32,8 @@ public class PlayerAttack : MonoBehaviour
 	Camera cameraComponent;
 
     Vector2 spawnPos = new Vector2();
-	
+    // this catAttack checks if the player is allowed to attack currently only being used from the movement script
+    public bool canAttack = true;
     void Start()
     {
         // Set the private variable to the public one
@@ -46,24 +47,26 @@ public class PlayerAttack : MonoBehaviour
 
     void Attack()
     {
-		Vector3 position = cameraComponent.ScreenToWorldPoint(Input.mousePosition);
-		position.z = 0;
+        if (canAttack) {
+            Vector3 position = cameraComponent.ScreenToWorldPoint(Input.mousePosition);
+            position.z = 0;
 
-		Vector3 direction = Vector3.Normalize(position - transform.position);
+            Vector3 direction = Vector3.Normalize(position - transform.position);
 
-		Debug.Log("Dir: " + direction);
+            Debug.Log("Dir: " + direction);
 
-		// Spawn hitbox in front of the player in the direction they are facing
-		Hitbox newHitbox = Instantiate(hitbox, transform.position + direction, transform.rotation).GetComponent<Hitbox>();
+            // Spawn hitbox in front of the player in the direction they are facing
+            Hitbox newHitbox = Instantiate(hitbox, transform.position + direction, transform.rotation).GetComponent<Hitbox>();
 
-		newHitbox.damage = attackDamage;
-		newHitbox.isEnemy = false;
+            newHitbox.damage = attackDamage;
+            newHitbox.isEnemy = false;
 
-		playerMovement.timeTillCanMove = movePauseTime;
+            playerMovement.timeTillCanMove = movePauseTime;
 
-		timeTillResetAnim = attackAnimTime;
+            timeTillResetAnim = attackAnimTime;
 
-		animator.SetBool("Melee", true);
+            animator.SetBool("Melee", true);
+        }
 	}
 
     void Update()

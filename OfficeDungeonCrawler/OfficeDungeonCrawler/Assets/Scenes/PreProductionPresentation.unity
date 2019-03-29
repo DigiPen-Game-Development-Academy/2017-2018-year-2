@@ -231,7 +231,12 @@ Prefab:
         type: 2}
       propertyPath: healthBarObj
       value: 
-      objectReference: {fileID: 1951965965}
+      objectReference: {fileID: 0}
+    - target: {fileID: 114709727378048926, guid: 78360258d93ca764d8d87f6365d1e0c5,
+        type: 2}
+      propertyPath: camera
+      value: 
+      objectReference: {fileID: 1403621335}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78360258d93ca764d8d87f6365d1e0c5, type: 2}
   m_IsPrefabAsset: 0
@@ -348,6 +353,7 @@ MonoBehaviour:
   splashHitbox: {fileID: 1022452900169336, guid: 7054561e0a5e4004fa95f0cd2e7b370b,
     type: 2}
   attackDistance: 2
+  refridgerator: 6
   attackCooldown: 1
   attackChargeTime: 1
   attackDamage: 20
@@ -19265,7 +19271,7 @@ Prefab:
     - target: {fileID: 3664157343317121368, guid: c6cb270111c411748b8cbd77ff80bb00,
         type: 2}
       propertyPath: m_ChunkCullingBounds.y
-      value: 0.734375
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6cb270111c411748b8cbd77ff80bb00, type: 2}
@@ -21464,11 +21470,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1951965965 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1911421588566370, guid: e92353e4dc4ac3e4696add8a2d39b668,
-    type: 2}
-  m_PrefabInternal: {fileID: 876472993}
 --- !u!1 &1965628972
 GameObject:
   m_ObjectHideFlags: 0

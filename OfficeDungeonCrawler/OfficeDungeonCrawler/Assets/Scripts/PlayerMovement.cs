@@ -104,11 +104,12 @@ public class PlayerMovement : MonoBehaviour
 		{
 			direction = dashDirection;
 			currentSpeed = dashSpeed;
+            gameObject.GetComponent<PlayerAttack>().canAttack = false;
 		}
-
-		if (dashTimeRemaining <= dashLerpTime)
-			currentSpeed /= dashLerpSpeed;
-
+        if (dashTimeRemaining < 0) gameObject.GetComponent<PlayerAttack>().canAttack = true;
+        if (dashTimeRemaining <= dashLerpTime)
+            currentSpeed /= dashLerpSpeed;
+        
 		if (timeTillCanMove <= 0.0f)
 			rb.velocity = direction.normalized * currentSpeed;
 		else
