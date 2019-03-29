@@ -221,7 +221,9 @@ MonoBehaviour:
   hitbox: {fileID: 1274357521494908, guid: 9184b171418e98c4fad188b5afd5621e, type: 2}
   attackSpeed: 0.5
   attackDamage: 1
+  attackAnimTime: 0.5
   camera: {fileID: 0}
+  movePauseTime: 0.2
 --- !u!114 &114767603162018166
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -353,6 +355,7 @@ MonoBehaviour:
   walkSound3: {fileID: 8300000, guid: ce5b896f6e16b2c448a8e1082d029713, type: 3}
   dashSound: {fileID: 0}
   walkSoundDelay: 0.35
+  timeTillCanMove: 0
 --- !u!114 &114898050982018894
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -376,6 +379,7 @@ MonoBehaviour:
   healColor: {r: 0, g: 1, b: 0, a: 1}
   normalColor: {r: 1, g: 1, b: 1, a: 1}
   deathObject: {fileID: 0}
+  hurtSound: {fileID: 8300000, guid: 8ea69f502eccb5346b649909ae4ce3d4, type: 3}
 --- !u!212 &212421118207432532
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -38,10 +38,15 @@ public class Health : MonoBehaviour
 	// The Bar of the health bar
 	Bar healthBar;
 
-	void Start()
+    public AudioClip hurtSound;
+    AudioSource audioSource;
+
+    void Start()
 	{
-		// Get the SpriteRenderer component
-		spriteRenderer = GetComponent<SpriteRenderer>();
+        audioSource = GetComponent<AudioSource>();
+
+        // Get the SpriteRenderer component
+        spriteRenderer = GetComponent<SpriteRenderer>();
 
 		// If the health bar is not null..
 		if (healthBarObj != null)
@@ -72,14 +77,17 @@ public class Health : MonoBehaviour
 	// Used to damage the entity
 	public void Damage(float amount)
 	{
-		// Decrease the current health
-		currentHealth -= amount;
+        float vol = Random.Range(0.5f, 0.8f);
+        // Decrease the current health
+        currentHealth -= amount;
 
 		// Set the entity color
 		spriteRenderer.color = hurtColor;
 
-		// If the current health is less than 0..
-		if (currentHealth <= 0)
+        audioSource.PlayOneShot(hurtSound, vol);
+
+        // If the current health is less than 0..
+        if (currentHealth <= 0)
 		{
 			// Kill the entity
 			Death();
