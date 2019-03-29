@@ -729,6 +729,31 @@ Prefab:
       propertyPath: currentHealth
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 114898050982018894, guid: 78360258d93ca764d8d87f6365d1e0c5,
+        type: 2}
+      propertyPath: hurtScreenColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114898050982018894, guid: 78360258d93ca764d8d87f6365d1e0c5,
+        type: 2}
+      propertyPath: hurtScreenColor.g
+      value: 0.55099326
+      objectReference: {fileID: 0}
+    - target: {fileID: 114898050982018894, guid: 78360258d93ca764d8d87f6365d1e0c5,
+        type: 2}
+      propertyPath: hurtScreenColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114898050982018894, guid: 78360258d93ca764d8d87f6365d1e0c5,
+        type: 2}
+      propertyPath: hurtScreenColor.a
+      value: 0.5647059
+      objectReference: {fileID: 0}
+    - target: {fileID: 114898050982018894, guid: 78360258d93ca764d8d87f6365d1e0c5,
+        type: 2}
+      propertyPath: damageScreen
+      value: 
+      objectReference: {fileID: 272958219}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78360258d93ca764d8d87f6365d1e0c5, type: 2}
   m_IsPrefabAsset: 0
