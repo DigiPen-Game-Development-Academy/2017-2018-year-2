@@ -12,6 +12,7 @@ using UnityEngine.UI;
 public class Health : MonoBehaviour
 {
 	public GameObject itemDrop;
+    public GameObject camera;
 	public List<string> itemDrops = new List<string>();
 	public List<int> itemDropCounts = new List<int>();
 	public float dropDistance = 0.5f;
@@ -34,7 +35,9 @@ public class Health : MonoBehaviour
 	public Color normalColor = new Color(1.0f, 1.0f, 1.0f, 1.0f);
 	// The object to spawn when the entity dies
 	public GameObject deathObject;
-
+    // two variables are used for passing to the screen shake script.
+    public float shakeDuration = 0;
+    public float shakeIntensity = 0;
 	// The SpriteRenderer of the entity
 	SpriteRenderer spriteRenderer;
 	// The Bar of the health bar
@@ -89,7 +92,7 @@ public class Health : MonoBehaviour
         damageScreen.GetComponent<SpriteRenderer>().color = hurtScreenColor;
 
         audioSource.PlayOneShot(hurtSound, vol);
-
+        camera.GetComponent<ScreenShake>().Update(shakeIntensity, shakeDuration);
         // If the current health is less than 0..
         if (currentHealth <= 0)
 		{

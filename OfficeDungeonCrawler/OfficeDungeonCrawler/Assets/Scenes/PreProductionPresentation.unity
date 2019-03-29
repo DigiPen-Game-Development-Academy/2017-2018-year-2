@@ -229,9 +229,9 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114898050982018894, guid: 78360258d93ca764d8d87f6365d1e0c5,
         type: 2}
-      propertyPath: healthBarObj
+      propertyPath: camera
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1403621335}
     - target: {fileID: 114709727378048926, guid: 78360258d93ca764d8d87f6365d1e0c5,
         type: 2}
       propertyPath: camera
@@ -20740,6 +20740,7 @@ GameObject:
   - component: {fileID: 1403621338}
   - component: {fileID: 1403621337}
   - component: {fileID: 1403621336}
+  - component: {fileID: 1403621340}
   - component: {fileID: 1403621339}
   m_Layer: 0
   m_Name: Main Camera
@@ -20823,6 +20824,17 @@ MonoBehaviour:
   speed: 3
   directionMultiplier: 2.5
   type: 1
+--- !u!114 &1403621340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1403621335}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ce2b1fddefe0144d82ff9d08d2c072a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1453507934
 Prefab:
   m_ObjectHideFlags: 0

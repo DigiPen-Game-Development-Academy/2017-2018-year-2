@@ -43,7 +43,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1190466586900746}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.48, y: 4.33, z: 0}
+  m_LocalPosition: {x: -2.87, y: 1.91, z: 0}
   m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -224,6 +224,7 @@ MonoBehaviour:
   attackAnimTime: 0.5
   camera: {fileID: 0}
   movePauseTime: 0.2
+  canAttack: 1
 --- !u!114 &114767603162018166
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -368,6 +369,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemDrop: {fileID: 0}
+  camera: {fileID: 0}
   itemDrops: []
   itemDropCounts: 
   dropDistance: 0.5
@@ -379,6 +381,8 @@ MonoBehaviour:
   healColor: {r: 0, g: 1, b: 0, a: 1}
   normalColor: {r: 1, g: 1, b: 1, a: 1}
   deathObject: {fileID: 0}
+  shakeDuration: 0
+  shakeIntensity: 0.5
   hurtSound: {fileID: 8300000, guid: 8ea69f502eccb5346b649909ae4ce3d4, type: 3}
 --- !u!212 &212421118207432532
 SpriteRenderer:
