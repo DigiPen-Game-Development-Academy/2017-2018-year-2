@@ -23,7 +23,9 @@ public class PrinterScript : MonoBehaviour
     public Sprite sprite1;
     public Sprite sprite2;
     public Sprite sprite3;
-    bool lineOfSite = false;
+    bool lineOfSight = false;
+
+    public LayerMask m_layerMask;
 
     float timer = 0;
 
@@ -41,11 +43,34 @@ public class PrinterScript : MonoBehaviour
     {
         if (Vector2.Distance(transform.position, player.transform.position) <= detectionRange)
         {
-            //RaycastHit hit;
-            //if(Physics.Raycast(transform.position, transform.TransformDirection(Vector3.right), out hit, Mathf.Infinity);
-           // Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.right) * 100, Color.red, 100f, false);
+            //OLD CODE
+            //Physics.Raycast(transform.position, player.transform.position - transform.position, out hit, Mathf.Infinity);
+            //Debug.DrawRay(transform.position, dir * 10, Color.red, 100f, false);
 
-            if (!lineOfSite) 
+            //-----------------//
+            //CHRIS ONORATI CODE
+            Vector3 dir = player.transform.position - transform.position;
+            dir.Normalize();
+
+            //just a different method to make a raycast - I recommend avoiding out.
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, dir, 100.0f, m_layerMask);
+
+            //END CHRIS CODE
+            //-----------------//
+
+
+            //Debug.Log(hit.collider.tag);
+            if (hit.collider.tag.Equals("Player"))
+            {
+                Debug.Log("In LINE OF SIGHT");
+                lineOfSight = true;
+            }
+            else
+            {
+                Debug.Log("OUT OF SIGHT");
+                lineOfSight = false;
+            }
+            if (lineOfSight)
             {
                 Vector3 difference = player.transform.position - transform.position;
                 Vector3 newRotation = Vector3.RotateTowards(transform.right, difference, Mathf.Deg2Rad * turnSpeedInDegrees * Time.deltaTime, Vector3.Distance(transform.position, player.transform.position));
