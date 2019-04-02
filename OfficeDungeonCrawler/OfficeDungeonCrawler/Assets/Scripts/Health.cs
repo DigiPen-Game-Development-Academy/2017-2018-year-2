@@ -1,5 +1,5 @@
 ﻿/*
-Author: Kevin P
+Author: Kevin-Sen Panasyuk
 Contributors: Myles Busig
 Date Last Modified: 2/13/2019
 */
@@ -12,7 +12,7 @@ using UnityEngine.UI;
 public class Health : MonoBehaviour
 {
 	public GameObject itemDrop;
-    public GameObject camera;
+    public GameObject mainCamera;
 	public List<string> itemDrops = new List<string>();
 	public List<int> itemDropCounts = new List<int>();
 	public float dropDistance = 0.5f;
@@ -95,7 +95,7 @@ public class Health : MonoBehaviour
         damageScreen.GetComponent<SpriteRenderer>().color = hurtScreenColor;
 
         audioSource.PlayOneShot(hurtSound, vol);
-        camera.GetComponent<ScreenShake>().Update(shakeIntensity, shakeDuration);
+        mainCamera.GetComponent<ScreenShake>().Update(shakeIntensity, shakeDuration);
         // If the current health is less than 0..
         if (currentHealth <= 0)
 		{
