@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ScreenShake : MonoBehaviour
 {
-
+    public GameObject mainCamera;
     // Use this for initialization
     void Start()
     {
@@ -12,11 +12,23 @@ public class ScreenShake : MonoBehaviour
     }
 
     // Update is called once per frame
-    public void Update(float intensity, float time)
+    public void Update()
     {
+        
+    }
 
-        float xTransform = Random.Range(-intensity, intensity);
-        float yTransform = Random.Range(-intensity, intensity);
-        gameObject.transform.position += new Vector3(xTransform, yTransform, 0);
+    public void shakeCamera(float intensity, float time)
+    {
+        time = 0.0f;
+        float length = 1.0f;
+        for (time = 0; time < length; time++)
+        {
+            if (time == 1)
+            {
+                float xTransform = Random.Range(-intensity, intensity);
+                float yTransform = Random.Range(-intensity, intensity);
+                mainCamera.transform.position += new Vector3(xTransform, yTransform, 0);
+            }
+        }
     }
 }
