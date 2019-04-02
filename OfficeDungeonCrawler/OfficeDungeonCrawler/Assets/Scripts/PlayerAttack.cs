@@ -39,12 +39,12 @@ public class PlayerAttack : MonoBehaviour
     {
         get
         {
-            return spawnPos;
+            return SpawnPos;
         }
 
         set
         {
-            spawnPos = value;
+            SpawnPos = value;
         }
     }
 
