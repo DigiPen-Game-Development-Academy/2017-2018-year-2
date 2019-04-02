@@ -1,6 +1,6 @@
 ﻿/*
 Author: Luke T
-Contributors: Myles Busig
+Contributors: Myles Busig, Kevin-sen Panasyuk
 Date Last Modified: 2/13/2019
 */
 
@@ -21,10 +21,11 @@ public class StaplerAttack : MonoBehaviour
 
 	Vector2 attackPosition = Vector2.zero;
 
-	EnemyMovement enemyMovement;
+    EnemyMovement enemyMovement;
 	GameObject player;
+    //PlayerAttack playerAttack= null;
 
-	void Start()
+    void Start()
 	{
 		player = GameObject.FindGameObjectWithTag("Player");
 		enemyMovement = GetComponent<EnemyMovement>();
@@ -68,54 +69,60 @@ public class StaplerAttack : MonoBehaviour
 		else
 			timeTillAttack = attackChargeTime;
 
-		//float distance = Vector2.Distance(transform.position, player.transform.position);
+        //if (playerAttack == true)
+        //{
+        //    timeTillAttack = attackCooldown;
+        //}
 
-		//Debug.Log("Attack pos: " + attackPosition);
 
-		//Debug.Log("Tims, FC: " + timeTillFastCharge + ", FA: " + timeTillFastAttack + ", LC: " + timeTillLongCharge + ", LA: " + timeTillLongAttack);
+        //float distance = Vector2.Distance(transform.position, player.transform.position);
 
-		//if (distance <= attackDistance)
-		//{
-		//	timeTillLongCharge -= Time.deltaTime;
-		//	timeTillFastCharge -= Time.deltaTime;
+        //Debug.Log("Attack pos: " + attackPosition);
 
-		//	if (timeTillLongCharge <= 0.0f)
-		//	{
-		//		timeTillLongAttack -= Time.deltaTime;
+        //Debug.Log("Tims, FC: " + timeTillFastCharge + ", FA: " + timeTillFastAttack + ", LC: " + timeTillLongCharge + ", LA: " + timeTillLongAttack);
 
-		//		enemyMovement.canMove = false;
-		//	}
-		//	else if (timeTillFastCharge <= 0.0f)
-		//	{
-		//		timeTillFastAttack -= Time.deltaTime;
+        //if (distance <= attackDistance)
+        //{
+        //	timeTillLongCharge -= Time.deltaTime;
+        //	timeTillFastCharge -= Time.deltaTime;
 
-		//		enemyMovement.canMove = false;
-		//	}
-		//	else
-		//		attackPosition = player.transform.position;
+        //	if (timeTillLongCharge <= 0.0f)
+        //	{
+        //		timeTillLongAttack -= Time.deltaTime;
 
-		//	if (timeTillLongAttack <= 0.0f)
-		//	{
-		//		GameObject newHitbox = Instantiate(hitbox, attackPosition, Quaternion.Euler(Vector2.zero));
+        //		enemyMovement.canMove = false;
+        //	}
+        //	else if (timeTillFastCharge <= 0.0f)
+        //	{
+        //		timeTillFastAttack -= Time.deltaTime;
 
-		//		timeTillLongCharge = longAttackCooldown;
-		//		timeTillLongAttack = longAttackChargeTime;
-		//		timeTillFastCharge = fastAttackCooldown;
-		//		timeTillFastAttack = fastAttackChargeTime;
+        //		enemyMovement.canMove = false;
+        //	}
+        //	else
+        //		attackPosition = player.transform.position;
 
-		//		enemyMovement.canMove = true;
-		//	}
-		//	else if (timeTillFastAttack <= 0.0f)
-		//	{
-		//		GameObject newHitbox = Instantiate(hitbox, attackPosition, Quaternion.Euler(Vector2.zero));
+        //	if (timeTillLongAttack <= 0.0f)
+        //	{
+        //		GameObject newHitbox = Instantiate(hitbox, attackPosition, Quaternion.Euler(Vector2.zero));
 
-		//		timeTillFastCharge = fastAttackCooldown;
-		//		timeTillFastAttack = fastAttackChargeTime;
+        //		timeTillLongCharge = longAttackCooldown;
+        //		timeTillLongAttack = longAttackChargeTime;
+        //		timeTillFastCharge = fastAttackCooldown;
+        //		timeTillFastAttack = fastAttackChargeTime;
 
-		//		enemyMovement.canMove = true;
-		//	}
-		//}
-		//else
-		//	enemyMovement.canMove = true;
-	}
+        //		enemyMovement.canMove = true;
+        //	}
+        //	else if (timeTillFastAttack <= 0.0f)
+        //	{
+        //		GameObject newHitbox = Instantiate(hitbox, attackPosition, Quaternion.Euler(Vector2.zero));
+
+        //		timeTillFastCharge = fastAttackCooldown;
+        //		timeTillFastAttack = fastAttackChargeTime;
+
+        //		enemyMovement.canMove = true;
+        //	}
+        //}
+        //else
+        //	enemyMovement.canMove = true;
+    }
 }

@@ -33,9 +33,9 @@ public class Inventory : MonoBehaviour
 		//GiveItem("test5", 1);
 	}
 
-	int it = 0;
+	//int it = 0;
 
-	void Update()
+    void Update()
 	{
 		//if (Input.GetKeyDown(KeyCode.R))
 		//{

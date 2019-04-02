@@ -31,6 +31,7 @@ public class PlayerAttack : MonoBehaviour
 
 	Camera cameraComponent;
 
+<<<<<<< HEAD
 	//Vector2 spawnPos = new Vector2();
 	// this catAttack checks if the player is allowed to attack currently only being used from the movement script
 	public bool canAttack = true;
@@ -41,6 +42,31 @@ public class PlayerAttack : MonoBehaviour
 		attackCooldown = attackSpeed;
 		hitbox.GetComponent<Hitbox>().isEnemy = false;
 		hitbox.GetComponent<Hitbox>().damage = attackDamage;
+=======
+    //Vector2 spawnPos = new Vector2();
+    // this catAttack checks if the player is allowed to attack currently only being used from the movement script
+    public bool canAttack = true;
+
+    public Vector2 SpawnPos
+    {
+        get
+        {
+            return SpawnPos;
+        }
+
+        set
+        {
+            SpawnPos = value;
+        }
+    }
+
+    void Start()
+    {
+        // Set the private variable to the public one
+        attackCooldown = attackSpeed;
+        hitbox.GetComponent<Hitbox>().isEnemy = false;
+        hitbox.GetComponent<Hitbox>().damage = attackDamage;
+>>>>>>> 63ab0d2f5a25ab74449fd2828f713074526e9b87
 		cameraComponent = camera.GetComponent<Camera>();
 		animator = GetComponent<Animator>();
 		playerMovement = GetComponent<PlayerMovement>();
