@@ -12,7 +12,7 @@ using UnityEngine.UI;
 public class Health : MonoBehaviour
 {
 	public GameObject itemDrop;
-    public GameObject camera;
+	new public GameObject camera;
 	public List<string> itemDrops = new List<string>();
 	public List<int> itemDropCounts = new List<int>();
 	public float dropDistance = 0.5f;
@@ -25,36 +25,39 @@ public class Health : MonoBehaviour
 	public GameObject healthBarObj;
 	// The speed to change back to the normal color
 	public float colorChangeSpeed = 1.0f;
+	public float screenColorChangeSpeed = 2.0f;
 	// The color when hurt
 	public Color hurtColor = new Color(1.0f, 0.0f, 0.0f, 1.0f);
-    // The screen color when hurt
-    public Color hurtScreenColor = new Color(1.0f, 1.0f, 0.0f, 85.0f);
-    // The color when healed
-    public Color healColor = new Color(0.0f, 1.0f, 0.0f, 1.0f);
+	// The screen color when hurt
+	public Color hurtScreenColor = new Color(1.0f, 1.0f, 0.0f, 85.0f);
+	// The color when healed
+	public Color healColor = new Color(0.0f, 1.0f, 0.0f, 1.0f);
 	// The normal color
 	public Color normalColor = new Color(1.0f, 1.0f, 1.0f, 1.0f);
-    // The normal screen color
-    public Color normalScreenColor = new Color(1.0f, 1.0f, 1.0f, 0.0f);
-    // The object to spawn when the entity dies
-    public GameObject deathObject;
-    // two variables are used for passing to the screen shake script.
-    public float shakeDuration = 0;
-    public float shakeIntensity = 0;
+	// The normal screen color
+	public Color normalScreenColor = new Color(1.0f, 1.0f, 1.0f, 0.0f);
+	// The object to spawn when the entity dies
+	public GameObject deathObject;
+	// two variables are used for passing to the screen shake script.
+	public float shakeDuration = 0;
+	public float shakeIntensity = 0;
 	// The SpriteRenderer of the entity
 	SpriteRenderer spriteRenderer;
 	// The Bar of the health bar
 	Bar healthBar;
 
-    public AudioClip hurtSound;
-    AudioSource audioSource;
-    public GameObject damageScreen;
+	Image damageScreenIMG = null;
 
-    void Start()
+	public AudioClip hurtSound;
+	AudioSource audioSource;
+	public GameObject damageScreen;
+
+	void Start()
 	{
-        audioSource = GetComponent<AudioSource>();
+		audioSource = GetComponent<AudioSource>();
 
-        // Get the SpriteRenderer component
-        spriteRenderer = GetComponent<SpriteRenderer>();
+		// Get the SpriteRenderer component
+		spriteRenderer = GetComponent<SpriteRenderer>();
 
 		// If the health bar is not null..
 		if (healthBarObj != null)
@@ -68,6 +71,9 @@ public class Health : MonoBehaviour
 
 		// Update the health bar
 		UpdateHealthBar();
+
+		if (damageScreen != null)
+			damageScreenIMG = damageScreen.GetComponent<Image>();
 	}
 
 	void Update()
@@ -80,24 +86,31 @@ public class Health : MonoBehaviour
 
 		// Lerp back to the normal color
 		spriteRenderer.color = Color.Lerp(spriteRenderer.color, normalColor, Time.deltaTime * colorChangeSpeed);
-        damageScreen.GetComponent<SpriteRenderer>().color = Color.Lerp(damageScreen.GetComponent<SpriteRenderer>().color, normalScreenColor, Time.deltaTime * colorChangeSpeed);
-    }
+
+		if (damageScreenIMG != null)
+			damageScreenIMG.color = Color.Lerp(damageScreenIMG.color, normalScreenColor, Time.deltaTime * screenColorChangeSpeed);
+	}
 
 	// Used to damage the entity
 	public void Damage(float amount)
 	{
-        float vol = Random.Range(0.5f, 0.8f);
-        // Decrease the current health
-        currentHealth -= amount;
+		float vol = Random.Range(0.5f, 0.8f);
+		// Decrease the current health
+		currentHealth -= amount;
 
 		// Set the entity color
 		spriteRenderer.color = hurtColor;
-        damageScreen.GetComponent<SpriteRenderer>().color = hurtScreenColor;
 
-        audioSource.PlayOneShot(hurtSound, vol);
-        camera.GetComponent<ScreenShake>().Update(shakeIntensity, shakeDuration);
-        // If the current health is less than 0..
-        if (currentHealth <= 0)
+		if (damageScreenIMG != null)
+			damageScreenIMG.color = hurtScreenColor;
+
+		audioSource.PlayOneShot(hurtSound, vol);
+
+		//if (camera != null)
+			//camera.GetComponent<ScreenShake>().Shake(shakeIntensity, shakeDuration);
+
+		// If the current health is less than 0..
+		if (currentHealth <= 0)
 		{
 			// Kill the entity
 			Death();
@@ -153,7 +166,7 @@ public class Health : MonoBehaviour
 
 		// Create the death entity
 		//if (deathObject != null)
-			//Instantiate(deathObject, transform.position, transform.rotation);
+		//Instantiate(deathObject, transform.position, transform.rotation);
 		// Destroy the entity
 		Destroy(gameObject);
 	}

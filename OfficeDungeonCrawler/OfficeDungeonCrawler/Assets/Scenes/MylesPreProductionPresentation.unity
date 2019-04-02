@@ -404,6 +404,56 @@ Prefab:
       propertyPath: m_Offset.y
       value: -0.4
       objectReference: {fileID: 0}
+    - target: {fileID: 114898050982018894, guid: 78360258d93ca764d8d87f6365d1e0c5,
+        type: 2}
+      propertyPath: damageScreen
+      value: 
+      objectReference: {fileID: 1572615732}
+    - target: {fileID: 114898050982018894, guid: 78360258d93ca764d8d87f6365d1e0c5,
+        type: 2}
+      propertyPath: hurtScreenColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114898050982018894, guid: 78360258d93ca764d8d87f6365d1e0c5,
+        type: 2}
+      propertyPath: normalScreenColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114898050982018894, guid: 78360258d93ca764d8d87f6365d1e0c5,
+        type: 2}
+      propertyPath: normalScreenColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114898050982018894, guid: 78360258d93ca764d8d87f6365d1e0c5,
+        type: 2}
+      propertyPath: normalScreenColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114898050982018894, guid: 78360258d93ca764d8d87f6365d1e0c5,
+        type: 2}
+      propertyPath: normalScreenColor.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114898050982018894, guid: 78360258d93ca764d8d87f6365d1e0c5,
+        type: 2}
+      propertyPath: shakeDuration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114898050982018894, guid: 78360258d93ca764d8d87f6365d1e0c5,
+        type: 2}
+      propertyPath: screenColorChangeSpeed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114898050982018894, guid: 78360258d93ca764d8d87f6365d1e0c5,
+        type: 2}
+      propertyPath: shakeIntensity
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114898050982018894, guid: 78360258d93ca764d8d87f6365d1e0c5,
+        type: 2}
+      propertyPath: hurtScreenColor.a
+      value: 0.46666667
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78360258d93ca764d8d87f6365d1e0c5, type: 2}
   m_IsPrefabAsset: 0
@@ -20064,6 +20114,57 @@ Prefab:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1403621337}
+    - target: {fileID: 224222646969714286, guid: e92353e4dc4ac3e4696add8a2d39b668,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224225434318680962, guid: e92353e4dc4ac3e4696add8a2d39b668,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 224218781939996880, guid: e92353e4dc4ac3e4696add8a2d39b668,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224552568719173232, guid: e92353e4dc4ac3e4696add8a2d39b668,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 224730847054929762, guid: e92353e4dc4ac3e4696add8a2d39b668,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114744199809317614, guid: e92353e4dc4ac3e4696add8a2d39b668,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114744199809317614, guid: e92353e4dc4ac3e4696add8a2d39b668,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114744199809317614, guid: e92353e4dc4ac3e4696add8a2d39b668,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114744199809317614, guid: e92353e4dc4ac3e4696add8a2d39b668,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 70ea92e89da156448a7ce5892f7c0e1f,
+        type: 3}
+    - target: {fileID: 114744199809317614, guid: e92353e4dc4ac3e4696add8a2d39b668,
+        type: 2}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e92353e4dc4ac3e4696add8a2d39b668, type: 2}
   m_IsPrefabAsset: 0
@@ -21137,6 +21238,7 @@ GameObject:
   - component: {fileID: 1403621337}
   - component: {fileID: 1403621336}
   - component: {fileID: 1403621339}
+  - component: {fileID: 1403621340}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -21219,6 +21321,17 @@ MonoBehaviour:
   speed: 3
   directionMultiplier: 2.5
   type: 1
+--- !u!114 &1403621340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1403621335}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ce2b1fddefe0144d82ff9d08d2c072a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1453507934
 Prefab:
   m_ObjectHideFlags: 0
@@ -21420,6 +21533,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1572615732 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1717433945783240, guid: e92353e4dc4ac3e4696add8a2d39b668,
+    type: 2}
+  m_PrefabInternal: {fileID: 839367993}
 --- !u!1 &1603015307 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1115242007197786, guid: e92353e4dc4ac3e4696add8a2d39b668,
