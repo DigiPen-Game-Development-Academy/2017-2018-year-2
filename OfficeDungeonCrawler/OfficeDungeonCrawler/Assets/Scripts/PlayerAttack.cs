@@ -31,7 +31,7 @@ public class PlayerAttack : MonoBehaviour
 
 	Camera cameraComponent;
 
-    Vector2 spawnPos = new Vector2();
+    //Vector2 spawnPos = new Vector2();
     // this catAttack checks if the player is allowed to attack currently only being used from the movement script
     public bool canAttack = true;
 
