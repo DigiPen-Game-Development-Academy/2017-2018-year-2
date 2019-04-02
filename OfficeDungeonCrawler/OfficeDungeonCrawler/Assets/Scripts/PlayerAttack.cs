@@ -34,6 +34,20 @@ public class PlayerAttack : MonoBehaviour
     Vector2 spawnPos = new Vector2();
     // this catAttack checks if the player is allowed to attack currently only being used from the movement script
     public bool canAttack = true;
+
+    public Vector2 SpawnPos
+    {
+        get
+        {
+            return spawnPos;
+        }
+
+        set
+        {
+            spawnPos = value;
+        }
+    }
+
     void Start()
     {
         // Set the private variable to the public one

@@ -20,4 +20,3 @@ public class ScreenShake : MonoBehaviour
         gameObject.transform.position += new Vector3(xTransform, yTransform, 0);
     }
 }
-    
