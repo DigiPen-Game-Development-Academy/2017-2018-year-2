@@ -107,7 +107,7 @@ public class Health : MonoBehaviour
 		audioSource.PlayOneShot(hurtSound, vol);
 
 		//if (camera != null)
-			//camera.GetComponent<ScreenShake>().Shake(shakeIntensity, shakeDuration);
+		//camera.GetComponent<ScreenShake>().Shake(shakeIntensity, shakeDuration);
 
 		// If the current health is less than 0..
 		if (currentHealth <= 0)

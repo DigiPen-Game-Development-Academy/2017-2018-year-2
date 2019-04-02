@@ -1,16 +1,49 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class Button : MonoBehaviour {
+public enum ButtonType
+{
+	SwitchLevel,
+	Quit
+}
 
-	// Use this for initialization
-	void Start () {
-		
+public class Button : MonoBehaviour
+{
+	public ButtonType buttonType = ButtonType.SwitchLevel;
+	public string level;
+
+	bool isOver = false;
+
+	void Start()
+	{
+
 	}
 	
-	// Update is called once per frame
-	void Update () {
-		
+	void Update()
+	{
+		if (isOver && Input.GetMouseButtonDown(0))
+		{
+			switch (buttonType)
+			{
+				case ButtonType.SwitchLevel:
+					SceneManager.LoadScene(level);
+					break;
+				case ButtonType.Quit:
+					Debug.Log("QUIT");
+					Application.Quit();
+					break;
+				default:
+					break;
+			}
+		}
+
+		isOver = false;
+	}
+
+	void OnMouseOver()
+	{
+		isOver = true;
 	}
 }
