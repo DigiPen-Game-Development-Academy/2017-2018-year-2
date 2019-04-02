@@ -39,7 +39,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1904221187910892}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.47, y: -0.43, z: 0}
+  m_LocalPosition: {x: -8.447929, y: -5.4574327, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -135,19 +135,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemDrop: {fileID: 1431077138254094, guid: ba8917fbb29f17c47968193c9ae06cb0, type: 2}
+  camera: {fileID: 0}
   itemDrops:
-  - test1
-  - test2
-  itemDropCounts: 0600000007000000
+  - pizza
+  - avocado
+  itemDropCounts: 0200000001000000
   dropDistance: 0.5
   maxHealth: 3
   currentHealth: 0
   healthBarObj: {fileID: 0}
   colorChangeSpeed: 1
+  screenColorChangeSpeed: 2
   hurtColor: {r: 1, g: 0, b: 0, a: 1}
+  hurtScreenColor: {r: 1, g: 1, b: 0, a: 85}
   healColor: {r: 0, g: 1, b: 0, a: 1}
   normalColor: {r: 1, g: 1, b: 1, a: 1}
+  normalScreenColor: {r: 1, g: 1, b: 1, a: 0}
   deathObject: {fileID: 0}
+  shakeDuration: 0
+  shakeIntensity: 0
+  hurtSound: {fileID: 0}
+  damageScreen: {fileID: 0}
 --- !u!212 &212779598680844722
 SpriteRenderer:
   m_ObjectHideFlags: 1

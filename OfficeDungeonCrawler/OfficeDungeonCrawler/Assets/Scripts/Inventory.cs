@@ -20,8 +20,12 @@ public class Inventory : MonoBehaviour
 	public Sprite slotBackgroundDeselectedL;
 	public Sprite slotBackgroundDeselectedR;
 
+	Health health;
+
 	void Start()
 	{
+		health = GetComponent<Health>();
+
 		//GiveItem("test1", 1);
 		//GiveItem("test2", 1);
 		//GiveItem("test3", 1);
@@ -33,11 +37,11 @@ public class Inventory : MonoBehaviour
 
 	void Update()
 	{
-		if (Input.GetKeyDown(KeyCode.R))
-		{
-			GiveItem(itemBases[it].id, 1);
-			++it;
-		}
+		//if (Input.GetKeyDown(KeyCode.R))
+		//{
+		//	GiveItem(itemBases[it].id, 1);
+		//	++it;
+		//}
 
 		if (Input.GetKeyDown(KeyCode.Q))
 		{
@@ -54,6 +58,15 @@ public class Inventory : MonoBehaviour
 				selectedSlot = 0;
 		}
 		
+		if (Input.GetMouseButtonDown(1))
+		{
+			if (items[selectedSlot].itemType == ItemType.HealthItem)
+			{
+				health.Heal(items[selectedSlot].health);
+				RemoveItem(items[selectedSlot].id, 1);
+			}
+		}
+
 		for (int i = 0; i < slotBackgrounds.Count; ++i)
 		{
 			if (i == selectedSlot)

@@ -43,7 +43,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1190466586900746}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.87, y: 1.91, z: 0}
+  m_LocalPosition: {x: -3.3996127, y: -1.145865, z: 0}
   m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -81,7 +81,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.37}
+  m_Offset: {x: 0, y: -0.4}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -92,7 +92,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.4, y: 1}
+  m_Size: {x: 0.4, y: 0.9}
   m_EdgeRadius: 0
 --- !u!82 &82610715678498424
 AudioSource:
@@ -221,10 +221,9 @@ MonoBehaviour:
   hitbox: {fileID: 1274357521494908, guid: 9184b171418e98c4fad188b5afd5621e, type: 2}
   attackSpeed: 0.5
   attackDamage: 1
-  attackAnimTime: 0.5
+  attackAnimTime: 0.1
   camera: {fileID: 0}
   movePauseTime: 0
-  canAttack: 1
   canAttack: 1
 --- !u!114 &114767603162018166
 MonoBehaviour:
@@ -239,42 +238,36 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   items: []
   itemBases:
-  - id: test1
-    itemType: 0
-    sprite: {fileID: 21300000, guid: eef5549d3b5d08e418248f1d9532bd57, type: 3}
+  - id: avocado
+    itemType: 3
+    sprite: {fileID: 21300000, guid: 967723b9fd34a824998f3b5e2750c310, type: 3}
     count: 0
     damage: 0
-    health: 0
-  - id: test2
-    itemType: 0
-    sprite: {fileID: 21300000, guid: 21c1126588cd3b34abe7b9e297b6192e, type: 3}
+    health: 2
+  - id: watermelon
+    itemType: 3
+    sprite: {fileID: 21300000, guid: 763e8020f96f0e843af19932eea2dcdc, type: 3}
     count: 0
     damage: 0
-    health: 0
-  - id: test3
-    itemType: 0
-    sprite: {fileID: 21300000, guid: 5a2e2bd23b4a1f741b53ffd781e2f5f2, type: 3}
+    health: 3
+  - id: pizza
+    itemType: 3
+    sprite: {fileID: 21300000, guid: 49f65db86d815b140bcd7617c431e5cc, type: 3}
     count: 0
     damage: 0
-    health: 0
-  - id: test4
-    itemType: 0
-    sprite: {fileID: 21300000, guid: ee6d5ca31fe0f4a4780b8ca06e3f98f7, type: 3}
+    health: 1
+  - id: potato
+    itemType: 3
+    sprite: {fileID: 21300000, guid: 54b56a1bdece6f54e8ad828efe937d8a, type: 3}
     count: 0
     damage: 0
-    health: 0
-  - id: test5
-    itemType: 0
-    sprite: {fileID: 21300000, guid: 5c05168c5c92708409d701065c1b2a71, type: 3}
+    health: 5
+  - id: gouda
+    itemType: 3
+    sprite: {fileID: 21300000, guid: c9d293164fe2329449b0aafad8ee7d97, type: 3}
     count: 0
     damage: 0
-    health: 0
-  - id: test6
-    itemType: 0
-    sprite: {fileID: 21300000, guid: 3d67495c2eca37949bc5eb0165ea65b6, type: 3}
-    count: 0
-    damage: 0
-    health: 0
+    health: 5
   selectedSlot: 0
   slots:
   - {fileID: 0}
@@ -375,17 +368,21 @@ MonoBehaviour:
   itemDrops: []
   itemDropCounts: 
   dropDistance: 0.5
-  maxHealth: 1000000
-  currentHealth: 1000000
+  maxHealth: 10
+  currentHealth: 10
   healthBarObj: {fileID: 0}
   colorChangeSpeed: 1
+  screenColorChangeSpeed: 2
   hurtColor: {r: 1, g: 0, b: 0, a: 1}
+  hurtScreenColor: {r: 1, g: 0, b: 0, a: 0.46666667}
   healColor: {r: 0, g: 1, b: 0, a: 1}
   normalColor: {r: 1, g: 1, b: 1, a: 1}
+  normalScreenColor: {r: 1, g: 0, b: 0, a: 0}
   deathObject: {fileID: 0}
-  shakeDuration: 0
-  shakeIntensity: 0.5
+  shakeDuration: 1
+  shakeIntensity: 10
   hurtSound: {fileID: 8300000, guid: 8ea69f502eccb5346b649909ae4ce3d4, type: 3}
+  damageScreen: {fileID: 0}
 --- !u!212 &212421118207432532
 SpriteRenderer:
   m_ObjectHideFlags: 1
