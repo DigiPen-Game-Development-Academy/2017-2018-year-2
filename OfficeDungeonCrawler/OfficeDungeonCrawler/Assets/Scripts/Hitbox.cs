@@ -22,12 +22,18 @@ public class Hitbox : MonoBehaviour
     {
 		Debug.Log("HIT OBJ: " + other.gameObject);
 
+        // Check if the object we collided with is a wall and we are the enemy
+        if (other.tag == "Tileset" && isEnemy)
+        {
+            Destroy(gameObject);
+        }
         // Check if the object we collided with is the player and we are the enemy
         if (other.tag == "Player" && isEnemy)
         {
             // Subtract damage from the other objects health
             other.gameObject.GetComponent<Health>().Damage(damage);
             other.gameObject.GetComponent<PlayerMovement>().timeTillCanMove = other.gameObject.GetComponent<PlayerMovement>().pauseOnHurt;
+            Destroy(gameObject);
 
         }
         else if (other.tag == "Enemy" && !isEnemy) // Check if the object we collided with is the enemy and we are the player
