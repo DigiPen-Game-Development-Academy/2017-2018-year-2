@@ -1,7 +1,8 @@
 ﻿/*
 Author; Luke Taranowski
 Contributers: Kevin-sen Panasyuk
-Last Edited: 3/22/2019
+justin Van Der Sluys
+Last Edited: 4/4/2019
 */
 using System.Collections;
 using System.Collections.Generic;
@@ -24,12 +25,14 @@ public class PrinterScript : MonoBehaviour
     public Sprite sprite2;
     public Sprite sprite3;
     bool lineOfSight = false;
-
+    public float fireRate = 5;
     public LayerMask m_layerMask;
-
-    float timer = 0;
-
-
+    public float burstDuration = 0;
+    public bool allowedFire = false;
+    public float timer = 0;
+    [HideInInspector]
+    public float burstTimer = 0;
+    public float burstTimeCoolDown = 0;
 
 
     void Start()
@@ -37,11 +40,13 @@ public class PrinterScript : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         timer = firerate;
         shotsLeft = burstSize;
+        fireRate = Time.deltaTime * fireRate;  
     }
 
     void Update()
     {
-        if (Vector2.Distance(transform.position, player.transform.position) <= detectionRange)
+       
+                if (Vector2.Distance(transform.position, player.transform.position) <= detectionRange)
         {
             //OLD CODE
             //Physics.Raycast(transform.position, player.transform.position - transform.position, out hit, Mathf.Infinity);
@@ -57,17 +62,21 @@ public class PrinterScript : MonoBehaviour
 
             //END CHRIS CODE
             //-----------------//
-
+            
+            
+                burstTimer += Time.deltaTime;
+                
+            
 
             //Debug.Log(hit.collider.tag);
             if (hit.collider.tag.Equals("Player"))
             {
-                Debug.Log("In LINE OF SIGHT");
+                //Debug.Log("In LINE OF SIGHT");
                 lineOfSight = true;
             }
             else
             {
-                Debug.Log("OUT OF SIGHT");
+                //Debug.Log("OUT OF SIGHT");
                 lineOfSight = false;
             }
             if (lineOfSight)
@@ -76,7 +85,7 @@ public class PrinterScript : MonoBehaviour
                 Vector3 newRotation = Vector3.RotateTowards(transform.right, difference, Mathf.Deg2Rad * turnSpeedInDegrees * Time.deltaTime, Vector3.Distance(transform.position, player.transform.position));
                 transform.right = newRotation;
 
-                if (timer <= 0)
+                if (timer <= 0 && allowedFire == true)
                 {
                     Sprite spriteToSpawn = sprite1;
 
@@ -100,12 +109,21 @@ public class PrinterScript : MonoBehaviour
                     newProjectile.GetComponent<Rigidbody2D>().velocity = transform.right * projectileSpeed;
 
                     timer = firerate;
-
                 }
                 else
                 {
-                    timer -= Time.deltaTime;
+                    timer -= fireRate;
                 }
+                if (burstTimer >= 0)
+                {
+                    allowedFire = true;
+                }
+                if (burstTimer >= burstDuration && allowedFire == true)
+                {
+                    allowedFire = false;
+                    burstTimer = burstTimeCoolDown;
+                }
+                
             }
         }
     }
