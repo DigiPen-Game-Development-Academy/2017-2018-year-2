@@ -20,8 +20,6 @@ public class Hitbox : MonoBehaviour
 	
     void OnTriggerEnter2D(Collider2D other)
     {
-		Debug.Log("HIT OBJ: " + other.gameObject);
-
         // Check if the object we collided with is a wall and we are the enemy
         if (other.tag == "Tileset" && isEnemy)
         {
@@ -39,20 +37,26 @@ public class Hitbox : MonoBehaviour
         else if (other.tag == "Enemy" && !isEnemy) // Check if the object we collided with is the enemy and we are the player
         {
             // Subtract damage from the other objects health
-            other.gameObject.GetComponent<Health>().Damage(damage);
+            if(other.gameObject.GetComponent<Health>())
+                other.gameObject.GetComponent<Health>().Damage(damage);
 
-            other.gameObject.GetComponent<EnemyMovement>().canMoveKnockback = false;
-            other.gameObject.GetComponent<EnemyMovement>().canMoveAfterKnockback = knockbackDuration;
+            if (other.gameObject.GetComponent<EnemyMovement>() != null)
+            {
+                Debug.Log("Oof");
+                other.gameObject.GetComponent<EnemyMovement>().canMoveKnockback = false;
+                other.gameObject.GetComponent<EnemyMovement>().canMoveAfterKnockback = knockbackDuration;
+
+                // calculate the angle of attack
+                Vector2 knockbackDirection = GameObject.FindGameObjectWithTag("Player").transform.position - other.gameObject.transform.position;
+
+                // Add knockback effect to the enemy
+                other.gameObject.GetComponent<Rigidbody2D>().velocity = -knockbackDirection.normalized * knockbackMultiplier;
+
+            }
 
             Vector3 spawnPosition = new Vector3(other.gameObject.transform.position.x, other.gameObject.transform.position.y, other.gameObject.transform.position.z + 10);
             // Spawn the particle effect
             Instantiate(enemyDamagedParticleEffect, spawnPosition, other.gameObject.transform.rotation);
-
-            // calculate the angle of attack
-            Vector2 knockbackDirection = GameObject.FindGameObjectWithTag("Player").transform.position - other.gameObject.transform.position;
-
-            // Add knockback effect to the enemy
-            other.gameObject.GetComponent<Rigidbody2D>().velocity = -knockbackDirection.normalized * knockbackMultiplier;
         }
         else
         {

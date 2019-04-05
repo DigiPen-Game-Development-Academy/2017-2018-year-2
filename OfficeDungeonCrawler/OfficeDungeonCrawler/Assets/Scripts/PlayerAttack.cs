@@ -55,8 +55,6 @@ public class PlayerAttack : MonoBehaviour
 
 			Vector3 direction = Vector3.Normalize(position - transform.position);
 
-			Debug.Log("Dir: " + direction);
-
 			// Spawn hitbox in front of the player in the direction they are facing
 			Hitbox newHitbox = Instantiate(hitbox, transform.position + direction, transform.rotation).GetComponent<Hitbox>();
 
