@@ -122,8 +122,8 @@ public class PlayerMovement : MonoBehaviour
 		{
 			//Debug.Log("DASH LEFT SPRITE");
 			//animator.Play(dashLeft);
-			animator.SetBool("MovingLeft", true);
-			animator.SetBool("MovingRight", false);
+			animator.SetBool("MovingLeft", false);
+			animator.SetBool("MovingRight", true);
 			animator.SetBool("MovingUp", false);
 			animator.SetBool("MovingDown", false);
 			spriteRenderer.flipX = true;

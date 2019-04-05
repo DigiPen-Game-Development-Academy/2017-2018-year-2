@@ -20,6 +20,7 @@ public class EnemyMovement : MonoBehaviour
 	public bool canMove = true;
     public bool canMoveKnockback = true;
     public float canMoveAfterKnockback = 0;
+	public LayerMask layer;
 
 	// Target for the enemy will chase
 	public GameObject target;
@@ -47,7 +48,9 @@ public class EnemyMovement : MonoBehaviour
         if(!canMoveKnockback)
         {
             return;
-        }
+
+		}
+
 		// If the target is not set, return
 		if (target == null || !canMove)
 		{
@@ -56,7 +59,7 @@ public class EnemyMovement : MonoBehaviour
 		}
 
 		// Cast a ray
-		RaycastHit2D hit = Physics2D.Raycast(transform.position, target.transform.position - transform.position, maxRaycastDistance);
+		RaycastHit2D hit = Physics2D.Raycast(transform.position, target.transform.position - transform.position, maxRaycastDistance, layer);
 		
 		// Set velocity to zero
 		rigidbody.velocity = Vector2.zero;
@@ -72,12 +75,18 @@ public class EnemyMovement : MonoBehaviour
 			}
 			else
 			{
+				Debug.Log("Cannot see player");
+
+				Debug.Log("Hit: " + hit.transform.gameObject.name);
+
 				// Stop
 				rigidbody.velocity = Vector2.zero;
 			}
 		}
 		else
 		{
+			Debug.Log("NOthing");
+
 			// Stop
 			rigidbody.velocity = Vector2.zero;
 		}
