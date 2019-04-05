@@ -39470,11 +39470,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4349503618860558, guid: 78360258d93ca764d8d87f6365d1e0c5, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -7.027898
+      value: -6.848
       objectReference: {fileID: 0}
     - target: {fileID: 4349503618860558, guid: 78360258d93ca764d8d87f6365d1e0c5, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 1.4734458
+      value: 1.554
       objectReference: {fileID: 0}
     - target: {fileID: 4349503618860558, guid: 78360258d93ca764d8d87f6365d1e0c5, type: 2}
       propertyPath: m_LocalPosition.z
@@ -39657,18 +39657,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114724419539805250, guid: 3efc137496d0ea64caba933d2da3425d,
-        type: 2}
-      propertyPath: ShootingPrinterFront
-      value: 
-      objectReference: {fileID: 21300000, guid: b74785ad1ddc0c64693ccf413b7eed8d,
-        type: 3}
-    - target: {fileID: 114724419539805250, guid: 3efc137496d0ea64caba933d2da3425d,
-        type: 2}
-      propertyPath: notShootingPrinter
-      value: 
-      objectReference: {fileID: 21300000, guid: 07e29cc90d2ad9548a6db44a7ef4e297,
-        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3efc137496d0ea64caba933d2da3425d, type: 2}
   m_IsPrefabAsset: 0
