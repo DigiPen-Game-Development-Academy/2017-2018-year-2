@@ -27,6 +27,14 @@ public class EnemyMovement : MonoBehaviour
 
 	// The Rigidbody2D component
 	new Rigidbody2D rigidbody;
+
+	public Sprite idleRight;
+	public Sprite idleUp;
+	public Sprite idleDown;
+	public Sprite walkRight;
+	public Sprite walkUp;
+	public Sprite walkDown;
+	public float margin = 0.3f;
 	
 	void Start()
 	{
@@ -72,13 +80,79 @@ public class EnemyMovement : MonoBehaviour
 			{
 				// Move towards the target
 				rigidbody.velocity = (target.transform.position - transform.position).normalized * speed;
+
+				Animator animator = GetComponent<Animator>();
+				SpriteRenderer sr = GetComponent<SpriteRenderer>();
+
+				if (rigidbody.velocity.x > -margin && rigidbody.velocity.x < margin)
+				{
+					animator.SetBool("IdleSide", true);
+					animator.SetBool("IdleFront", false);
+					animator.SetBool("IdleBack", false);
+					animator.SetBool("WalkSide", false);
+					animator.SetBool("WalkFront", false);
+					animator.SetBool("WalkBack", false);
+
+					sr.flipX = false;
+				}
+				else if (rigidbody.velocity.x < 0.0f)
+				{
+					animator.SetBool("IdleSide", true);
+					animator.SetBool("IdleFront", false);
+					animator.SetBool("IdleBack", false);
+					animator.SetBool("WalkSide", false);
+					animator.SetBool("WalkFront", false);
+					animator.SetBool("WalkBack", false);
+
+					sr.flipX = true;
+				}
+				else if (rigidbody.velocity.x > 0.0f)
+				{
+					animator.SetBool("IdleSide", true);
+					animator.SetBool("IdleFront", false);
+					animator.SetBool("IdleBack", false);
+					animator.SetBool("WalkSide", false);
+					animator.SetBool("WalkFront", false);
+					animator.SetBool("WalkBack", false);
+
+					sr.flipX = false;
+				}
+				if (rigidbody.velocity.y > -margin && rigidbody.velocity.y < margin)
+				{
+					animator.SetBool("IdleSide", false);
+					animator.SetBool("IdleFront", false);
+					animator.SetBool("IdleBack", false);
+					animator.SetBool("WalkSide", false);
+					animator.SetBool("WalkFront", false);
+					animator.SetBool("WalkBack", false);
+
+					sr.flipX = false;
+				}
+				else if (rigidbody.velocity.y < 0.0f)
+				{
+					animator.SetBool("IdleSide", true);
+					animator.SetBool("IdleFront", false);
+					animator.SetBool("IdleBack", false);
+					animator.SetBool("WalkSide", false);
+					animator.SetBool("WalkFront", false);
+					animator.SetBool("WalkBack", false);
+
+					sr.flipX = true;
+				}
+				else if (rigidbody.velocity.y > 0.0f)
+				{
+					animator.SetBool("IdleSide", true);
+					animator.SetBool("IdleFront", false);
+					animator.SetBool("IdleBack", false);
+					animator.SetBool("WalkSide", false);
+					animator.SetBool("WalkFront", false);
+					animator.SetBool("WalkBack", false);
+
+					sr.flipX = false;
+				}
 			}
 			else
 			{
-				Debug.Log("Cannot see player");
-
-				Debug.Log("Hit: " + hit.transform.gameObject.name);
-
 				// Stop
 				rigidbody.velocity = Vector2.zero;
 			}
