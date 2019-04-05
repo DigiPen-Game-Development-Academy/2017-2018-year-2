@@ -28,7 +28,9 @@ public class PrinterScript : MonoBehaviour
     public float fireRate = 5;
     public LayerMask m_layerMask;
     public float burstDuration = 0;
+    [HideInInspector]
     public bool allowedFire = false;
+    [HideInInspector]
     public float timer = 0;
     [HideInInspector]
     public float burstTimer = 0;
@@ -40,7 +42,9 @@ public class PrinterScript : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         timer = firerate;
         shotsLeft = burstSize;
-        fireRate = Time.deltaTime * fireRate;  
+        fireRate = Time.deltaTime * fireRate;
+        if (burstTimeCoolDown > 0)
+            burstTimeCoolDown = -burstTimeCoolDown;
     }
 
     void Update()
