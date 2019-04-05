@@ -26,19 +26,19 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
-  - m_Name: ChompingSide
+  - m_Name: WalkSide
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
-  - m_Name: ChompingFront
+  - m_Name: WalkFront
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
-  - m_Name: ChompingBack
+  - m_Name: WalkBack
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -113,7 +113,7 @@ AnimatorStateTransition:
     m_ConditionEvent: IdleSide
     m_EventTreshold: 0
   - m_ConditionMode: 2
-    m_ConditionEvent: ChompingSide
+    m_ConditionEvent: WalkSide
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102500566051553354}
@@ -140,7 +140,7 @@ AnimatorStateTransition:
     m_ConditionEvent: IdleBack
     m_EventTreshold: 0
   - m_ConditionMode: 2
-    m_ConditionEvent: ChompingBack
+    m_ConditionEvent: WalkBack
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102846271589158820}
@@ -188,7 +188,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: ChompingSide
+    m_ConditionEvent: WalkSide
     m_EventTreshold: 0
   - m_ConditionMode: 2
     m_ConditionEvent: IdleSide
@@ -215,7 +215,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: ChompingFront
+    m_ConditionEvent: WalkFront
     m_EventTreshold: 0
   - m_ConditionMode: 2
     m_ConditionEvent: IdleFront
@@ -242,7 +242,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: ChompingBack
+    m_ConditionEvent: WalkBack
     m_EventTreshold: 0
   - m_ConditionMode: 2
     m_ConditionEvent: IdleBack
@@ -296,7 +296,7 @@ AnimatorStateTransition:
     m_ConditionEvent: IdleFront
     m_EventTreshold: 0
   - m_ConditionMode: 2
-    m_ConditionEvent: ChompingFront
+    m_ConditionEvent: WalkFront
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102780872273211154}

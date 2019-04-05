@@ -120,7 +120,7 @@ public class EnemyMovement : MonoBehaviour
 				if (rigidbody.velocity.y > -margin && rigidbody.velocity.y < margin)
 				{
 					animator.SetBool("IdleSide", false);
-					animator.SetBool("IdleFront", false);
+					animator.SetBool("IdleFront", true);
 					animator.SetBool("IdleBack", false);
 					animator.SetBool("WalkSide", false);
 					animator.SetBool("WalkFront", false);
@@ -130,23 +130,23 @@ public class EnemyMovement : MonoBehaviour
 				}
 				else if (rigidbody.velocity.y < 0.0f)
 				{
-					animator.SetBool("IdleSide", true);
+					animator.SetBool("IdleSide", false);
 					animator.SetBool("IdleFront", false);
 					animator.SetBool("IdleBack", false);
 					animator.SetBool("WalkSide", false);
-					animator.SetBool("WalkFront", false);
+					animator.SetBool("WalkFront", true);
 					animator.SetBool("WalkBack", false);
 
-					sr.flipX = true;
+					sr.flipX = false;
 				}
 				else if (rigidbody.velocity.y > 0.0f)
 				{
-					animator.SetBool("IdleSide", true);
+					animator.SetBool("IdleSide", false);
 					animator.SetBool("IdleFront", false);
 					animator.SetBool("IdleBack", false);
 					animator.SetBool("WalkSide", false);
 					animator.SetBool("WalkFront", false);
-					animator.SetBool("WalkBack", false);
+					animator.SetBool("WalkBack", true);
 
 					sr.flipX = false;
 				}
