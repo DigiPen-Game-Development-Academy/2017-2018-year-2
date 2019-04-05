@@ -35,9 +35,9 @@ public class PrinterScript : MonoBehaviour
     [HideInInspector]
     public float burstTimer = 0;
     public float burstTimeCoolDown = 0;
-
-
-    void Start()
+    public Sprite ShootingPrinterFront;
+    public Sprite notShootingPrinter;
+     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         timer = firerate;
@@ -121,9 +121,11 @@ public class PrinterScript : MonoBehaviour
                 if (burstTimer >= 0)
                 {
                     allowedFire = true;
+                    GetComponent<SpriteRenderer>().sprite = ShootingPrinterFront;
                 }
                 if (burstTimer >= burstDuration && allowedFire == true)
                 {
+                    GetComponent<SpriteRenderer>().sprite = notShootingPrinter;
                     allowedFire = false;
                     burstTimer = burstTimeCoolDown;
                 }
