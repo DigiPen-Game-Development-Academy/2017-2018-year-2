@@ -1,4 +1,10 @@
-﻿using System.Collections;
+﻿/*
+Author: Kevin-sen Panasyuk
+Contributors: N/A
+Date Last Modified: 4/5/2019
+*/
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
