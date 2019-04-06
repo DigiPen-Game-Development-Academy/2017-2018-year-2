@@ -84,51 +84,7 @@ public class EnemyMovement : MonoBehaviour
 				Animator animator = GetComponent<Animator>();
 				SpriteRenderer sr = GetComponent<SpriteRenderer>();
 
-				if (rigidbody.velocity.x > -margin && rigidbody.velocity.x < margin)
-				{
-					animator.SetBool("IdleSide", true);
-					animator.SetBool("IdleFront", false);
-					animator.SetBool("IdleBack", false);
-					animator.SetBool("WalkSide", false);
-					animator.SetBool("WalkFront", false);
-					animator.SetBool("WalkBack", false);
-
-					sr.flipX = false;
-				}
-				else if (rigidbody.velocity.x < 0.0f)
-				{
-					animator.SetBool("IdleSide", true);
-					animator.SetBool("IdleFront", false);
-					animator.SetBool("IdleBack", false);
-					animator.SetBool("WalkSide", false);
-					animator.SetBool("WalkFront", false);
-					animator.SetBool("WalkBack", false);
-
-					sr.flipX = true;
-				}
-				else if (rigidbody.velocity.x > 0.0f)
-				{
-					animator.SetBool("IdleSide", true);
-					animator.SetBool("IdleFront", false);
-					animator.SetBool("IdleBack", false);
-					animator.SetBool("WalkSide", false);
-					animator.SetBool("WalkFront", false);
-					animator.SetBool("WalkBack", false);
-
-					sr.flipX = false;
-				}
-				if (rigidbody.velocity.y > -margin && rigidbody.velocity.y < margin)
-				{
-					animator.SetBool("IdleSide", false);
-					animator.SetBool("IdleFront", true);
-					animator.SetBool("IdleBack", false);
-					animator.SetBool("WalkSide", false);
-					animator.SetBool("WalkFront", false);
-					animator.SetBool("WalkBack", false);
-
-					sr.flipX = false;
-				}
-				else if (rigidbody.velocity.y < 0.0f)
+				if (rigidbody.velocity.y < -margin)
 				{
 					animator.SetBool("IdleSide", false);
 					animator.SetBool("IdleFront", false);
@@ -139,7 +95,7 @@ public class EnemyMovement : MonoBehaviour
 
 					sr.flipX = false;
 				}
-				else if (rigidbody.velocity.y > 0.0f)
+				else if (rigidbody.velocity.y > margin)
 				{
 					animator.SetBool("IdleSide", false);
 					animator.SetBool("IdleFront", false);
@@ -150,9 +106,41 @@ public class EnemyMovement : MonoBehaviour
 
 					sr.flipX = false;
 				}
+				else if (rigidbody.velocity.x < -margin)
+				{
+					animator.SetBool("IdleSide", true);
+					animator.SetBool("IdleFront", false);
+					animator.SetBool("IdleBack", false);
+					animator.SetBool("WalkSide", false);
+					animator.SetBool("WalkFront", false);
+					animator.SetBool("WalkBack", false);
+
+					sr.flipX = true;
+				}
+				else if (rigidbody.velocity.x > margin)
+				{
+					animator.SetBool("IdleSide", true);
+					animator.SetBool("IdleFront", false);
+					animator.SetBool("IdleBack", false);
+					animator.SetBool("WalkSide", false);
+					animator.SetBool("WalkFront", false);
+					animator.SetBool("WalkBack", false);
+
+					sr.flipX = false;
+				}
 			}
 			else
 			{
+				Animator animator = GetComponent<Animator>();
+				SpriteRenderer sr = GetComponent<SpriteRenderer>();
+
+				animator.SetBool("IdleSide", true);
+				animator.SetBool("IdleFront", false);
+				animator.SetBool("IdleBack", false);
+				animator.SetBool("WalkSide", false);
+				animator.SetBool("WalkFront", false);
+				animator.SetBool("WalkBack", false);
+
 				// Stop
 				rigidbody.velocity = Vector2.zero;
 			}
