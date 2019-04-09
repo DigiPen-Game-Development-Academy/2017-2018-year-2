@@ -58,7 +58,7 @@ public class PrinterScript : MonoBehaviour
 
             //-----------------//
             //CHRIS ONORATI CODE
-            Vector3 dir = player.transform.position - transform.position;
+            Vector3 dir = player.transform.position - transform.position + (Vector3)player.GetComponent<CircleCollider2D>().offset;
             dir.Normalize();
 
             //just a different method to make a raycast - I recommend avoiding out.
