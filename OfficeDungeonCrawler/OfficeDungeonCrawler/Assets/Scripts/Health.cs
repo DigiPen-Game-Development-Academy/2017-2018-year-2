@@ -78,6 +78,8 @@ public class Health : MonoBehaviour
 
 	void Update()
 	{
+		//Debug.Log(gameObject.name + " health: " + currentHealth + "/" + maxHealth);
+
 		// Used for testing
 		if (Input.GetKeyDown(KeyCode.Alpha0))
 			Heal(1.0f);
@@ -104,7 +106,8 @@ public class Health : MonoBehaviour
 		if (damageScreenIMG != null)
 			damageScreenIMG.color = hurtScreenColor;
 
-		audioSource.PlayOneShot(hurtSound, vol);
+		if (hurtSound != null)
+			audioSource.PlayOneShot(hurtSound, vol);
 
 		//if (camera != null)
 		//camera.GetComponent<ScreenShake>().Shake(shakeIntensity, shakeDuration);
@@ -156,6 +159,8 @@ public class Health : MonoBehaviour
 	// Used to kill the entity
 	public void Death()
 	{
+		Debug.Log("DESTROYING " + gameObject.name);
+
 		for (int i = 0; i < itemDrops.Count; ++i)
 		{
 			ItemPickup drop = Instantiate(itemDrop, transform.position + new Vector3(Random.Range(-dropDistance, dropDistance), Random.Range(-dropDistance, dropDistance)), transform.rotation).GetComponent<ItemPickup>();

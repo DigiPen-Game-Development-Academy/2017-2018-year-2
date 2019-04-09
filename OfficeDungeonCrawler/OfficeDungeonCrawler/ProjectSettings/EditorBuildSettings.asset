@@ -5,13 +5,16 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: 36684880b652fab45bc62b99c6263264
   - enabled: 1
     path: Assets/Scenes/MylesPreProductionPresentation.unity
     guid: f682d623e57d2e24ba8d511ae419ca1e
+  - enabled: 1
+    path: Assets/Scenes/Rooms/CubicleRoom1.unity
+    guid: 743ade3fefc81f04b88ab00017e5e2d4
+  - enabled: 1
+    path: Assets/Scenes/Rooms/room two.unity
+    guid: 9af43c2484ac25247a063a5a1854c4f5
   m_configObjects: {}

@@ -81,7 +81,7 @@ public class EnemyMovement : MonoBehaviour
 				// Move towards the target
 				rigidbody.velocity = (target.transform.position - transform.position).normalized * speed;
 
-				Animator animator = GetComponent<Animator>();
+				/*Animator animator = GetComponent<Animator>();
 				SpriteRenderer sr = GetComponent<SpriteRenderer>();
 
 				if (rigidbody.velocity.y < -margin)
@@ -127,11 +127,11 @@ public class EnemyMovement : MonoBehaviour
 					animator.SetBool("WalkBack", false);
 
 					sr.flipX = false;
-				}
+				}*/
 			}
 			else
 			{
-				Animator animator = GetComponent<Animator>();
+				/*Animator animator = GetComponent<Animator>();
 				SpriteRenderer sr = GetComponent<SpriteRenderer>();
 
 				animator.SetBool("IdleSide", true);
@@ -139,7 +139,7 @@ public class EnemyMovement : MonoBehaviour
 				animator.SetBool("IdleBack", false);
 				animator.SetBool("WalkSide", false);
 				animator.SetBool("WalkFront", false);
-				animator.SetBool("WalkBack", false);
+				animator.SetBool("WalkBack", false);*/
 
 				// Stop
 				rigidbody.velocity = Vector2.zero;
