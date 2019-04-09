@@ -67,7 +67,11 @@ public class StaplerAttack : MonoBehaviour
 			}
 		}
 		else
+		{
+			enemyMovement.canMove = true;
+
 			timeTillAttack = attackChargeTime;
+		}
 
         //if (playerAttack == true)
         //{

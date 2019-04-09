@@ -28,12 +28,6 @@ public class EnemyMovement : MonoBehaviour
 	// The Rigidbody2D component
 	new Rigidbody2D rigidbody;
 
-	public Sprite idleRight;
-	public Sprite idleUp;
-	public Sprite idleDown;
-	public Sprite walkRight;
-	public Sprite walkUp;
-	public Sprite walkDown;
 	public float margin = 0.3f;
 	
 	void Start()
@@ -67,7 +61,7 @@ public class EnemyMovement : MonoBehaviour
 		}
 
 		// Cast a ray
-		RaycastHit2D hit = Physics2D.Raycast(transform.position, target.transform.position - transform.position, maxRaycastDistance, layer);
+		RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector3.Normalize(target.transform.position - transform.position + (Vector3)target.GetComponent<CircleCollider2D>().offset), maxRaycastDistance, layer);
 		
 		// Set velocity to zero
 		rigidbody.velocity = Vector2.zero;
@@ -80,66 +74,55 @@ public class EnemyMovement : MonoBehaviour
 			{
 				// Move towards the target
 				rigidbody.velocity = (target.transform.position - transform.position).normalized * speed;
-
-				/*Animator animator = GetComponent<Animator>();
+				
+				Animator animator = GetComponent<Animator>();
 				SpriteRenderer sr = GetComponent<SpriteRenderer>();
 
 				if (rigidbody.velocity.y < -margin)
 				{
-					animator.SetBool("IdleSide", false);
-					animator.SetBool("IdleFront", false);
-					animator.SetBool("IdleBack", false);
-					animator.SetBool("WalkSide", false);
+					animator.SetBool("Idle", false);
+					animator.SetBool("WalkRight", false);
 					animator.SetBool("WalkFront", true);
 					animator.SetBool("WalkBack", false);
-
-					sr.flipX = false;
+					animator.SetBool("WalkLeft", false);
 				}
 				else if (rigidbody.velocity.y > margin)
 				{
-					animator.SetBool("IdleSide", false);
-					animator.SetBool("IdleFront", false);
-					animator.SetBool("IdleBack", false);
-					animator.SetBool("WalkSide", false);
+					animator.SetBool("Idle", false);
+					animator.SetBool("WalkRight", false);
 					animator.SetBool("WalkFront", false);
 					animator.SetBool("WalkBack", true);
-
-					sr.flipX = false;
+					animator.SetBool("WalkLeft", false);
 				}
 				else if (rigidbody.velocity.x < -margin)
 				{
-					animator.SetBool("IdleSide", true);
-					animator.SetBool("IdleFront", false);
-					animator.SetBool("IdleBack", false);
-					animator.SetBool("WalkSide", false);
+					animator.SetBool("Idle", false);
+					animator.SetBool("WalkRight", false);
 					animator.SetBool("WalkFront", false);
 					animator.SetBool("WalkBack", false);
-
-					sr.flipX = true;
+					animator.SetBool("WalkLeft", true);
 				}
-				else if (rigidbody.velocity.x > margin)
+				else/* if (rigidbody.velocity.x > margin)*/
 				{
-					animator.SetBool("IdleSide", true);
-					animator.SetBool("IdleFront", false);
-					animator.SetBool("IdleBack", false);
-					animator.SetBool("WalkSide", false);
+					animator.SetBool("Idle", false);
+					animator.SetBool("WalkRight", true);
 					animator.SetBool("WalkFront", false);
 					animator.SetBool("WalkBack", false);
-
-					sr.flipX = false;
-				}*/
+					animator.SetBool("WalkLeft", false);
+				}
 			}
 			else
 			{
-				/*Animator animator = GetComponent<Animator>();
+				Animator animator = GetComponent<Animator>();
 				SpriteRenderer sr = GetComponent<SpriteRenderer>();
 
-				animator.SetBool("IdleSide", true);
-				animator.SetBool("IdleFront", false);
-				animator.SetBool("IdleBack", false);
+				animator.SetBool("Idle", true);
 				animator.SetBool("WalkSide", false);
 				animator.SetBool("WalkFront", false);
-				animator.SetBool("WalkBack", false);*/
+				animator.SetBool("WalkBack", false);
+				animator.SetBool("WalkLeft", false);
+
+				Debug.Log("Stopped, cannot see player");
 
 				// Stop
 				rigidbody.velocity = Vector2.zero;
