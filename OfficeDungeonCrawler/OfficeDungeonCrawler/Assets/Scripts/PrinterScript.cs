@@ -49,8 +49,8 @@ public class PrinterScript : MonoBehaviour
 
     void Update()
     {
-        if (bossConditions)
-        {
+        
+        
                 if (Vector2.Distance(transform.position, player.transform.position) <= detectionRange)
         {
             //OLD CODE
@@ -90,30 +90,33 @@ public class PrinterScript : MonoBehaviour
                     Vector3 newRotation = Vector3.RotateTowards(transform.right, difference, Mathf.Deg2Rad * turnSpeedInDegrees * Time.deltaTime, Vector3.Distance(transform.position, player.transform.position));
                     transform.right = newRotation;
 
-                    if (timer <= 0 && allowedFire == true)
+                    if (bossConditions)
                     {
-                        Sprite spriteToSpawn = sprite1;
+                        if (timer <= 0 && allowedFire == true)
+                        {
+                            Sprite spriteToSpawn = sprite1;
 
-                        int randomNumber = Random.Range(0, 6);
-                        if (randomNumber < 2)
-                            spriteToSpawn = sprite1;
-                        if (randomNumber > 2 && randomNumber < 4)
-                            spriteToSpawn = sprite2;
-                        if (randomNumber > 4)
-                            spriteToSpawn = sprite3;
+                            int randomNumber = Random.Range(0, 6);
+                            if (randomNumber < 2)
+                                spriteToSpawn = sprite1;
+                            if (randomNumber > 2 && randomNumber < 4)
+                                spriteToSpawn = sprite2;
+                            if (randomNumber > 4)
+                                spriteToSpawn = sprite3;
 
-                        Quaternion rotation = transform.rotation;
-                        GameObject newProjectile = Instantiate(projectile, transform.position + transform.right, rotation *= Quaternion.Euler(0, 0, 90));
+                            Quaternion rotation = transform.rotation;
+                            GameObject newProjectile = Instantiate(projectile, transform.position + transform.right, rotation *= Quaternion.Euler(0, 0, 90));
 
-                        newProjectile.transform.localScale = new Vector3(2, 2, 2);
-                        newProjectile.GetComponent<Hitbox>().isEnemy = true;
-                        newProjectile.GetComponent<Hitbox>().damage = attackDamage;
-                        newProjectile.GetComponent<TimedDeath>().deathTimer = projectileLifespan;
+                            newProjectile.transform.localScale = new Vector3(2, 2, 2);
+                            newProjectile.GetComponent<Hitbox>().isEnemy = true;
+                            newProjectile.GetComponent<Hitbox>().damage = attackDamage;
+                            newProjectile.GetComponent<TimedDeath>().deathTimer = projectileLifespan;
 
-                        newProjectile.GetComponent<SpriteRenderer>().sprite = spriteToSpawn;
-                        newProjectile.GetComponent<Rigidbody2D>().velocity = transform.right * projectileSpeed;
+                            newProjectile.GetComponent<SpriteRenderer>().sprite = spriteToSpawn;
+                            newProjectile.GetComponent<Rigidbody2D>().velocity = transform.right * projectileSpeed;
 
-                        timer = firerate;
+                            timer = firerate;
+                        }
                     }
                     else
                     {
@@ -135,4 +138,4 @@ public class PrinterScript : MonoBehaviour
             }
         }
     }
-}
+

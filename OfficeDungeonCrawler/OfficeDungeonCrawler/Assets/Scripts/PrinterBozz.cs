@@ -1,4 +1,4 @@
-﻿/*using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -43,10 +43,24 @@ public class PrinterBozz : MonoBehaviour {
     public float phase2Melee = 0;
     public float phase3Melee = 0;
     public float phase4Melee = 0;
-    
+
+    //the values of the move time for when it is in each phase
+    public float phase1MoveTime = 0;
+    public float phase2MoveTime = 0;
+    public float phase3MoveTime = 0;
+    public float phase4MoveTime = 0;
+
+    //the values for shooting in each phase 
+    public float phase1ShootTime = 0;
+    public float phase2ShootTime = 0;
+    public float phase3ShootTime = 0;
+    public float phase4ShootTime = 0;
+
     //this controls when the boss can move towards the player till its in proper range
     public float optimalShootingDistance;
+    [HideInInspector]
     public float moveTime = 0;
+    [HideInInspector]
     public float shootTime = 0;
 
     //end of boss stats
@@ -60,7 +74,7 @@ public class PrinterBozz : MonoBehaviour {
 	void Start () {
        Health = gameObject.GetComponent<Health>().maxHealth;
         Player = GameObject.Find("Player");
-        gameObject.GetComponent<Health>().CurrentHealth = Health;
+        gameObject.GetComponent<Health>().currentHealth = Health;
         shootTime = -shootTime;
        //if(gameObject.GetComponent<>)
     }
@@ -71,9 +85,9 @@ public class PrinterBozz : MonoBehaviour {
 
         if(timer >= moveTime)
         {
-            if (vector3.Distance(Player.transform.position, transform.position) >= optimalShootingDistance)
+            if (Vector3.Distance(Player.transform.position, transform.position) >= optimalShootingDistance)
             {
-                gameObject.GetCompoenent<EnemyMovement>().bossConditions = true;
+                gameObject.GetComponent<EnemyMovement>().bossConditions = true;
             } 
         }
         
@@ -84,6 +98,8 @@ public class PrinterBozz : MonoBehaviour {
             gameObject.GetComponent<PrinterScript>().burstTimeCoolDown = phase1ShootCooldown;
             gameObject.GetComponent<EnemyMovement>().speed = phase1Move;
             gameObject.GetComponent<StaplerAttack>().attackDamage = phase1Melee;
+            shootTime = phase1ShootTime;
+            moveTime = phase1MoveTime;
             if (CurrentHealth <= phase2HealthTrigger && CurrentHealth >= phase3HealthTrigger)
             {
                 gameObject.GetComponent<PrinterScript>().fireRate = phase2ShootIntensity;
@@ -91,6 +107,8 @@ public class PrinterBozz : MonoBehaviour {
                 gameObject.GetComponent<PrinterScript>().burstTimeCoolDown = phase2ShootCooldown;
                 gameObject.GetComponent<EnemyMovement>().speed = phase2Move;
                 gameObject.GetComponent<StaplerAttack>().attackDamage = phase2Melee;
+                shootTime = phase2ShootTime;
+                moveTime = phase2MoveTime;
                 if (CurrentHealth <= phase3HealthTrigger && CurrentHealth >= phase4HealthTrigger)
                 {
                     gameObject.GetComponent<PrinterScript>().fireRate = phase3ShootIntensity;
@@ -98,6 +116,8 @@ public class PrinterBozz : MonoBehaviour {
                     gameObject.GetComponent<PrinterScript>().burstTimeCoolDown = phase3ShootCooldown;
                     gameObject.GetComponent<EnemyMovement>().speed = phase3Move;
                     gameObject.GetComponent<StaplerAttack>().attackDamage = phase3Melee;
+                    shootTime = phase3ShootTime;
+                    moveTime = phase3MoveTime;
                     if (CurrentHealth <= phase4HealthTrigger)
                     {
                         gameObject.GetComponent<PrinterScript>().fireRate = phase4ShootIntensity;
@@ -105,22 +125,24 @@ public class PrinterBozz : MonoBehaviour {
                         gameObject.GetComponent<PrinterScript>().burstTimeCoolDown = phase4ShootCooldown;
                         gameObject.GetComponent<EnemyMovement>().speed = phase4Move;
                         gameObject.GetComponent<StaplerAttack>().attackDamage = phase4Melee;
+                        shootTime = phase4ShootTime;
+                        moveTime = phase4MoveTime;
                     }
                 }
             }
         }
         if (timer <= 0)
         {
-            gameobject.GetComponent<PrinterScript>().bossConditions = true;
-            gameobject.GetComponent<EnemyMovement>().bossConditions = false;
+            gameObject.GetComponent<PrinterScript>().bossConditions = true;
+            gameObject.GetComponent<EnemyMovement>().bossConditions = false;
+            gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
         }
         if(timer >= 0)
         {
-            gameobject.GetComponent<PrinterScript>().bossConditions = false;
-            gameobject.GetComponent<EnemyMovement>().bossConditions = true;
+            gameObject.GetComponent<PrinterScript>().bossConditions = false;
+            gameObject.GetComponent<EnemyMovement>().bossConditions = true;
         }
-        if (timer >= movetime) timer = shootTime;
+        if (timer >= moveTime) timer = shootTime;
     timer += Time.deltaTime * switchSpeed;
 	}
 }
-*/

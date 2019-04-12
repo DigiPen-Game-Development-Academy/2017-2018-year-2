@@ -185,34 +185,44 @@ MonoBehaviour:
   shooting: 1
   switchSpeed: 1
   CurrentHealth: 0
-  phase1ShootDuration: 100
-  phase2ShootDuration: 0
-  phase3ShootDuration: 0
-  phase4ShootDuration: 0
-  phase1ShootCooldown: 0
-  phase2ShootCooldown: 0
-  phase3ShootCooldown: 0
-  phase4ShootCooldown: 0
-  phase1Healthtrigger: 90
-  phase2HealthTrigger: 75
-  phase3HealthTrigger: 50
-  phase4HealthTrigger: 30
-  phase1Move: 25
-  phase2Move: 0
-  phase3Move: 0
-  phase4Move: 0
-  phase1ShootIntensity: 0
-  phase2ShootIntensity: 0
-  phase3ShootIntensity: 0
-  phase4ShootIntensity: 0
-  phase1Melee: 0
-  phase2Melee: 0
-  phase3Melee: 0
-  phase4Melee: 0
-  optimalShootingDistance: 0
+  phase1ShootDuration: 10
+  phase2ShootDuration: 12.5
+  phase3ShootDuration: 14
+  phase4ShootDuration: 20
+  phase1ShootCooldown: 4
+  phase2ShootCooldown: 3
+  phase3ShootCooldown: 2
+  phase4ShootCooldown: 1
+  phase1Healthtrigger: 40
+  phase2HealthTrigger: 30
+  phase3HealthTrigger: 20
+  phase4HealthTrigger: 10
+  phase1Move: 2
+  phase2Move: 3
+  phase3Move: 4
+  phase4Move: 5
+  phase1ShootIntensity: 10
+  phase2ShootIntensity: 15
+  phase3ShootIntensity: 20
+  phase4ShootIntensity: 35
+  phase1Melee: 1
+  phase2Melee: 1
+  phase3Melee: 1.5
+  phase4Melee: 2
+  phase1MoveTime: 5
+  phase2MoveTime: 4
+  phase3MoveTime: 3
+  phase4MoveTime: 2
+  phase1ShootTime: 2
+  phase2ShootTime: 3
+  phase3ShootTime: 4
+  phase4ShootTime: 5
+  optimalShootingDistance: 7
+  moveTime: 4
+  shootTime: 4
   timer: 0
   Health: 0
-  Player: {fileID: 0}
+  Player: {fileID: 2030266392}
 --- !u!114 &466842594
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -225,7 +235,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  maxRaycastDistance: 7.5
+  maxRaycastDistance: 1000
   canMove: 1
   canMoveKnockback: 1
   canMoveAfterKnockback: 0
@@ -262,6 +272,7 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
+  - component: {fileID: 519420030}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -276,6 +287,21 @@ AudioListener:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
+--- !u!114 &519420030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0ee903e839b11a4d8fc0eafc8043951, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 2030266392}
+  speed: 3
+  directionMultiplier: 2.5
+  type: 1
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -583,7 +609,17 @@ MonoBehaviour:
   phase2Melee: 0
   phase3Melee: 0
   phase4Melee: 0
+  phase1MoveTime: 0
+  phase2MoveTime: 0
+  phase3MoveTime: 0
+  phase4MoveTime: 0
+  phase1ShootTime: 0
+  phase2ShootTime: 0
+  phase3ShootTime: 0
+  phase4ShootTime: 0
   optimalShootingDistance: 0
+  moveTime: 0
+  shootTime: 0
   timer: 0
   Health: 0
   Player: {fileID: 0}
