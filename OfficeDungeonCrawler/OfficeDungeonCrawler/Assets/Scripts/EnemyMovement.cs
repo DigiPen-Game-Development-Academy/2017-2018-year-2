@@ -117,12 +117,12 @@ public class EnemyMovement : MonoBehaviour
 				SpriteRenderer sr = GetComponent<SpriteRenderer>();
 
 				animator.SetBool("Idle", true);
-				animator.SetBool("WalkSide", false);
+				//animator.SetBool("WalkSide", false);
 				animator.SetBool("WalkFront", false);
 				animator.SetBool("WalkBack", false);
 				animator.SetBool("WalkLeft", false);
 
-				Debug.Log("Stopped, cannot see player");
+				//Debug.Log("Stopped, cannot see player");
 
 				// Stop
 				rigidbody.velocity = Vector2.zero;

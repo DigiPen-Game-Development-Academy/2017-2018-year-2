@@ -48,11 +48,17 @@ public class PlayerMovement : MonoBehaviour
 	public string idleRight = "Idle";
 	public string idleUp = "Idle";
 	public string idleDown = "Idle";
+	
+	public Sprite dashRightSpr;
+	public Sprite dashUpSpr;
+	public Sprite dashDownSpr;
 
 	public AudioClip walkSound1;
 	public AudioClip walkSound2;
 	public AudioClip walkSound3;
 	public AudioClip dashSound;
+
+	public GameObject onionSkin;
 
 	public float walkSoundDelay = 1.0f;
 	float timeTillPlaySound = 0.0f;
@@ -104,6 +110,88 @@ public class PlayerMovement : MonoBehaviour
 		{
 			direction = dashDirection;
 			currentSpeed = dashSpeed;
+
+			//Debug.Log("Dashing");
+
+			if (direction.x > 0.0f)
+			{
+				Debug.Log("Dashing right");
+
+				animator.SetBool("MovingLeft", false);
+				animator.SetBool("MovingRight", false);
+				animator.SetBool("MovingUp", false);
+				animator.SetBool("MovingDown", false);
+
+				animator.SetBool("DashRight", true);
+				animator.SetBool("DashBack", false);
+				animator.SetBool("DashFront", false);
+				
+				spriteRenderer.flipX = false;
+			}
+			else if (direction.x < 0.0f)
+			{
+				Debug.Log("Dashing left");
+
+				animator.SetBool("MovingLeft", false);
+				animator.SetBool("MovingRight", false);
+				animator.SetBool("MovingUp", false);
+				animator.SetBool("MovingDown", false);
+
+				animator.SetBool("DashRight", true);
+				animator.SetBool("DashBack", false);
+				animator.SetBool("DashFront", false);
+				
+				spriteRenderer.flipX = true;
+			}
+			else if (direction.y > 0.0f)
+			{
+				Debug.Log("Dashing up");
+
+				animator.SetBool("MovingLeft", false);
+				animator.SetBool("MovingRight", false);
+				animator.SetBool("MovingUp", false);
+				animator.SetBool("MovingDown", false);
+
+				animator.SetBool("DashRight", false);
+				animator.SetBool("DashBack", true);
+				animator.SetBool("DashFront", false);
+				
+				spriteRenderer.flipX = false;
+			}
+			else if (direction.y < 0.0f)
+			{
+				Debug.Log("Dashing down");
+
+				animator.SetBool("MovingLeft", false);
+				animator.SetBool("MovingRight", false);
+				animator.SetBool("MovingUp", false);
+				animator.SetBool("MovingDown", false);
+
+				animator.SetBool("DashRight", false);
+				animator.SetBool("DashBack", false);
+				animator.SetBool("DashFront", true);
+				
+				spriteRenderer.flipX = false;
+			}
+
+			Debug.Log("Dash mod: " + (dashTimeRemaining % 0.025f));
+			if (dashTimeRemaining % 0.025f <= 0.1f)
+			{
+				GameObject newOnionSkin = Instantiate(onionSkin, transform.position, transform.rotation);
+
+				newOnionSkin.GetComponent<SpriteRenderer>().sprite = spriteRenderer.sprite;
+				newOnionSkin.GetComponent<SpriteRenderer>().flipX = spriteRenderer.flipX;
+			}
+		}
+		else
+		{
+			//Debug.Log("Not dashing");
+
+			animator.SetBool("DashRight", false);
+			animator.SetBool("DashBack", false);
+			animator.SetBool("DashFront", false);
+
+			spriteRenderer.flipX = false;
 		}
 
 		if (dashTimeRemaining <= dashLerpTime)
@@ -118,7 +206,7 @@ public class PlayerMovement : MonoBehaviour
         if (direction != Vector2.zero)
 			currentDirection = direction.normalized;
 
-		if (direction.x == -1/* && dashTimeRemaining > 0*/)
+		if (direction.x == -1 && dashTimeRemaining < 0)
 		{
 			//Debug.Log("DASH LEFT SPRITE");
 			//animator.Play(dashLeft);
@@ -128,7 +216,7 @@ public class PlayerMovement : MonoBehaviour
 			animator.SetBool("MovingDown", false);
 			spriteRenderer.flipX = true;
 		}
-		if (direction.x == 1/* && dashTimeRemaining > 0*/)
+		else if (direction.x == 1 && dashTimeRemaining < 0)
 		{
 			//Debug.Log("DASH RIGHT SPRITE");
 			//animator.Play(dashRight);
@@ -139,7 +227,7 @@ public class PlayerMovement : MonoBehaviour
 			spriteRenderer.flipX = false;
 
 		}
-		if (direction.y == -1/* && dashTimeRemaining > 0*/)
+		else if (direction.y == -1 && dashTimeRemaining < 0)
 		{
 			//Debug.Log("DASH DOWN SPRITE");
 			//animator.Play(dashDown);
@@ -149,7 +237,7 @@ public class PlayerMovement : MonoBehaviour
 			animator.SetBool("MovingDown", true);
 			spriteRenderer.flipX = false;
 		}
-		if (direction.y == 1/* && dashTimeRemaining > 0*/)
+		else if (direction.y == 1 && dashTimeRemaining < 0)
 		{
 			//Debug.Log("DASH UP SPRITE");
 			//animator.Play(dashUp);
