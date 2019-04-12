@@ -13,7 +13,7 @@ public class StaplerAttack : MonoBehaviour
 	public GameObject hitbox;
 
 	public float attackDistance = 1;
-
+    public bool bossvariable = true;
 	public float attackCooldown = 1.0f;
 	public float attackChargeTime = 0.5f;
 	public float attackDamage = 1.0f;
@@ -35,98 +35,102 @@ public class StaplerAttack : MonoBehaviour
 
 	void Update()
 	{
-		if (player == null)
-			return;
+        if (bossvariable)
+        {
 
-		float distance = Vector2.Distance(transform.position, player.transform.position);
+            if (player == null)
+                return;
 
-		timeTillAttack -= Time.deltaTime;
+            float distance = Vector2.Distance(transform.position, player.transform.position);
 
-		if (distance <= attackDistance)
-		{
-			if (timeTillAttack <= 0.0f)
-			{
-				enemyMovement.canMove = false;
-			}
-			else
-			{
-				attackPosition = player.transform.position;
+            timeTillAttack -= Time.deltaTime;
 
-				enemyMovement.canMove = true;
-			}
+            if (distance <= attackDistance)
+            {
+                if (timeTillAttack <= 0.0f)
+                {
+                    enemyMovement.canMove = false;
+                }
+                else
+                {
+                    attackPosition = player.transform.position;
 
-			if (timeTillAttack <= -attackChargeTime)
-			{
-				GameObject newHitbox = Instantiate(hitbox, Vector2.Lerp(attackPosition, player.transform.position, 0.5f), Quaternion.Euler(Vector2.zero));
+                    enemyMovement.canMove = true;
+                }
 
-				Hitbox hitboxComponent = newHitbox.GetComponent<Hitbox>();
-				hitboxComponent.isEnemy = true;
-				hitboxComponent.damage = attackDamage;
+                if (timeTillAttack <= -attackChargeTime)
+                {
+                    GameObject newHitbox = Instantiate(hitbox, Vector2.Lerp(attackPosition, player.transform.position, 0.5f), Quaternion.Euler(Vector2.zero));
 
-				timeTillAttack = attackCooldown;
-			}
-		}
-		else
-		{
-			enemyMovement.canMove = true;
+                    Hitbox hitboxComponent = newHitbox.GetComponent<Hitbox>();
+                    hitboxComponent.isEnemy = true;
+                    hitboxComponent.damage = attackDamage;
 
-			timeTillAttack = attackChargeTime;
-		}
+                    timeTillAttack = attackCooldown;
+                }
+            }
+            else
+            {
+                enemyMovement.canMove = true;
 
-        //if (playerAttack == true)
-        //{
-        //    timeTillAttack = attackCooldown;
-        //}
+                timeTillAttack = attackChargeTime;
+            }
+
+            //if (playerAttack == true)
+            //{
+            //    timeTillAttack = attackCooldown;
+            //}
 
 
-        //float distance = Vector2.Distance(transform.position, player.transform.position);
+            //float distance = Vector2.Distance(transform.position, player.transform.position);
 
-        //Debug.Log("Attack pos: " + attackPosition);
+            //Debug.Log("Attack pos: " + attackPosition);
 
-        //Debug.Log("Tims, FC: " + timeTillFastCharge + ", FA: " + timeTillFastAttack + ", LC: " + timeTillLongCharge + ", LA: " + timeTillLongAttack);
+            //Debug.Log("Tims, FC: " + timeTillFastCharge + ", FA: " + timeTillFastAttack + ", LC: " + timeTillLongCharge + ", LA: " + timeTillLongAttack);
 
-        //if (distance <= attackDistance)
-        //{
-        //	timeTillLongCharge -= Time.deltaTime;
-        //	timeTillFastCharge -= Time.deltaTime;
+            //if (distance <= attackDistance)
+            //{
+            //	timeTillLongCharge -= Time.deltaTime;
+            //	timeTillFastCharge -= Time.deltaTime;
 
-        //	if (timeTillLongCharge <= 0.0f)
-        //	{
-        //		timeTillLongAttack -= Time.deltaTime;
+            //	if (timeTillLongCharge <= 0.0f)
+            //	{
+            //		timeTillLongAttack -= Time.deltaTime;
 
-        //		enemyMovement.canMove = false;
-        //	}
-        //	else if (timeTillFastCharge <= 0.0f)
-        //	{
-        //		timeTillFastAttack -= Time.deltaTime;
+            //		enemyMovement.canMove = false;
+            //	}
+            //	else if (timeTillFastCharge <= 0.0f)
+            //	{
+            //		timeTillFastAttack -= Time.deltaTime;
 
-        //		enemyMovement.canMove = false;
-        //	}
-        //	else
-        //		attackPosition = player.transform.position;
+            //		enemyMovement.canMove = false;
+            //	}
+            //	else
+            //		attackPosition = player.transform.position;
 
-        //	if (timeTillLongAttack <= 0.0f)
-        //	{
-        //		GameObject newHitbox = Instantiate(hitbox, attackPosition, Quaternion.Euler(Vector2.zero));
+            //	if (timeTillLongAttack <= 0.0f)
+            //	{
+            //		GameObject newHitbox = Instantiate(hitbox, attackPosition, Quaternion.Euler(Vector2.zero));
 
-        //		timeTillLongCharge = longAttackCooldown;
-        //		timeTillLongAttack = longAttackChargeTime;
-        //		timeTillFastCharge = fastAttackCooldown;
-        //		timeTillFastAttack = fastAttackChargeTime;
+            //		timeTillLongCharge = longAttackCooldown;
+            //		timeTillLongAttack = longAttackChargeTime;
+            //		timeTillFastCharge = fastAttackCooldown;
+            //		timeTillFastAttack = fastAttackChargeTime;
 
-        //		enemyMovement.canMove = true;
-        //	}
-        //	else if (timeTillFastAttack <= 0.0f)
-        //	{
-        //		GameObject newHitbox = Instantiate(hitbox, attackPosition, Quaternion.Euler(Vector2.zero));
+            //		enemyMovement.canMove = true;
+            //	}
+            //	else if (timeTillFastAttack <= 0.0f)
+            //	{
+            //		GameObject newHitbox = Instantiate(hitbox, attackPosition, Quaternion.Euler(Vector2.zero));
 
-        //		timeTillFastCharge = fastAttackCooldown;
-        //		timeTillFastAttack = fastAttackChargeTime;
+            //		timeTillFastCharge = fastAttackCooldown;
+            //		timeTillFastAttack = fastAttackChargeTime;
 
-        //		enemyMovement.canMove = true;
-        //	}
-        //}
-        //else
-        //	enemyMovement.canMove = true;
+            //		enemyMovement.canMove = true;
+            //	}
+            //}
+            //else
+            //	enemyMovement.canMove = true;
+        }
     }
 }

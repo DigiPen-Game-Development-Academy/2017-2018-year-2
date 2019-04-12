@@ -12,7 +12,7 @@ public class PrinterScript : MonoBehaviour
 {
     public GameObject projectile;
     GameObject player;
-
+    public bool bossConditions = true;
     public float projectileSpeed;
     public float projectileLifespan;
     public float detectionRange;
@@ -49,7 +49,8 @@ public class PrinterScript : MonoBehaviour
 
     void Update()
     {
-       
+        if (bossConditions)
+        {
                 if (Vector2.Distance(transform.position, player.transform.position) <= detectionRange)
         {
             //OLD CODE
@@ -83,53 +84,54 @@ public class PrinterScript : MonoBehaviour
                 //Debug.Log("OUT OF SIGHT");
                 lineOfSight = false;
             }
-            if (lineOfSight)
-            {
-                Vector3 difference = player.transform.position - transform.position;
-                Vector3 newRotation = Vector3.RotateTowards(transform.right, difference, Mathf.Deg2Rad * turnSpeedInDegrees * Time.deltaTime, Vector3.Distance(transform.position, player.transform.position));
-                transform.right = newRotation;
-
-                if (timer <= 0 && allowedFire == true)
+                if (lineOfSight)
                 {
-                    Sprite spriteToSpawn = sprite1;
+                    Vector3 difference = player.transform.position - transform.position;
+                    Vector3 newRotation = Vector3.RotateTowards(transform.right, difference, Mathf.Deg2Rad * turnSpeedInDegrees * Time.deltaTime, Vector3.Distance(transform.position, player.transform.position));
+                    transform.right = newRotation;
 
-                    int randomNumber = Random.Range(0, 6);
-                    if (randomNumber < 2)
-                        spriteToSpawn = sprite1;
-                    if (randomNumber > 2 && randomNumber < 4)
-                        spriteToSpawn = sprite2;
-                    if (randomNumber > 4)
-                        spriteToSpawn = sprite3;
+                    if (timer <= 0 && allowedFire == true)
+                    {
+                        Sprite spriteToSpawn = sprite1;
 
-                    Quaternion rotation = transform.rotation;
-                    GameObject newProjectile = Instantiate(projectile, transform.position + transform.right, rotation *= Quaternion.Euler(0, 0, 90));
+                        int randomNumber = Random.Range(0, 6);
+                        if (randomNumber < 2)
+                            spriteToSpawn = sprite1;
+                        if (randomNumber > 2 && randomNumber < 4)
+                            spriteToSpawn = sprite2;
+                        if (randomNumber > 4)
+                            spriteToSpawn = sprite3;
 
-                    newProjectile.transform.localScale = new Vector3(2, 2, 2);
-                    newProjectile.GetComponent<Hitbox>().isEnemy = true;
-                    newProjectile.GetComponent<Hitbox>().damage = attackDamage;
-                    newProjectile.GetComponent<TimedDeath>().deathTimer = projectileLifespan;
+                        Quaternion rotation = transform.rotation;
+                        GameObject newProjectile = Instantiate(projectile, transform.position + transform.right, rotation *= Quaternion.Euler(0, 0, 90));
 
-                    newProjectile.GetComponent<SpriteRenderer>().sprite = spriteToSpawn;
-                    newProjectile.GetComponent<Rigidbody2D>().velocity = transform.right * projectileSpeed;
+                        newProjectile.transform.localScale = new Vector3(2, 2, 2);
+                        newProjectile.GetComponent<Hitbox>().isEnemy = true;
+                        newProjectile.GetComponent<Hitbox>().damage = attackDamage;
+                        newProjectile.GetComponent<TimedDeath>().deathTimer = projectileLifespan;
 
-                    timer = firerate;
+                        newProjectile.GetComponent<SpriteRenderer>().sprite = spriteToSpawn;
+                        newProjectile.GetComponent<Rigidbody2D>().velocity = transform.right * projectileSpeed;
+
+                        timer = firerate;
+                    }
+                    else
+                    {
+                        timer -= fireRate;
+                    }
+                    if (burstTimer >= 0)
+                    {
+                        allowedFire = true;
+                        GetComponent<SpriteRenderer>().sprite = ShootingPrinterFront;
+                    }
+                    if (burstTimer >= burstDuration && allowedFire == true)
+                    {
+                        GetComponent<SpriteRenderer>().sprite = notShootingPrinter;
+                        allowedFire = false;
+                        burstTimer = burstTimeCoolDown;
+                    }
+
                 }
-                else
-                {
-                    timer -= fireRate;
-                }
-                if (burstTimer >= 0)
-                {
-                    allowedFire = true;
-                    GetComponent<SpriteRenderer>().sprite = ShootingPrinterFront;
-                }
-                if (burstTimer >= burstDuration && allowedFire == true)
-                {
-                    GetComponent<SpriteRenderer>().sprite = notShootingPrinter;
-                    allowedFire = false;
-                    burstTimer = burstTimeCoolDown;
-                }
-                
             }
         }
     }
