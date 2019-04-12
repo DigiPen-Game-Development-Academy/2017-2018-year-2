@@ -136,7 +136,7 @@ MonoBehaviour:
   projectileSpeed: 3
   projectileLifespan: 7.5
   detectionRange: 9
-  firerate: 100
+  firerate: 0.65
   burstSize: 3
   attackDamage: 0.5
   turnSpeedInDegrees: 185
@@ -144,15 +144,15 @@ MonoBehaviour:
   sprite1: {fileID: 21300000, guid: dbae34d1d240c5d438dfaecc20d0bb0d, type: 3}
   sprite2: {fileID: 21300000, guid: 36819693d2321ce45ba807c116493b06, type: 3}
   sprite3: {fileID: 21300000, guid: 14eac1a08ab408b49a084fb31ee7e164, type: 3}
-  fireRate: 100
+  fireRate: 3
   m_layerMask:
     serializedVersion: 2
     m_Bits: 563
-  burstDuration: 3
+  burstDuration: 1
   allowedFire: 0
   timer: 0
   burstTimer: 0
-  burstTimeCoolDown: 2
+  burstTimeCoolDown: 3
   ShootingPrinterFront: {fileID: 21300000, guid: b74785ad1ddc0c64693ccf413b7eed8d,
     type: 3}
   notShootingPrinter: {fileID: 21300000, guid: 07e29cc90d2ad9548a6db44a7ef4e297, type: 3}

@@ -39462,16 +39462,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114724419539805250, guid: 3efc137496d0ea64caba933d2da3425d,
-        type: 2}
-      propertyPath: bossConditions
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114724419539805250, guid: 3efc137496d0ea64caba933d2da3425d,
-        type: 2}
-      propertyPath: firerate
-      value: 2
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3efc137496d0ea64caba933d2da3425d, type: 2}
   m_IsPrefabAsset: 0
