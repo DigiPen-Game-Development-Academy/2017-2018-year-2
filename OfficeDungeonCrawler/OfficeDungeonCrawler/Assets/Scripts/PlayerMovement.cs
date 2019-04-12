@@ -173,7 +173,7 @@ public class PlayerMovement : MonoBehaviour
 				
 				spriteRenderer.flipX = false;
 			}
-
+			
 			Debug.Log("Dash mod: " + (dashTimeRemaining % 0.025f));
 			if (dashTimeRemaining % 0.025f <= 0.1f)
 			{
