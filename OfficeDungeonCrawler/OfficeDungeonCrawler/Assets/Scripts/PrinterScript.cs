@@ -51,7 +51,7 @@ public class PrinterScript : MonoBehaviour
     {
         
         
-                if (Vector2.Distance(transform.position, player.transform.position) <= detectionRange)
+        if (Vector2.Distance(transform.position, player.transform.position) <= detectionRange)
         {
             //OLD CODE
             //Physics.Raycast(transform.position, player.transform.position - transform.position, out hit, Mathf.Infinity);
@@ -67,11 +67,8 @@ public class PrinterScript : MonoBehaviour
 
             //END CHRIS CODE
             //-----------------//
-            
-            
+                        
                 burstTimer += Time.deltaTime;
-                
-            
 
             //Debug.Log(hit.collider.tag);
             if (hit.collider.tag.Equals("Player"))
@@ -94,6 +91,7 @@ public class PrinterScript : MonoBehaviour
                     {
                         if (timer <= 0 && allowedFire == true)
                         {
+                            Debug.Log("Shoot Player");
                             Sprite spriteToSpawn = sprite1;
 
                             int randomNumber = Random.Range(0, 6);
@@ -117,13 +115,15 @@ public class PrinterScript : MonoBehaviour
 
                             timer = firerate;
                         }
-                    }
-                    else
-                    {
-                        timer -= fireRate;
-                    }
+                        else
+                        {
+                            timer -= fireRate;
+                        }
+                }
+
                     if (burstTimer >= 0)
                     {
+                        Debug.Log("Burst timer ended");
                         allowedFire = true;
                         GetComponent<SpriteRenderer>().sprite = ShootingPrinterFront;
                     }
