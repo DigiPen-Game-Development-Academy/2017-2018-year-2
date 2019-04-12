@@ -21,6 +21,7 @@ public class SpikeWall : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Player")
+            //                                    ITZ OVAH NINE THOUSAAAAND!!!!
             collision.gameObject.GetComponent<Health>().Damage(9001.0f);
     }
 }
