@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿/*using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -46,6 +46,8 @@ public class PrinterBozz : MonoBehaviour {
     
     //this controls when the boss can move towards the player till its in proper range
     public float optimalShootingDistance;
+    public float moveTime = 0;
+    public float shootTime = 0;
 
     //end of boss stats
     [HideInInspector]
@@ -58,6 +60,8 @@ public class PrinterBozz : MonoBehaviour {
 	void Start () {
        Health = gameObject.GetComponent<Health>().maxHealth;
         Player = GameObject.Find("Player");
+        gameObject.GetComponent<Health>().CurrentHealth = Health;
+        shootTime = -shootTime;
        //if(gameObject.GetComponent<>)
     }
 	
@@ -65,9 +69,14 @@ public class PrinterBozz : MonoBehaviour {
 	void Update () {
         CurrentHealth = gameObject.GetComponent<Health>().currentHealth;
 
-        //if(Player.gameObject.GetComponent<Transform>())
-
-
+        if(timer >= moveTime)
+        {
+            if (vector3.Distance(Player.transform.position, transform.position) >= optimalShootingDistance)
+            {
+                gameObject.GetCompoenent<EnemyMovement>().bossConditions = true;
+            } 
+        }
+        
         if (CurrentHealth <= phase1Healthtrigger && CurrentHealth >= phase2HealthTrigger)
         {
             gameObject.GetComponent<PrinterScript>().fireRate = phase1ShootIntensity;
@@ -100,7 +109,18 @@ public class PrinterBozz : MonoBehaviour {
                 }
             }
         }
-
-            timer += Time.deltaTime * switchSpeed;
+        if (timer <= 0)
+        {
+            gameobject.GetComponent<PrinterScript>().bossConditions = true;
+            gameobject.GetComponent<EnemyMovement>().bossConditions = false;
+        }
+        if(timer >= 0)
+        {
+            gameobject.GetComponent<PrinterScript>().bossConditions = false;
+            gameobject.GetComponent<EnemyMovement>().bossConditions = true;
+        }
+        if (timer >= movetime) timer = shootTime;
+    timer += Time.deltaTime * switchSpeed;
 	}
 }
+*/
