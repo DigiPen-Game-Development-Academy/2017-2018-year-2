@@ -125,8 +125,6 @@ public class EnemyMovement : MonoBehaviour
                     animator.SetBool("WalkBack", false);
                     animator.SetBool("WalkLeft", false);
 
-                    Debug.Log("Stopped, cannot see player");
-
                     // Stop
                     rigidbody.velocity = Vector2.zero;
                 }

@@ -11,10 +11,20 @@ using UnityEngine;
 
 public class DoorScript : MonoBehaviour
 {
-    public int nextRoomIndex;
+	public string nextRoom;
+	public bool locked = true;
 
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        SceneManager.LoadScene(nextRoomIndex);
-    }
+	void Update()
+	{
+		if (locked)
+			transform.GetChild(0).GetComponent<SpriteRenderer>().color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
+		else
+			transform.GetChild(0).GetComponent<SpriteRenderer>().color = new Color(1.0f, 1.0f, 1.0f, 0.0f);
+	}
+
+	void OnCollisionEnter2D(Collision2D collision)
+	{
+		if (collision.gameObject.tag == "Player" && !locked)
+			SceneManager.LoadScene(nextRoom);
+	}
 }

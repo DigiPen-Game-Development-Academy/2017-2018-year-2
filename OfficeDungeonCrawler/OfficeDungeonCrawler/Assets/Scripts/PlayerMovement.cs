@@ -116,8 +116,6 @@ public class PlayerMovement : MonoBehaviour
 
 			if (direction.x > 0.0f)
 			{
-				Debug.Log("Dashing right");
-
 				animator.SetBool("MovingLeft", false);
 				animator.SetBool("MovingRight", false);
 				animator.SetBool("MovingUp", false);
@@ -131,8 +129,6 @@ public class PlayerMovement : MonoBehaviour
 			}
 			else if (direction.x < 0.0f)
 			{
-				Debug.Log("Dashing left");
-
 				animator.SetBool("MovingLeft", false);
 				animator.SetBool("MovingRight", false);
 				animator.SetBool("MovingUp", false);
@@ -146,8 +142,6 @@ public class PlayerMovement : MonoBehaviour
 			}
 			else if (direction.y > 0.0f)
 			{
-				Debug.Log("Dashing up");
-
 				animator.SetBool("MovingLeft", false);
 				animator.SetBool("MovingRight", false);
 				animator.SetBool("MovingUp", false);
@@ -161,8 +155,6 @@ public class PlayerMovement : MonoBehaviour
 			}
 			else if (direction.y < 0.0f)
 			{
-				Debug.Log("Dashing down");
-
 				animator.SetBool("MovingLeft", false);
 				animator.SetBool("MovingRight", false);
 				animator.SetBool("MovingUp", false);
@@ -175,7 +167,6 @@ public class PlayerMovement : MonoBehaviour
 				spriteRenderer.flipX = false;
 			}
 			
-			Debug.Log("Dash mod: " + (dashTimeRemaining % 0.025f));
 			if (dashTimeRemaining % 0.025f <= 0.1f)
 			{
 				GameObject newOnionSkin = Instantiate(onionSkin, transform.position, transform.rotation);
