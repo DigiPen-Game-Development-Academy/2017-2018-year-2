@@ -101,6 +101,7 @@ public class PlayerMovement : MonoBehaviour
 
 		if (Input.GetKey(Settings.KeyBinds.dash) && stamina >= dashCooldown)
 		{
+			audioSource.PlayOneShot(dashSound);
 			dashDirection = direction;
 			dashTimeRemaining = dashTime;
 			stamina = 0;
