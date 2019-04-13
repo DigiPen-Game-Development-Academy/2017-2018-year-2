@@ -19,11 +19,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4500409596154058}
-  - component: {fileID: 212760057517738312}
   - component: {fileID: 114886382259108586}
   - component: {fileID: 114747202917726172}
   - component: {fileID: 61330537198139990}
   - component: {fileID: 50803167960290956}
+  - component: {fileID: 212871080544559242}
   m_Layer: 2
   m_Name: Hitbox
   m_TagString: Untagged
@@ -80,7 +80,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.03, y: 0.02}
+    oldSize: {x: 0.25, y: 0.25}
     newSize: {x: 0.03, y: 0.02}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -118,7 +118,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathTimer: 0.1
---- !u!212 &212760057517738312
+--- !u!212 &212871080544559242
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -153,14 +153,14 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 07b9010c1dd0e694997966e6c032656d, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.03, y: 0.02}
+  m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0

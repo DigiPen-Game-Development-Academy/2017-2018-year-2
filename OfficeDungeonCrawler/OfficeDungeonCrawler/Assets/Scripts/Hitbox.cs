@@ -22,11 +22,19 @@ public class Hitbox : MonoBehaviour
     {
 		if (other.tag == "Breakable")
 		{
+			if (other.GetComponent<Breakable>().breakLevel >= other.GetComponent<Breakable>().sprites.Count - 1 && !other.GetComponent<Breakable>().canFullDestroy)
+			{
+				Destroy(gameObject);
+				return;
+			}
+
 			++other.GetComponent<Breakable>().breakLevel;
 
 			Vector3 spawnPosition = new Vector3(other.gameObject.transform.position.x, other.gameObject.transform.position.y, other.gameObject.transform.position.z + 10);
 			// Spawn the particle effect
 			Instantiate(enemyDamagedParticleEffect, spawnPosition, other.gameObject.transform.rotation);
+
+			Destroy(gameObject);
 		}
 
         // Check if the object we collided with is a wall and we are the enemy

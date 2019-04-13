@@ -38162,9 +38162,6 @@ MonoBehaviour:
   sprites:
   - {fileID: 21300000, guid: 7eef0ab8f07358848b5e30634217f91b, type: 3}
   - {fileID: 21300000, guid: 68dbdb62965abe4438b897cb04c927b7, type: 3}
-  - {fileID: 21300000, guid: 71b4d80665dbe334c9927849b9651e23, type: 3}
-  - {fileID: 21300000, guid: 34aa570cadf106944bacd59d43ee7f90, type: 3}
-  - {fileID: 21300000, guid: 6394b5dc24e9d9741b79fa6df03a2ed1, type: 3}
   canFullDestroy: 1
   breakSound: {fileID: 8300000, guid: c9ff231a64da18a4280f608c37a38e72, type: 3}
   finalBreakSound: {fileID: 8300000, guid: 83f7f836643547a4f8b6801d8698e3d6, type: 3}
@@ -38246,7 +38243,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1233520562}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.0687685, y: -2.5501862, z: 0}
+  m_LocalPosition: {x: -15.4, y: -8.36, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
