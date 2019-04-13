@@ -44,7 +44,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1190466586900746}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.027898, y: 1.4734458, z: 0}
+  m_LocalPosition: {x: 6.75, y: 4.44, z: 0}
   m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -237,7 +237,7 @@ MonoBehaviour:
   hitbox: {fileID: 1274357521494908, guid: 9184b171418e98c4fad188b5afd5621e, type: 2}
   attackSpeed: 0.5
   attackDamage: 1
-  attackAnimTime: 0.1
+  attackAnimTime: 1
   camera: {fileID: 0}
   movePauseTime: 0
   canAttack: 1
@@ -284,6 +284,12 @@ MonoBehaviour:
     count: 0
     damage: 0
     health: 5
+  - id: water
+    itemType: 3
+    sprite: {fileID: 21300000, guid: 7b2ad1d5ce7df41439588d9451c2f297, type: 3}
+    count: 0
+    damage: 0
+    health: 3
   selectedSlot: 0
   slots:
   - {fileID: 0}
@@ -362,10 +368,14 @@ MonoBehaviour:
   idleRight: Idle
   idleUp: Idle
   idleDown: Idle
+  dashRightSpr: {fileID: 0}
+  dashUpSpr: {fileID: 0}
+  dashDownSpr: {fileID: 0}
   walkSound1: {fileID: 8300000, guid: 2e82463da95f988479f30de1c1ced569, type: 3}
   walkSound2: {fileID: 8300000, guid: 6ea24849dae1d0f42bd13871fdfc5d98, type: 3}
   walkSound3: {fileID: 8300000, guid: a29d4e9175ef18f40a1bcf4bdd3bef5f, type: 3}
   dashSound: {fileID: 8300000, guid: 21b1aa89d6b10f648a8e367f65c8e3a2, type: 3}
+  onionSkin: {fileID: 1682809891537778, guid: 2a46b431d00c8f2449f6338ee5477b36, type: 2}
   walkSoundDelay: 0.35
   timeTillCanMove: 0
 --- !u!114 &114898050982018894
