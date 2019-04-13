@@ -192,7 +192,7 @@ public class PlayerMovement : MonoBehaviour
 			animator.SetBool("DashBack", false);
 			animator.SetBool("DashFront", false);
 
-			spriteRenderer.flipX = false;
+			//spriteRenderer.flipX = false;
 		}
 
 		if (dashTimeRemaining <= dashLerpTime)
