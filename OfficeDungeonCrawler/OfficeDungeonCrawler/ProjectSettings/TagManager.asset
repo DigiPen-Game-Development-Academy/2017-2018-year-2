@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - Tileset
+  - Breakable
   layers:
   - Default
   - TransparentFX

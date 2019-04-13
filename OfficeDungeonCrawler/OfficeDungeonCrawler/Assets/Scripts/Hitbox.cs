@@ -20,6 +20,15 @@ public class Hitbox : MonoBehaviour
 	
     void OnTriggerEnter2D(Collider2D other)
     {
+		if (other.tag == "Breakable")
+		{
+			++other.GetComponent<Breakable>().breakLevel;
+
+			Vector3 spawnPosition = new Vector3(other.gameObject.transform.position.x, other.gameObject.transform.position.y, other.gameObject.transform.position.z + 10);
+			// Spawn the particle effect
+			Instantiate(enemyDamagedParticleEffect, spawnPosition, other.gameObject.transform.rotation);
+		}
+
         // Check if the object we collided with is a wall and we are the enemy
         if (other.tag == "Tileset" && isEnemy)
         {
