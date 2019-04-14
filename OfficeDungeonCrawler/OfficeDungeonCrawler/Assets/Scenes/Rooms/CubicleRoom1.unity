@@ -36579,6 +36579,7 @@ GameObject:
   - component: {fileID: 884632426}
   - component: {fileID: 884632425}
   - component: {fileID: 884632428}
+  - component: {fileID: 884632429}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -36662,6 +36663,19 @@ MonoBehaviour:
   speed: 3
   directionMultiplier: 2.5
   type: 1
+--- !u!114 &884632429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 884632424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6890309170e401e4687baa365c1fb8e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  active: 0
+  mat: {fileID: 2100000, guid: 5a79b8790d6919943b3966429c0b6c3f, type: 2}
 --- !u!1001 &885387723
 Prefab:
   m_ObjectHideFlags: 0
@@ -39939,6 +39953,12 @@ Prefab:
       propertyPath: deathSound
       value: 
       objectReference: {fileID: 8300000, guid: 83f7f836643547a4f8b6801d8698e3d6, type: 3}
+    - target: {fileID: 114883571212207992, guid: 78360258d93ca764d8d87f6365d1e0c5,
+        type: 2}
+      propertyPath: hitMarker
+      value: 
+      objectReference: {fileID: 1777733614235014, guid: d6b7789859efa6d459c064e2de689362,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78360258d93ca764d8d87f6365d1e0c5, type: 2}
   m_IsPrefabAsset: 0

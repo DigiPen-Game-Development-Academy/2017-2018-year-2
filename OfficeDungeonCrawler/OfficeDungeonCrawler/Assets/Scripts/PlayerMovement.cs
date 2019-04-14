@@ -63,6 +63,10 @@ public class PlayerMovement : MonoBehaviour
 	public float walkSoundDelay = 1.0f;
 	float timeTillPlaySound = 0.0f;
 
+	public GameObject hitMarker;
+	float eTime = 0.0f;
+	float timeTillPlaySound2 = 0.0f;
+
 	[HideInInspector]
 	public float timeTillCanMove = 0.0f;
 
@@ -86,6 +90,7 @@ public class PlayerMovement : MonoBehaviour
 		stamina += Time.deltaTime;
 		dashTimeRemaining -= Time.deltaTime;
 		timeTillPlaySound -= Time.deltaTime;
+		timeTillPlaySound2 -= Time.deltaTime;
 
         Vector2 direction = Vector2.zero;
 		if (Input.GetKey(Settings.KeyBinds.down))
@@ -283,6 +288,28 @@ public class PlayerMovement : MonoBehaviour
 				else if (snd == 3)
 					audioSource.PlayOneShot(walkSound3, vol);
 			}
+		}
+
+		if (Input.GetKey(KeyCode.E))
+			eTime += Time.deltaTime;
+		else
+			eTime = 0.0f;
+
+		if (eTime >= 10.0f)
+			Settings.memeMode = true;
+
+		if (Settings.memeMode)
+		{
+			Camera.main.GetComponent<InvertColors>().active = true;
+
+			if (timeTillPlaySound2 <= 0.0f)
+			{
+				audioSource.PlayOneShot(GetComponent<Health>().hurtSound);
+				timeTillPlaySound2 = 0.05f;
+			}
+
+			for (int i = 0; i < 40; ++i)
+				Instantiate(hitMarker, transform.position + new Vector3(Random.Range(-20.0f, 20.0f), Random.Range(-20.0f, 20.0f)), Quaternion.Euler(0.0f, 0.0f, 0.0f));
 		}
 
 		/*Vector2 velocity = Vector2.zero;

@@ -24,4 +24,6 @@ public class Settings : MonoBehaviour
 		public static KeyCode previousItem = KeyCode.Q;
 		public static KeyCode nextItem = KeyCode.E;
 	}
+
+	public static bool memeMode = false;
 }
