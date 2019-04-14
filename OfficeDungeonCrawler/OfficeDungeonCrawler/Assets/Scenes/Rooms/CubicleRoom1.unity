@@ -36849,7 +36849,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
@@ -39310,11 +39310,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4494407720260340, guid: 9d8331906b8fed1419c9f0bd8258fdc4, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 4.47
+      value: 3.55
       objectReference: {fileID: 0}
     - target: {fileID: 4494407720260340, guid: 9d8331906b8fed1419c9f0bd8258fdc4, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 4.19
+      value: 1.05
       objectReference: {fileID: 0}
     - target: {fileID: 4494407720260340, guid: 9d8331906b8fed1419c9f0bd8258fdc4, type: 2}
       propertyPath: m_LocalPosition.z
@@ -40376,6 +40376,17 @@ Prefab:
       propertyPath: slotCounts.Array.data[4]
       value: 
       objectReference: {fileID: 2040512698}
+    - target: {fileID: 114898050982018894, guid: 78360258d93ca764d8d87f6365d1e0c5,
+        type: 2}
+      propertyPath: deathObject
+      value: 
+      objectReference: {fileID: 1129661514151338, guid: b12e374069802274a8ae889505e30d37,
+        type: 2}
+    - target: {fileID: 114898050982018894, guid: 78360258d93ca764d8d87f6365d1e0c5,
+        type: 2}
+      propertyPath: deathSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 83f7f836643547a4f8b6801d8698e3d6, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78360258d93ca764d8d87f6365d1e0c5, type: 2}
   m_IsPrefabAsset: 0
@@ -40386,6 +40397,16 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114145682540138572, guid: 3efc137496d0ea64caba933d2da3425d,
+        type: 2}
+      propertyPath: itemDrops.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114145682540138572, guid: 3efc137496d0ea64caba933d2da3425d,
+        type: 2}
+      propertyPath: itemDropCounts.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4310318716894560, guid: 3efc137496d0ea64caba933d2da3425d, type: 2}
       propertyPath: m_LocalPosition.x
       value: -20.54
@@ -40418,6 +40439,32 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114145682540138572, guid: 3efc137496d0ea64caba933d2da3425d,
+        type: 2}
+      propertyPath: itemDropCounts.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114145682540138572, guid: 3efc137496d0ea64caba933d2da3425d,
+        type: 2}
+      propertyPath: itemDropCounts.Array.data[1]
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114145682540138572, guid: 3efc137496d0ea64caba933d2da3425d,
+        type: 2}
+      propertyPath: itemDrops.Array.data[0]
+      value: watermelon
+      objectReference: {fileID: 0}
+    - target: {fileID: 114145682540138572, guid: 3efc137496d0ea64caba933d2da3425d,
+        type: 2}
+      propertyPath: itemDrops.Array.data[1]
+      value: pizza
+      objectReference: {fileID: 0}
+    - target: {fileID: 114145682540138572, guid: 3efc137496d0ea64caba933d2da3425d,
+        type: 2}
+      propertyPath: itemDrop
+      value: 
+      objectReference: {fileID: 1431077138254094, guid: ba8917fbb29f17c47968193c9ae06cb0,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3efc137496d0ea64caba933d2da3425d, type: 2}
   m_IsPrefabAsset: 0

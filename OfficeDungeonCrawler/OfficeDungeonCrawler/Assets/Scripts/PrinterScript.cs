@@ -52,7 +52,8 @@ public class PrinterScript : MonoBehaviour
 
 	void Update()
 	{
-
+        if (player == null)
+            return;
 
 		if (Vector2.Distance(transform.position, player.transform.position) <= detectionRange)
 		{
