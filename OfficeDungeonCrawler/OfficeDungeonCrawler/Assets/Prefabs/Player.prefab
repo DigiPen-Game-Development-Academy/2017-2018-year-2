@@ -44,7 +44,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1190466586900746}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.75, y: 4.44, z: 0}
+  m_LocalPosition: {x: -7.68, y: 2.61, z: 0}
   m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -407,6 +407,8 @@ MonoBehaviour:
   deathObject: {fileID: 0}
   shakeDuration: 1
   shakeIntensity: 10
+  healParticle: {fileID: 1052298815990856, guid: d0f025c4b4fc73044b973403fe41e68a,
+    type: 2}
   hurtSound: {fileID: 8300000, guid: 8ea69f502eccb5346b649909ae4ce3d4, type: 3}
   damageScreen: {fileID: 0}
 --- !u!212 &212421118207432532

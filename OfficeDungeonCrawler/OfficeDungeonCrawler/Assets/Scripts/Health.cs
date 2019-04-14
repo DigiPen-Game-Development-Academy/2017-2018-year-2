@@ -41,6 +41,8 @@ public class Health : MonoBehaviour
 	// two variables are used for passing to the screen shake script.
 	public float shakeDuration = 0;
 	public float shakeIntensity = 0;
+
+    public GameObject healParticle;
 	// The SpriteRenderer of the entity
 	SpriteRenderer spriteRenderer;
 	// The Bar of the health bar
@@ -138,6 +140,8 @@ public class Health : MonoBehaviour
 
 		// Set the entity color
 		spriteRenderer.color = healColor;
+
+        Instantiate(healParticle, transform.position, transform.rotation);
 
 		// Update the health bar
 		UpdateHealthBar();
