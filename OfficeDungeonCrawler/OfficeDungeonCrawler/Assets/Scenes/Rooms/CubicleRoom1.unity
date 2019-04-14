@@ -38968,6 +38968,11 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d8331906b8fed1419c9f0bd8258fdc4, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &1430526733 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1717433945783240, guid: e92353e4dc4ac3e4696add8a2d39b668,
+    type: 2}
+  m_PrefabInternal: {fileID: 885387723}
 --- !u!1 &1472540013
 GameObject:
   m_ObjectHideFlags: 0
@@ -39822,7 +39827,7 @@ Prefab:
         type: 2}
       propertyPath: damageScreen
       value: 
-      objectReference: {fileID: 415608959}
+      objectReference: {fileID: 1430526733}
     - target: {fileID: 114839789041650520, guid: 78360258d93ca764d8d87f6365d1e0c5,
         type: 2}
       propertyPath: hearts.Array.data[0]

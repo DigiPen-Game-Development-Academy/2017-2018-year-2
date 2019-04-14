@@ -167,7 +167,7 @@ public class Health : MonoBehaviour
 
         for (int i = 0; i < itemDrops.Count; ++i)
         {
-            ItemPickup drop = Instantiate(itemDrop, transform.position + new Vector3(Random.Range(-dropDistance, dropDistance), Random.Range(-dropDistance, dropDistance)), transform.rotation).GetComponent<ItemPickup>();
+            ItemPickup drop = Instantiate(itemDrop, transform.position + new Vector3(Random.Range(-dropDistance, dropDistance), Random.Range(-dropDistance, dropDistance)), Quaternion.Euler(0.0f, 0.0f, 0.0f)).GetComponent<ItemPickup>();
 
             drop.itemID = itemDrops[i];
             drop.itemAmount = itemDropCounts[i];
