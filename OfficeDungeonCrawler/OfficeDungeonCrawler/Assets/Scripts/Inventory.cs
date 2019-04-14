@@ -62,8 +62,11 @@ public class Inventory : MonoBehaviour
 		{
 			if (items[selectedSlot].itemType == ItemType.HealthItem)
 			{
-				health.Heal(items[selectedSlot].health);
-				RemoveItem(items[selectedSlot].id, 1);
+                if (gameObject.GetComponent<Health>().currentHealth  < gameObject.GetComponent<Health>().maxHealth)
+                {
+                    health.Heal(items[selectedSlot].health);
+                    RemoveItem(items[selectedSlot].id, 1);
+                }
 			}
 		}
 
