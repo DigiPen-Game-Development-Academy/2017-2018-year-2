@@ -37,6 +37,13 @@ public class Hitbox : MonoBehaviour
 			Destroy(gameObject);
 		}
 
+        if (other.tag == "WaterCooler")
+        {
+            other.GetComponent<WaterCooler>().Dispense();
+
+            Destroy(gameObject);
+        }
+
         // Check if the object we collided with is a wall and we are the enemy
         if (other.tag == "Tileset" && isEnemy)
         {

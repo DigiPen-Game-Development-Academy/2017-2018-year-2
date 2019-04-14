@@ -26,6 +26,7 @@ GameObject:
   - component: {fileID: 50364442244807436}
   - component: {fileID: 61047147542544636}
   - component: {fileID: 95187546590218134}
+  - component: {fileID: 82924023153949166}
   m_Layer: 8
   m_Name: Stapler
   m_TagString: Enemy
@@ -91,6 +92,101 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.75, y: 0.75}
   m_EdgeRadius: 0
+--- !u!82 &82924023153949166
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1904221187910892}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!95 &95187546590218134
 Animator:
   serializedVersion: 3
@@ -128,6 +224,7 @@ MonoBehaviour:
   layer:
     serializedVersion: 2
     m_Bits: 563
+  bossConditions: 1
   target: {fileID: 1190466586900746, guid: 78360258d93ca764d8d87f6365d1e0c5, type: 2}
   margin: 0.5
 --- !u!114 &114315257230960634
@@ -143,6 +240,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitbox: {fileID: 1274357521494908, guid: 9184b171418e98c4fad188b5afd5621e, type: 2}
   attackDistance: 2
+  bossvariable: 1
   attackCooldown: 1
   attackChargeTime: 0.5
   attackDamage: 1
@@ -174,10 +272,13 @@ MonoBehaviour:
   healColor: {r: 0, g: 1, b: 0, a: 1}
   normalColor: {r: 1, g: 1, b: 1, a: 1}
   normalScreenColor: {r: 1, g: 1, b: 1, a: 0}
-  deathObject: {fileID: 0}
+  deathObject: {fileID: 1060476077283366, guid: b2862c0b59518204f834396fefd3f037,
+    type: 2}
+  deathSound: {fileID: 8300000, guid: 83f7f836643547a4f8b6801d8698e3d6, type: 3}
   shakeDuration: 0
   shakeIntensity: 0
-  hurtSound: {fileID: 0}
+  healParticle: {fileID: 0}
+  hurtSound: {fileID: 8300000, guid: c9ff231a64da18a4280f608c37a38e72, type: 3}
   damageScreen: {fileID: 0}
 --- !u!212 &212779598680844722
 SpriteRenderer:

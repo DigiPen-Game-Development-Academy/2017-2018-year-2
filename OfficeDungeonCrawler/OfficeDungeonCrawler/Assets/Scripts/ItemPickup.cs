@@ -6,6 +6,7 @@ public class ItemPickup : MonoBehaviour
 {
 	public string itemID;
 	public int itemAmount;
+	public AudioClip pickupSound;
 
 	GameObject player;
 	Inventory inventory;
@@ -25,10 +26,13 @@ public class ItemPickup : MonoBehaviour
 		if (collision.gameObject.tag == "Player")
 		{
 			if (inventory.GiveItem(itemID, itemAmount))
+			{
+				GameObject.Find("KeyAudio").GetComponent<AudioSource>().PlayOneShot(pickupSound);
 				Destroy(gameObject);
+			}
 		}
 	}
-	
+
 	void Update()
 	{
 		if (inventory != null)
