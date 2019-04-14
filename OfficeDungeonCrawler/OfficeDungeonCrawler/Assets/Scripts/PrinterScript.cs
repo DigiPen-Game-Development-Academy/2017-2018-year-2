@@ -38,6 +38,8 @@ public class PrinterScript : MonoBehaviour
 	public Sprite ShootingPrinterFront;
 	public Sprite notShootingPrinter;
 	public float signalTime = 0.5f;
+	public AudioClip shootSound;
+	
 	void Start()
 	{
 		player = GameObject.FindGameObjectWithTag("Player");
@@ -114,6 +116,8 @@ public class PrinterScript : MonoBehaviour
 						newProjectile.GetComponent<SpriteRenderer>().sprite = spriteToSpawn;
 						newProjectile.GetComponent<Rigidbody2D>().velocity = transform.right * projectileSpeed;
 
+						GetComponent<AudioSource>().PlayOneShot(shootSound);
+						
 						timer = firerate;
 					}
 					else
