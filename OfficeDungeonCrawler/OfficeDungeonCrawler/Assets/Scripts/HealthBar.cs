@@ -11,19 +11,19 @@ public class HealthBar : MonoBehaviour
 	public float current = 0.0f;
 	public float max = 0.0f;
 	public bool updateActive = true;
+	public Vector3 offset = Vector3.zero;
 
 	Health health;
 
 	public GameObject healthBarAnchor;
 	public GameObject healthBar;
+	public GameObject allHealthBar;
 	SpriteRenderer spriteRenderer;
 
 	public void Start()
 	{
 		health = GetComponent<Health>();
 		spriteRenderer = healthBar.GetComponent<SpriteRenderer>();
-
-		
 	}
 	
 	void Update()
@@ -33,6 +33,12 @@ public class HealthBar : MonoBehaviour
 			max = health.maxHealth;
 			current = health.currentHealth;
 		}
+		
+		
+		allHealthBar.transform.position = transform.position + offset;
+
+		//healthBarAnchor.transform.rotation = Quaternion.Euler(0.0f, 0.0f, 0.0f);
+		//transform.Find("HealthbarBGAnchor").transform.rotation = Quaternion.Euler(0.0f, 0.0f, 0.0f);
 
 		// Calculate the precentage
 		float precentage = ((100.0f / max) * current) / 100.0f;

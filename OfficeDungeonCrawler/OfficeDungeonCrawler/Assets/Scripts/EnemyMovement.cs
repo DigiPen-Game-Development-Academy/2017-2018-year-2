@@ -118,7 +118,7 @@ public class EnemyMovement : MonoBehaviour
                 {
                     Animator animator = GetComponent<Animator>();
                     SpriteRenderer sr = GetComponent<SpriteRenderer>();
-
+					
                     animator.SetBool("Idle", true);
                     animator.SetBool("WalkSide", false);
                     animator.SetBool("WalkFront", false);
