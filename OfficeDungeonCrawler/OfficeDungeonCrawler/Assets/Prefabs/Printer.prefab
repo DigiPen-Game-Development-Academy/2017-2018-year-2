@@ -67,14 +67,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1642738402527880}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -20.54, y: -7.96, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: 0.70710677, w: 0.7071068}
+  m_LocalPosition: {x: -10.513, y: -4.494, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4064294358851026}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90.00001}
 --- !u!50 &50343414987576642
 Rigidbody2D:
   serializedVersion: 4
@@ -263,6 +263,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectile: {fileID: 1274357521494908, guid: 9184b171418e98c4fad188b5afd5621e, type: 2}
+  player: {fileID: 0}
   bossConditions: 1
   projectileSpeed: 3
   projectileLifespan: 7.5
@@ -279,11 +280,11 @@ MonoBehaviour:
   m_layerMask:
     serializedVersion: 2
     m_Bits: 563
-  burstDuration: 1
+  burstDuration: 2
   allowedFire: 0
   timer: 0
   burstTimer: 0
-  burstTimeCoolDown: 3
+  burstTimeCoolDown: 0.5
   ShootingPrinterFront: {fileID: 21300000, guid: b74785ad1ddc0c64693ccf413b7eed8d,
     type: 3}
   notShootingPrinter: {fileID: 21300000, guid: 07e29cc90d2ad9548a6db44a7ef4e297, type: 3}
