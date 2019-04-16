@@ -44,8 +44,8 @@ public class PrinterScript : MonoBehaviour
 	{
         if(!player)
         {
-		player = GameObject.FindGameObjectWithTag("Player");
-            }
+		    player = GameObject.Find("Player");
+        }
 		timer = firerate;
 		shotsLeft = burstSize;
 		fireRate = Time.deltaTime * fireRate;
