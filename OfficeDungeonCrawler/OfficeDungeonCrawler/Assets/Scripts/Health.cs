@@ -22,7 +22,7 @@ public class Health : MonoBehaviour
     // Current health of the entity
     public float currentHealth;
     // Health bar used to display current health (if any)
-    public GameObject healthBarObj;
+    public GameObject healthBarAnchorObj;
     // The speed to change back to the normal color
     public float colorChangeSpeed = 1.0f;
     public float screenColorChangeSpeed = 2.0f;
@@ -47,7 +47,7 @@ public class Health : MonoBehaviour
     // The SpriteRenderer of the entity
     SpriteRenderer spriteRenderer;
     // The Bar of the health bar
-    Bar healthBar;
+    Bar healthBarAnchor;
 
     Image damageScreenIMG = null;
 
@@ -63,10 +63,10 @@ public class Health : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
 
         // If the health bar is not null..
-        if (healthBarObj != null)
+        if (healthBarAnchorObj != null)
         {
             // Get the Bar component of the health bar
-            healthBar = healthBarObj.GetComponent<Bar>();
+            healthBarAnchor = healthBarAnchorObj.GetComponent<Bar>();
         }
 
         // Set the current health to the max health
@@ -148,12 +148,12 @@ public class Health : MonoBehaviour
     public void UpdateHealthBar()
     {
         // If the health bar is not null
-        if (healthBar != null)
+        if (healthBarAnchor != null)
         {
             // Set the health bar max
-            healthBar.max = maxHealth;
+            healthBarAnchor.max = maxHealth;
             // Set the health bar current
-            healthBar.current = currentHealth;
+            healthBarAnchor.current = currentHealth;
         }
     }
 
@@ -190,9 +190,23 @@ public class Health : MonoBehaviour
             GameObject newDeathObj = Instantiate(deathObject, transform.position, transform.rotation);
 
             newDeathObj.GetComponent<AudioSource>().PlayOneShot(deathSound);
-        }
 
-        // Destroy the entity
-        Destroy(gameObject);
+			if (GetComponent<HealthBar>() != null)
+			{
+				GetComponent<HealthBar>().healthBarAnchor.transform.SetParent(newDeathObj.transform, true);
+				GetComponent<HealthBar>().transform.Find("HealthbarBGAnchor").transform.SetParent(newDeathObj.transform, true);
+
+				newDeathObj.GetComponent<HealthBar>().updateActive = false;
+				newDeathObj.GetComponent<HealthBar>().healthBarAnchor = GetComponent<HealthBar>().healthBarAnchor;
+				newDeathObj.GetComponent<HealthBar>().healthBar = GetComponent<HealthBar>().healthBar;
+				newDeathObj.GetComponent<HealthBar>().Start();
+				newDeathObj.GetComponent<HealthBar>().current = 0.0f;
+				newDeathObj.GetComponent<HealthBar>().max = maxHealth;
+				//newDeathObj.GetComponent<HealthBar>().healthBarAnchor = transform.Find("Healthbar").gameObject;
+			}
+		}
+
+		// Destroy the entity
+		Destroy(gameObject);
     }
 }
