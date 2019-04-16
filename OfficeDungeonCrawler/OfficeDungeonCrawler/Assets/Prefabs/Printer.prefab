@@ -41,7 +41,6 @@ GameObject:
   - component: {fileID: 114396786046469756}
   - component: {fileID: 61080810106388732}
   - component: {fileID: 82553269197838642}
-  - component: {fileID: 114552763823159764}
   m_Layer: 8
   m_Name: Printer
   m_TagString: Enemy
@@ -55,14 +54,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1398750883599670}
-  m_LocalRotation: {x: -0, y: -0, z: 0.71423304, w: -0.69990796}
-  m_LocalPosition: {x: -2.08, y: 31.13, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -20.73928, y: -8.136149, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4294352015032838}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -451.161}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4294352015032838
 Transform:
   m_ObjectHideFlags: 1
@@ -234,9 +233,9 @@ MonoBehaviour:
   - pizza
   itemDropCounts: 0100000003000000
   dropDistance: 0.5
-  maxHealth: 78
+  maxHealth: 5
   currentHealth: 0
-  healthBarObj: {fileID: 0}
+  healthBarAnchorObj: {fileID: 0}
   colorChangeSpeed: 1
   screenColorChangeSpeed: 2
   hurtColor: {r: 1, g: 0, b: 0, a: 1}
@@ -252,28 +251,6 @@ MonoBehaviour:
   healParticle: {fileID: 0}
   hurtSound: {fileID: 8300000, guid: c9ff231a64da18a4280f608c37a38e72, type: 3}
   damageScreen: {fileID: 0}
---- !u!114 &114552763823159764
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1398750883599670}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34c5425d4e7349c4294b926fc7dd4f3d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 3
-  maxRaycastDistance: 1000
-  canMove: 1
-  canMoveKnockback: 1
-  canMoveAfterKnockback: 0
-  layer:
-    serializedVersion: 2
-    m_Bits: 563
-  bossConditions: 1
-  target: {fileID: 0}
-  margin: 0.3
 --- !u!114 &114815450534552472
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -285,29 +262,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d5951acfd540d2469891de889129b70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectile: {fileID: 1599329250271450, guid: 281b5cb6fdf76b34aa6b6f3393f0cb10, type: 2}
+  projectile: {fileID: 1274357521494908, guid: 9184b171418e98c4fad188b5afd5621e, type: 2}
   player: {fileID: 0}
   bossConditions: 1
   projectileSpeed: 6
   projectileLifespan: 7.5
-  detectionRange: 9
-  firerate: 0.65
+  detectionRange: 15
+  firerate: 1
   burstSize: 3
-  attackDamage: 0.5
+  attackDamage: 1
   turnSpeedInDegrees: 145
   shotsLeft: 0
   sprite1: {fileID: 21300000, guid: dbae34d1d240c5d438dfaecc20d0bb0d, type: 3}
   sprite2: {fileID: 21300000, guid: 36819693d2321ce45ba807c116493b06, type: 3}
   sprite3: {fileID: 21300000, guid: 14eac1a08ab408b49a084fb31ee7e164, type: 3}
-  fireRate: 200
+  fireRate: 5
   m_layerMask:
     serializedVersion: 2
     m_Bits: 563
-  burstDuration: 2
+  burstDuration: 0.5
   allowedFire: 0
   timer: 0
   burstTimer: 0
-  burstTimeCoolDown: 0.5
+  burstTimeCoolDown: 1
   ShootingPrinterFront: {fileID: 21300000, guid: b74785ad1ddc0c64693ccf413b7eed8d,
     type: 3}
   notShootingPrinter: {fileID: 21300000, guid: 07e29cc90d2ad9548a6db44a7ef4e297, type: 3}

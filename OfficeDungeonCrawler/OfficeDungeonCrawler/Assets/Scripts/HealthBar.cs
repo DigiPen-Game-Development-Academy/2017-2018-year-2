@@ -36,13 +36,9 @@ public class HealthBar : MonoBehaviour
 
 		// Calculate the precentage
 		float precentage = ((100.0f / max) * current) / 100.0f;
-
-		//Debug.Log("percentage: " + precentage + ", " + max + "/" + current);
-
+		
 		// Calculate the current size
 		float currentSize = size * precentage;
-
-		Debug.Log("Current size: " + currentSize);
 
 		// Calculate the current color
 		Color currentColor = (lowColor * (1 - precentage)) + (highColor * precentage);
