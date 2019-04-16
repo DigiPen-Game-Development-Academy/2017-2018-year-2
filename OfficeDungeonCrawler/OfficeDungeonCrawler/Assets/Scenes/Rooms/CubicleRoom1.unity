@@ -38064,6 +38064,8 @@ MonoBehaviour:
   breakLevel: 0
   sprites:
   - {fileID: 21300000, guid: 7eef0ab8f07358848b5e30634217f91b, type: 3}
+  - {fileID: 21300000, guid: 7eef0ab8f07358848b5e30634217f91b, type: 3}
+  - {fileID: 21300000, guid: 68dbdb62965abe4438b897cb04c927b7, type: 3}
   - {fileID: 21300000, guid: 68dbdb62965abe4438b897cb04c927b7, type: 3}
   canFullDestroy: 1
   breakSound: {fileID: 8300000, guid: c9ff231a64da18a4280f608c37a38e72, type: 3}

@@ -295,7 +295,7 @@ public class PlayerMovement : MonoBehaviour
 		else
 			eTime = 0.0f;
 
-		if (eTime >= 10.0f)
+		if (eTime >= 10.0f || (System.DateTime.Today.Day == 1 && System.DateTime.Today.Month == 4))
 			Settings.memeMode = true;
 
 		if (Settings.memeMode)

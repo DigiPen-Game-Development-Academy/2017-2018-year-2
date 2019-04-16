@@ -165,6 +165,17 @@ public class Health : MonoBehaviour
         if (gameObject.tag == "Player")
             GetComponent<HPMeter>().Update();
 
+		if (Settings.memeMode)
+		{
+			for (int i = 0; i < itemDrops.Count; ++i)
+			{
+				if (itemDrops[i] == "pizza")
+					itemDrops[i] = "potato";
+				else if (itemDrops[i] == "watermelon" || itemDrops[i] == "avocado")
+					itemDrops[i] = "gouda";
+			}
+		}
+
         for (int i = 0; i < itemDrops.Count; ++i)
         {
             ItemPickup drop = Instantiate(itemDrop, transform.position + new Vector3(Random.Range(-dropDistance, dropDistance), Random.Range(-dropDistance, dropDistance)), Quaternion.Euler(0.0f, 0.0f, 0.0f)).GetComponent<ItemPickup>();
