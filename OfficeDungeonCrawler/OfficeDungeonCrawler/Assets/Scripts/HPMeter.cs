@@ -16,15 +16,20 @@ public class HPMeter : MonoBehaviour
     public Sprite heart;
     public Sprite halfHeart;
 
+    float scaleTracker = 2f;
+
     // Use this for initialization
     void Start()
     {
         health = GetComponent<Health>();
+        hearts[0].GetComponent<RectTransform>().localScale = new Vector3(2, 2, 1);
     }
 
     // Update is called once per frame
     public void Update()
     {
+        hearts[0].GetComponent<RectTransform>().localScale = Vector3.Lerp(hearts[0].GetComponent<RectTransform>().localScale, new Vector3(.8f,.8f,1), Time.deltaTime);
+
         for (int i = 0; i < hearts.Count; i++)
         {
             //Debug.Log((i * 2) + " < " + health.currentHealth);
