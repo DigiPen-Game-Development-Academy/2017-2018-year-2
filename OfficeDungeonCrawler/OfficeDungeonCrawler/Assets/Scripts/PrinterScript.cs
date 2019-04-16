@@ -11,7 +11,7 @@ using UnityEngine;
 public class PrinterScript : MonoBehaviour
 {
 	public GameObject projectile;
-	GameObject player;
+	public GameObject player;
 	public bool bossConditions = true;
 	public float projectileSpeed;
 	public float projectileLifespan;
@@ -42,7 +42,10 @@ public class PrinterScript : MonoBehaviour
 	
 	void Start()
 	{
+        if(!player)
+        {
 		player = GameObject.FindGameObjectWithTag("Player");
+            }
 		timer = firerate;
 		shotsLeft = burstSize;
 		fireRate = Time.deltaTime * fireRate;
@@ -109,7 +112,6 @@ public class PrinterScript : MonoBehaviour
 						Quaternion rotation = transform.rotation;
 						GameObject newProjectile = Instantiate(projectile, transform.position + transform.right, rotation *= Quaternion.Euler(0, 0, 90));
 
-						newProjectile.transform.localScale = new Vector3(2, 2, 2);
 						newProjectile.GetComponent<Hitbox>().isEnemy = true;
 						newProjectile.GetComponent<Hitbox>().damage = attackDamage;
 						newProjectile.GetComponent<TimedDeath>().deathTimer = projectileLifespan;
