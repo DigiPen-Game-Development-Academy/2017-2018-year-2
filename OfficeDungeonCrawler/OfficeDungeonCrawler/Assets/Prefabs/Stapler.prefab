@@ -239,11 +239,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitbox: {fileID: 1274357521494908, guid: 9184b171418e98c4fad188b5afd5621e, type: 2}
-  attackDistance: 2
+  attackDistance: 1.5
   bossvariable: 1
-  attackCooldown: 1
-  attackChargeTime: 0.5
-  attackDamage: 1
+  attackCooldown: 0.5
+  attackChargeTime: 0.2
+  attackDamage: 2
 --- !u!114 &114533964711421448
 MonoBehaviour:
   m_ObjectHideFlags: 1
