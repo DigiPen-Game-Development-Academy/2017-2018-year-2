@@ -44,8 +44,7 @@ public class PrinterScript : MonoBehaviour
         {
 		    player = GameObject.Find("Player");
         }
-		timer = firerate;
-		shotsLeft = burstSize;
+		timer = fireRate;
 		fireRate = Time.deltaTime * fireRate;
 		if (burstTimeCoolDown > 0)
 			burstTimeCoolDown = -burstTimeCoolDown;
@@ -113,7 +112,7 @@ public class PrinterScript : MonoBehaviour
 
 						GetComponent<AudioSource>().PlayOneShot(shootSound);
 						
-						timer = firerate;
+						timer = fireRate;
 					}
 					else
 					{

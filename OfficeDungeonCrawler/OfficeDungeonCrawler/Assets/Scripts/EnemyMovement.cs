@@ -100,10 +100,11 @@ public class EnemyMovement : MonoBehaviour
                     else if (rigidbody.velocity.x < -margin)
                     {
                         animator.SetBool("Idle", false);
-                        animator.SetBool("WalkRight", false);
+                        animator.SetBool("WalkRight", true);
                         animator.SetBool("WalkFront", false);
                         animator.SetBool("WalkBack", false);
                         animator.SetBool("WalkLeft", true);
+                        sr.flipX = true;
                     }
                     else/* if (rigidbody.velocity.x > margin)*/
                     {
@@ -112,6 +113,7 @@ public class EnemyMovement : MonoBehaviour
                         animator.SetBool("WalkFront", false);
                         animator.SetBool("WalkBack", false);
                         animator.SetBool("WalkLeft", false);
+                        sr.flipX = false;
                     }
                 }
                 else

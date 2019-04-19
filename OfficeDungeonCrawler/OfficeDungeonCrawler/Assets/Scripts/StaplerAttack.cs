@@ -1,6 +1,6 @@
 ﻿/*
 Author: Luke T
-Contributors: Myles Busig, Kevin-sen Panasyuk
+Contributors: Myles Busig, Kevin-sen Panasyuk, Elena S
 Date Last Modified: 2/13/2019
 */
 
@@ -47,15 +47,32 @@ public class StaplerAttack : MonoBehaviour
 
             if (distance <= attackDistance)
             {
+                Animator animator = GetComponent<Animator>();
+
+
                 if (timeTillAttack <= 0.0f)
                 {
                     enemyMovement.canMove = false;
+                    animator.SetBool("AttackSide", true);
+                    animator.SetBool("AttackFront", false);
+                    animator.SetBool("AttackBack", false);
+                    animator.SetBool("Idle", false);
+                    animator.SetBool("WalkRight", false);
+                    animator.SetBool("WalkBack", false);
+                    animator.SetBool("WalkFront", false);
                 }
                 else
                 {
                     attackPosition = player.transform.position;
 
                     enemyMovement.canMove = true;
+                    animator.SetBool("AttackSide", false);
+                    animator.SetBool("AttackFront", false);
+                    animator.SetBool("AttackBack", false);
+                    animator.SetBool("Idle", true);
+                    animator.SetBool("WalkRight", false);
+                    animator.SetBool("WalkBack", false);
+                    animator.SetBool("WalkFront", false);
                 }
 
                 if (timeTillAttack <= -attackChargeTime)
