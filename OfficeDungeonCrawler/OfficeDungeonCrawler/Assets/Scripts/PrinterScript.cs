@@ -1,5 +1,5 @@
 ﻿/*
-Author; Luke Taranowski luke wuz here and he i mean I messed it up;
+Author; Luke Taranowski
 Contributers: Kevin-sen Panasyuk
 justin Van Der Sluys
 Last Edited: 4/4/2019
@@ -15,10 +15,12 @@ public class PrinterScript : MonoBehaviour
 	public bool bossConditions = true;
 	public float projectileSpeed;
 	public float projectileLifespan;
-    public float detectionRange;
+	public float detectionRange;
+	public float firerate = 0;
 	public int burstSize = 3;
 	public float attackDamage;
 	public float turnSpeedInDegrees;
+	public int shotsLeft = 0;
 	public Sprite sprite1;
 	public Sprite sprite2;
 	public Sprite sprite3;
@@ -52,12 +54,15 @@ public class PrinterScript : MonoBehaviour
 
 	void Update()
 	{
-        if (player == null) return;
+        if (player == null)
+            return;
+
 		if (Vector2.Distance(transform.position, player.transform.position) <= detectionRange)
 		{
 			//OLD CODE
 			//Physics.Raycast(transform.position, player.transform.position - transform.position, out hit, Mathf.Infinity);
 			//Debug.DrawRay(transform.position, dir * 10, Color.red, 100f, false);
+
 			//-----------------//
 			//CHRIS ONORATI CODE
 			Vector3 dir = player.transform.position - transform.position + (Vector3)player.GetComponent<CircleCollider2D>().offset;
@@ -74,10 +79,12 @@ public class PrinterScript : MonoBehaviour
 			//Debug.Log(hit.collider.tag);
 			if (hit.collider.tag.Equals("Player"))
 			{
+				//Debug.Log("In LINE OF SIGHT");
 				lineOfSight = true;
 			}
 			else
 			{
+				//Debug.Log("OUT OF SIGHT");
 				lineOfSight = false;
 			}
 			if (lineOfSight)
@@ -85,6 +92,7 @@ public class PrinterScript : MonoBehaviour
 				Vector3 difference = player.transform.position - transform.position;
 				Vector3 newRotation = Vector3.RotateTowards(transform.right, difference, Mathf.Deg2Rad * turnSpeedInDegrees * Time.deltaTime, Vector3.Distance(transform.position, player.transform.position));
 				transform.right = newRotation;
+
 				if (bossConditions)
 				{
 					if (timer <= 0 && allowedFire == true)
@@ -121,8 +129,10 @@ public class PrinterScript : MonoBehaviour
 				}
 
 				if (burstTimer >= 0)
-                { 
+				{
+					Debug.Log("Burst timer ended");
 					allowedFire = true;
+					
 				}
 				if (burstTimer >= -signalTime)
 				{
