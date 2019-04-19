@@ -1,12 +1,14 @@
 fileFormatVersion: 2
-guid: d35f3290e1b3f174babd8a9baadc2adc
+guid: 39a393468ebec0949a8767edea502dc7
 TextureImporter:
   fileIDToRecycleName:
-    21300000: PlayerOof_0
-    21300002: PlayerOof_1
-    21300004: PlayerOof_2
-    21300006: PlayerOof_3
-    21300008: PlayerOof_4
+    21300000: FINALBACKATTACK_0
+    21300002: FINALBACKATTACK_1
+    21300004: FINALBACKATTACK_2
+    21300006: FINALBACKATTACK_3
+    21300008: FINALBACKATTACK_4
+    21300010: FINALBACKATTACK_5
+    21300012: FINALBACKATTACK_6
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -46,11 +48,11 @@ TextureImporter:
   lightmap: 0
   compressionQuality: 50
   spriteMode: 2
-  spriteExtrude: 1
+  spriteExtrude: 15
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 24
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -89,101 +91,141 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PlayerOof_0
+      name: FINALBACKATTACK_0
       rect:
         serializedVersion: 2
-        x: 21
-        y: 7
-        width: 22
-        height: 52
+        x: 0
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aa08ab6223ed5e34b9e4d2b5c02d5e7d
+      spriteID: 8c1be7650f03d4749968dd5f0b06ea34
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerOof_1
+      name: FINALBACKATTACK_1
       rect:
         serializedVersion: 2
-        x: 86
-        y: 12
-        width: 21
-        height: 33
-      alignment: 9
-      pivot: {x: 0.57566, y: 0.02280585}
+        x: 64
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9df5fb7807752424f9f0d962c1e297d6
+      spriteID: e5b53dc6919cee14cb5ab9cd301da23d
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerOof_2
+      name: FINALBACKATTACK_2
       rect:
         serializedVersion: 2
-        x: 149
-        y: 19
-        width: 16
-        height: 21
-      alignment: 9
-      pivot: {x: 0.53542995, y: 0.31644168}
+        x: 128
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5e78ca8b6e5741b4f844e9adb2f6c3c9
+      spriteID: ae65cb5a707414a4b95cfb8570ba9b36
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerOof_3
+      name: FINALBACKATTACK_3
       rect:
         serializedVersion: 2
-        x: 211
-        y: 10
-        width: 20
-        height: 20
-      alignment: 9
-      pivot: {x: 0.472068, y: 0.75837374}
+        x: 192
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 05aaf545a4867d24da8b43008bbeb19c
+      spriteID: f031283fad81e7841a7cc8fcaad6ba38
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerOof_4
+      name: FINALBACKATTACK_4
       rect:
         serializedVersion: 2
-        x: 275
-        y: 10
-        width: 20
-        height: 20
-      alignment: 9
-      pivot: {x: 0.46508485, y: 0.7932892}
+        x: 256
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d66dbf556c2493e499340562d6f3c96f
+      spriteID: 30a78f60ada83a8409ee97da6f6e6ad8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FINALBACKATTACK_5
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b1653358d4131e44b58888c02e8f5d1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FINALBACKATTACK_6
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5258fd019f4fe2048aac59fb65e86d0b
       vertices: []
       indices: 
       edges: []
@@ -191,7 +233,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: ba4ebd0a8d221054bbf3fe332833442c
+    spriteID: d374ecc6e739770489376dd87a1b3df3
     vertices: []
     indices: 
     edges: []
