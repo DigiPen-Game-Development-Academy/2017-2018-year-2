@@ -53,10 +53,10 @@ public class StaplerAttack : MonoBehaviour
                 if (timeTillAttack <= 0.0f)
                 {
                     enemyMovement.canMove = false;
-                    animator.SetBool("AttackSide", false);
+                    animator.SetBool("AttackSide", true);
                     animator.SetBool("AttackFront", false);
                     animator.SetBool("AttackBack", false);
-                    animator.SetBool("Idle", true);
+                    animator.SetBool("Idle", false);
                     animator.SetBool("WalkRight", false);
                     animator.SetBool("WalkBack", false);
                     animator.SetBool("WalkFront", false);
@@ -66,10 +66,10 @@ public class StaplerAttack : MonoBehaviour
                     attackPosition = player.transform.position;
 
                     enemyMovement.canMove = true;
-                    animator.SetBool("AttackSide", true);
+                    animator.SetBool("AttackSide", false);
                     animator.SetBool("AttackFront", false);
                     animator.SetBool("AttackBack", false);
-                    animator.SetBool("Idle", false);
+                    animator.SetBool("Idle", true);
                     animator.SetBool("WalkRight", false);
                     animator.SetBool("WalkBack", false);
                     animator.SetBool("WalkFront", false);
