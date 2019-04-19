@@ -11,6 +11,7 @@ using UnityEngine.UI;
 
 public class HPMeter : MonoBehaviour
 {
+    GameObject player;
     public List<GameObject> hearts = new List<GameObject>();
     Health health;
     public Sprite heart;
@@ -18,17 +19,39 @@ public class HPMeter : MonoBehaviour
 
     float scaleTracker = 2f;
 
+    bool beatingHeart;
+
     // Use this for initialization
     void Start()
     {
         health = GetComponent<Health>();
-        hearts[0].GetComponent<RectTransform>().localScale = new Vector3(2, 2, 1);
+        player = GameObject.Find("Player");
     }
 
     // Update is called once per frame
     public void Update()
     {
-        hearts[0].GetComponent<RectTransform>().localScale = Vector3.Lerp(hearts[0].GetComponent<RectTransform>().localScale, new Vector3(.8f,.8f,1), Time.deltaTime);
+        if (player.GetComponent<Health>().currentHealth <= 4)
+            beatingHeart = true;
+        else
+        {
+            beatingHeart = false;
+            hearts[0].GetComponent<RectTransform>().localScale = Vector3.Lerp(hearts[0].GetComponent<RectTransform>().localScale, new Vector3(.8f, .8f, 1), Time.deltaTime * 3);
+            hearts[1].GetComponent<RectTransform>().localScale = Vector3.Lerp(hearts[1].GetComponent<RectTransform>().localScale, new Vector3(.8f, .8f, 1), Time.deltaTime * 3);
+        }
+
+        if (beatingHeart)
+        {
+            if (hearts[0].GetComponent<RectTransform>().localScale.x > .825f)
+                hearts[0].GetComponent<RectTransform>().localScale = Vector3.Lerp(hearts[0].GetComponent<RectTransform>().localScale, new Vector3(.8f, .8f, 1), Time.deltaTime * 3);
+            else
+                hearts[0].GetComponent<RectTransform>().localScale = new Vector3(1f, 1f, 1);
+
+            if (hearts[1].GetComponent<RectTransform>().localScale.x > .825f)
+                hearts[1].GetComponent<RectTransform>().localScale = Vector3.Lerp(hearts[1].GetComponent<RectTransform>().localScale, new Vector3(.8f, .8f, 1), Time.deltaTime * 3);
+            else
+                hearts[1].GetComponent<RectTransform>().localScale = new Vector3(1f, 1f, 1);
+        }
 
         for (int i = 0; i < hearts.Count; i++)
         {
