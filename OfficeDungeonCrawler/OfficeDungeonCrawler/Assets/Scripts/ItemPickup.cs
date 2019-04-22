@@ -43,5 +43,7 @@ public class ItemPickup : MonoBehaviour
 					spriteRenderer.sprite = item.sprite;
 			}
 		}
+		else
+			spriteRenderer.sprite = null;
 	}
 }
