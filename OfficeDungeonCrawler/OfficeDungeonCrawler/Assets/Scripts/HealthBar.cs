@@ -28,6 +28,9 @@ public class HealthBar : MonoBehaviour
 	
 	void Update()
 	{
+		if (health == null)
+			return;
+
 		if (updateActive)
 		{
 			max = health.maxHealth;
