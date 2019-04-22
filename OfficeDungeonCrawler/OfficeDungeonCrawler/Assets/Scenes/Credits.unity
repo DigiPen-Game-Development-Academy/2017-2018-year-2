@@ -138,9 +138,9 @@ TextMesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 997511075}
-  m_Text: 'Pretend there are credits here
-
-    and you are amazed by the quality of them.'
+  m_Text: "All content \xA9 2018 DigiPen (USA) Corporation,\nAll rights reserved.\n\nGame
+    Director: Luke\nProducer: Justin\nTechnical Director: Myles\nArt Director: Elena\nExtra
+    Help: Kevin"
   m_OffsetZ: 0
   m_CharacterSize: 1
   m_LineSpacing: 1
@@ -214,7 +214,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   max: 100
-  speed: 0.04
+  speed: 0.03
 --- !u!1 &1189094671
 GameObject:
   m_ObjectHideFlags: 0
@@ -245,7 +245,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   max: 100
-  speed: 0.04
+  speed: 0.03
 --- !u!102 &1189094673
 TextMesh:
   serializedVersion: 3
@@ -253,9 +253,9 @@ TextMesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1189094671}
-  m_Text: 'Pretend there are credits here
-
-    and you are amazed by the quality of them.'
+  m_Text: "All content \xA9 2018 DigiPen (USA) Corporation,\nAll rights reserved.\n\nGame
+    Director: Luke\nProducer: Justin\nTechnical Director: Myles\nArt Director: Elena\nExtra
+    Help: Kevin"
   m_OffsetZ: 0
   m_CharacterSize: 1
   m_LineSpacing: 1
