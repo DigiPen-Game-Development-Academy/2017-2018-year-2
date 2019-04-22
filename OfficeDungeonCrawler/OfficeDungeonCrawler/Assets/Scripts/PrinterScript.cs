@@ -74,6 +74,9 @@ public class PrinterScript : MonoBehaviour
 
 			burstTimer += Time.deltaTime;
 
+			if (!hit)
+				return;
+
 			//Debug.Log(hit.collider.tag);
 			if (hit.collider.tag.Equals("Player"))
 			{

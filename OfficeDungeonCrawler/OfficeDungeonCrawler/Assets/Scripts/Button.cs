@@ -6,7 +6,8 @@ using UnityEngine.SceneManagement;
 public enum ButtonType
 {
 	SwitchLevel,
-	Quit
+	Quit,
+	Respawn
 }
 
 public class Button : MonoBehaviour
@@ -33,6 +34,9 @@ public class Button : MonoBehaviour
 				case ButtonType.Quit:
 					Debug.Log("QUIT");
 					Application.Quit();
+					break;
+				case ButtonType.Respawn:
+					SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 					break;
 				default:
 					break;

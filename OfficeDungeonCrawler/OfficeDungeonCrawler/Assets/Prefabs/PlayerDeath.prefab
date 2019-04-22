@@ -168,6 +168,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathTimer: 0.5
+  deathScreen: {fileID: 1733658848913328, guid: 2ada6dbb24496004493d9d2b68bd3601,
+    type: 2}
 --- !u!212 &212135140472124692
 SpriteRenderer:
   m_ObjectHideFlags: 1
