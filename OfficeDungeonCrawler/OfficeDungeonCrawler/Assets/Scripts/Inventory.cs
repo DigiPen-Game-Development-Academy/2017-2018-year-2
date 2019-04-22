@@ -20,11 +20,15 @@ public class Inventory : MonoBehaviour
 	public Sprite slotBackgroundDeselectedL;
 	public Sprite slotBackgroundDeselectedR;
 
+	public static List<Item> staticItems = new List<Item>();
+
 	Health health;
 
 	void Start()
 	{
 		health = GetComponent<Health>();
+
+		items = staticItems;
 
 		//GiveItem("test1", 1);
 		//GiveItem("test2", 1);
@@ -114,6 +118,8 @@ public class Inventory : MonoBehaviour
 			else
 				text.text = "";
 		}
+
+		staticItems = items;
 	}
 
 	public bool GiveItem(string id, int count)
