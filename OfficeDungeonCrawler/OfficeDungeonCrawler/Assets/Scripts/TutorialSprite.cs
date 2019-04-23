@@ -39,7 +39,7 @@ public class TutorialSprite : MonoBehaviour
 					completed = true;
 				break;
 			case TutorialSpriteEvent.Dash:
-				if (Input.GetKeyDown(Settings.KeyBinds.dash))
+				if (Input.GetKeyDown(Settings.KeyBinds.dash) || Input.GetKeyDown(KeyCode.Space))
 					completed = true;
 				break;
 			case TutorialSpriteEvent.Attack:

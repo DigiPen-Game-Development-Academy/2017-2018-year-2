@@ -104,7 +104,7 @@ public class PlayerMovement : MonoBehaviour
 
 		currentSpeed = walkSpeed;
 
-		if (Input.GetKey(Settings.KeyBinds.dash) && stamina >= dashCooldown)
+		if ((Input.GetKey(Settings.KeyBinds.dash) || Input.GetKeyDown(KeyCode.Space)) && stamina >= dashCooldown)
 		{
 			audioSource.PlayOneShot(dashSound);
 			dashDirection = direction;
