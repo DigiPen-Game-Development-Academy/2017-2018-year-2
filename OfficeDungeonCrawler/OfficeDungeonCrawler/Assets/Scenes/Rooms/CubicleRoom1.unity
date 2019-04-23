@@ -36770,10 +36770,6 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1717433945783240, guid: e92353e4dc4ac3e4696add8a2d39b668, type: 2}
-      propertyPath: m_Name
-      value: UIDamageScreen
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e92353e4dc4ac3e4696add8a2d39b668, type: 2}
   m_IsPrefabAsset: 0
@@ -37618,7 +37614,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1138113783 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 1773262785588104, guid: e92353e4dc4ac3e4696add8a2d39b668,
+  m_CorrespondingSourceObject: {fileID: 1299016988985470, guid: e92353e4dc4ac3e4696add8a2d39b668,
     type: 2}
   m_PrefabInternal: {fileID: 885387723}
 --- !u!1 &1138116288

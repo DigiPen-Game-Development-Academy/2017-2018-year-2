@@ -8,6 +8,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
+using UnityEngine.UI;
 
 public enum DoorUnlockMode
 {
@@ -37,9 +38,15 @@ public class DoorScript : MonoBehaviour
 			locked = false;
 
 		if (locked)
+		{
 			transform.GetChild(0).GetComponent<SpriteRenderer>().color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
+			GameObject.Find("KeyIcon").GetComponent<Image>().color = new Color(1.0f, 1.0f, 1.0f, 0.0f);
+		}
 		else
+		{
 			transform.GetChild(0).GetComponent<SpriteRenderer>().color = new Color(1.0f, 1.0f, 1.0f, 0.0f);
+			GameObject.Find("KeyIcon").GetComponent<Image>().color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
+		}
 	}
 
 	void OnCollisionEnter2D(Collision2D collision)
