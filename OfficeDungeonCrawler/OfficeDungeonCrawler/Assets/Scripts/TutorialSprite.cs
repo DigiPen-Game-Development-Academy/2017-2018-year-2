@@ -15,6 +15,7 @@ public class TutorialSprite : MonoBehaviour
 	public TutorialSpriteEvent tEvent = TutorialSpriteEvent.Walk;
 	public float time = 10.0f;
 	public float lerpSpeed = 1.5f;
+	public float lerpOutSpeed = 1.5f;
 	public float maxAlha = 0.5f;
 	float timeTillShow;
 	bool completed = false;
@@ -57,6 +58,6 @@ public class TutorialSprite : MonoBehaviour
 		if (timeTillShow <= 0.0f && !completed)
 			sr.color = new Color(sr.color.r, sr.color.g, sr.color.b, Mathf.Lerp(sr.color.a, maxAlha, lerpSpeed * Time.deltaTime));
 		else
-			sr.color = new Color(sr.color.r, sr.color.g, sr.color.b, Mathf.Lerp(sr.color.a, 0.0f, lerpSpeed * Time.deltaTime));
+			sr.color = new Color(sr.color.r, sr.color.g, sr.color.b, Mathf.Lerp(sr.color.a, 0.0f, lerpOutSpeed * Time.deltaTime));
 	}
 }
