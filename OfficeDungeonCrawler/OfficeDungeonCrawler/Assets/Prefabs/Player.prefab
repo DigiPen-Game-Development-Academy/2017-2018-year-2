@@ -377,6 +377,7 @@ MonoBehaviour:
   dashSound: {fileID: 8300000, guid: 21b1aa89d6b10f648a8e367f65c8e3a2, type: 3}
   onionSkin: {fileID: 1682809891537778, guid: 2a46b431d00c8f2449f6338ee5477b36, type: 2}
   walkSoundDelay: 0.35
+  hitMarker: {fileID: 1777733614235014, guid: d6b7789859efa6d459c064e2de689362, type: 2}
   timeTillCanMove: 0
 --- !u!114 &114898050982018894
 MonoBehaviour:
@@ -396,19 +397,22 @@ MonoBehaviour:
   dropDistance: 0.5
   maxHealth: 10
   currentHealth: 10
-  healthBarObj: {fileID: 0}
+  healthBarAnchorObj: {fileID: 0}
   colorChangeSpeed: 1
-  screenColorChangeSpeed: 2
+  screenColorChangeSpeed: 1
   hurtColor: {r: 1, g: 0, b: 0, a: 1}
   hurtScreenColor: {r: 1, g: 0, b: 0, a: 0.46666667}
   healColor: {r: 0.4669811, g: 0.9946148, b: 1, a: 1}
   normalColor: {r: 1, g: 1, b: 1, a: 1}
   normalScreenColor: {r: 1, g: 0, b: 0, a: 0}
-  deathObject: {fileID: 0}
+  deathObject: {fileID: 1129661514151338, guid: b12e374069802274a8ae889505e30d37,
+    type: 2}
+  deathSound: {fileID: 8300000, guid: 83f7f836643547a4f8b6801d8698e3d6, type: 3}
   shakeDuration: 1
   shakeIntensity: 10
   healParticle: {fileID: 1052298815990856, guid: d0f025c4b4fc73044b973403fe41e68a,
     type: 2}
+  beatTime: 0.7
   hurtSound: {fileID: 8300000, guid: 8ea69f502eccb5346b649909ae4ce3d4, type: 3}
   damageScreen: {fileID: 0}
 --- !u!212 &212421118207432532

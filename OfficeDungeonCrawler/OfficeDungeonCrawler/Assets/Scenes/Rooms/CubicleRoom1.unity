@@ -39971,41 +39971,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 8
       objectReference: {fileID: 0}
-    - target: {fileID: 114709727378048926, guid: 78360258d93ca764d8d87f6365d1e0c5,
-        type: 2}
-      propertyPath: camera
-      value: 
-      objectReference: {fileID: 884632424}
-    - target: {fileID: 114898050982018894, guid: 78360258d93ca764d8d87f6365d1e0c5,
-        type: 2}
-      propertyPath: damageScreen
-      value: 
-      objectReference: {fileID: 1430526733}
-    - target: {fileID: 114839789041650520, guid: 78360258d93ca764d8d87f6365d1e0c5,
-        type: 2}
-      propertyPath: hearts.Array.data[0]
-      value: 
-      objectReference: {fileID: 1701649575}
-    - target: {fileID: 114839789041650520, guid: 78360258d93ca764d8d87f6365d1e0c5,
-        type: 2}
-      propertyPath: hearts.Array.data[1]
-      value: 
-      objectReference: {fileID: 549119817}
-    - target: {fileID: 114839789041650520, guid: 78360258d93ca764d8d87f6365d1e0c5,
-        type: 2}
-      propertyPath: hearts.Array.data[2]
-      value: 
-      objectReference: {fileID: 906504705}
-    - target: {fileID: 114839789041650520, guid: 78360258d93ca764d8d87f6365d1e0c5,
-        type: 2}
-      propertyPath: hearts.Array.data[3]
-      value: 
-      objectReference: {fileID: 760794568}
-    - target: {fileID: 114839789041650520, guid: 78360258d93ca764d8d87f6365d1e0c5,
-        type: 2}
-      propertyPath: hearts.Array.data[4]
-      value: 
-      objectReference: {fileID: 393891092}
     - target: {fileID: 114767603162018166, guid: 78360258d93ca764d8d87f6365d1e0c5,
         type: 2}
       propertyPath: slots.Array.data[0]
@@ -40081,28 +40046,41 @@ Prefab:
       propertyPath: slotCounts.Array.data[4]
       value: 
       objectReference: {fileID: 2040512698}
+    - target: {fileID: 114839789041650520, guid: 78360258d93ca764d8d87f6365d1e0c5,
+        type: 2}
+      propertyPath: hearts.Array.data[0]
+      value: 
+      objectReference: {fileID: 1701649575}
+    - target: {fileID: 114839789041650520, guid: 78360258d93ca764d8d87f6365d1e0c5,
+        type: 2}
+      propertyPath: hearts.Array.data[1]
+      value: 
+      objectReference: {fileID: 549119817}
+    - target: {fileID: 114839789041650520, guid: 78360258d93ca764d8d87f6365d1e0c5,
+        type: 2}
+      propertyPath: hearts.Array.data[2]
+      value: 
+      objectReference: {fileID: 906504705}
+    - target: {fileID: 114839789041650520, guid: 78360258d93ca764d8d87f6365d1e0c5,
+        type: 2}
+      propertyPath: hearts.Array.data[3]
+      value: 
+      objectReference: {fileID: 760794568}
+    - target: {fileID: 114839789041650520, guid: 78360258d93ca764d8d87f6365d1e0c5,
+        type: 2}
+      propertyPath: hearts.Array.data[4]
+      value: 
+      objectReference: {fileID: 393891092}
     - target: {fileID: 114898050982018894, guid: 78360258d93ca764d8d87f6365d1e0c5,
         type: 2}
-      propertyPath: deathObject
+      propertyPath: damageScreen
       value: 
-      objectReference: {fileID: 1129661514151338, guid: b12e374069802274a8ae889505e30d37,
-        type: 2}
-    - target: {fileID: 114898050982018894, guid: 78360258d93ca764d8d87f6365d1e0c5,
-        type: 2}
-      propertyPath: deathSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 83f7f836643547a4f8b6801d8698e3d6, type: 3}
-    - target: {fileID: 114883571212207992, guid: 78360258d93ca764d8d87f6365d1e0c5,
-        type: 2}
-      propertyPath: hitMarker
-      value: 
-      objectReference: {fileID: 1777733614235014, guid: d6b7789859efa6d459c064e2de689362,
-        type: 2}
+      objectReference: {fileID: 1430526733}
     - target: {fileID: 114709727378048926, guid: 78360258d93ca764d8d87f6365d1e0c5,
         type: 2}
-      propertyPath: attackAnimTime
-      value: 1
-      objectReference: {fileID: 0}
+      propertyPath: camera
+      value: 
+      objectReference: {fileID: 884632424}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78360258d93ca764d8d87f6365d1e0c5, type: 2}
   m_IsPrefabAsset: 0

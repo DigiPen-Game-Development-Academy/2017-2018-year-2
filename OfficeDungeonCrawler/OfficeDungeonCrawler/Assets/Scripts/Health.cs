@@ -48,6 +48,8 @@ public class Health : MonoBehaviour
     SpriteRenderer spriteRenderer;
     // The Bar of the health bar
     Bar healthBarAnchor;
+	public float beatTime = 0.5f;
+	float timeTillBeat = 0.0f;
 
     Image damageScreenIMG = null;
 
@@ -81,6 +83,14 @@ public class Health : MonoBehaviour
 
     void Update()
     {
+		timeTillBeat -= Time.deltaTime;
+
+		if (timeTillBeat <= 0.0f && currentHealth <= 4.0f)
+		{
+			Damage(0.0f, true, 0.3f);
+			timeTillBeat = beatTime;
+		}
+
         if (Input.GetKeyDown(KeyCode.Minus) && gameObject.CompareTag("Player"))
             Damage(1.0f);
         //Debug.Log(gameObject.name + " health: " + currentHealth + "/" + maxHealth);
@@ -93,17 +103,25 @@ public class Health : MonoBehaviour
     }
 
     // Used to damage the entity
-    public void Damage(float amount)
+    public void Damage(float amount, bool noFlash = false, float alpha = -1.0f)
     {
         float vol = Random.Range(0.5f, 0.8f);
         // Decrease the current health
         currentHealth -= amount;
 
         // Set the entity color
-        spriteRenderer.color = hurtColor;
+		if (!noFlash)
+		    spriteRenderer.color = hurtColor;
 
-        if (damageScreenIMG != null)
-            damageScreenIMG.color = hurtScreenColor;
+		if (damageScreenIMG != null)
+		{
+			Color c = hurtScreenColor;
+
+			if (alpha != -1.0f)
+				c.a = alpha;
+
+			damageScreenIMG.color = c;
+		}
 
         if (hurtSound != null)
             audioSource.PlayOneShot(hurtSound, vol);
