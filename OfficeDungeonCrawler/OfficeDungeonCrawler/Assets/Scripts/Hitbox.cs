@@ -28,6 +28,8 @@ public class Hitbox : MonoBehaviour
 				return;
 			}
 
+			Camera.main.GetComponent<CameraMovement>().screenShakeTime = 0.2f;
+
 			++other.GetComponent<Breakable>().breakLevel;
 
 			Vector3 spawnPosition = new Vector3(other.gameObject.transform.position.x, other.gameObject.transform.position.y, other.gameObject.transform.position.z + 10);
@@ -39,7 +41,9 @@ public class Hitbox : MonoBehaviour
 
         if (other.tag == "WaterCooler")
         {
-            other.GetComponent<WaterCooler>().Dispense();
+			Camera.main.GetComponent<CameraMovement>().screenShakeTime = 0.2f;
+
+			other.GetComponent<WaterCooler>().Dispense();
 
             Destroy(gameObject);
         }
@@ -52,16 +56,20 @@ public class Hitbox : MonoBehaviour
         // Check if the object we collided with is the player and we are the enemy
         if (other.tag == "Player" && isEnemy)
         {
-            // Subtract damage from the other objects health
-            other.gameObject.GetComponent<Health>().Damage(damage);
+			//Camera.main.GetComponent<CameraMovement>().screenShakeTime = 0.2f;
+
+			// Subtract damage from the other objects health
+			other.gameObject.GetComponent<Health>().Damage(damage);
             other.gameObject.GetComponent<PlayerMovement>().timeTillCanMove = other.gameObject.GetComponent<PlayerMovement>().pauseOnHurt;
             Destroy(gameObject);
 
         }
         else if (other.tag == "Enemy" && !isEnemy) // Check if the object we collided with is the enemy and we are the player
         {
-            // Subtract damage from the other objects health
-            if(other.gameObject.GetComponent<Health>())
+			Camera.main.GetComponent<CameraMovement>().screenShakeTime = 0.2f;
+
+			// Subtract damage from the other objects health
+			if (other.gameObject.GetComponent<Health>())
                 other.gameObject.GetComponent<Health>().Damage(damage);
 
             if (other.gameObject.GetComponent<EnemyMovement>() != null)

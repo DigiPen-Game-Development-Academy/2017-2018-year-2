@@ -34,7 +34,7 @@ public class DoorScript : MonoBehaviour
 			locked = false;
 		if (unlockMode == DoorUnlockMode.RightClick && Input.GetMouseButtonDown(1))
 			locked = false;
-		if (unlockMode == DoorUnlockMode.Dash && Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.Space))
+		if (unlockMode == DoorUnlockMode.Dash && (Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.Space)))
 			locked = false;
 
 		if (locked)

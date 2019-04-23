@@ -36944,6 +36944,16 @@ Prefab:
       propertyPath: target
       value: 
       objectReference: {fileID: 1941142164}
+    - target: {fileID: 114352092362753734, guid: 4e05f82db7b558947b27e63f0f19eb8d,
+        type: 2}
+      propertyPath: screenShakeOffset.x
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 114352092362753734, guid: 4e05f82db7b558947b27e63f0f19eb8d,
+        type: 2}
+      propertyPath: screenShakeOffset.y
+      value: 0.75
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4e05f82db7b558947b27e63f0f19eb8d, type: 2}
   m_IsPrefabAsset: 0
