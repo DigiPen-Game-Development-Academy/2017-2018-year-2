@@ -85,7 +85,7 @@ public class Health : MonoBehaviour
     {
 		timeTillBeat -= Time.deltaTime;
 
-		if (timeTillBeat <= 0.0f && currentHealth <= 4.0f)
+		if (timeTillBeat <= 0.0f && currentHealth <= 4.0f && gameObject.tag == "Player")
 		{
 			Damage(0.0f, true, 0.3f);
 			timeTillBeat = beatTime;
