@@ -20,9 +20,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4193059143187056}
   - component: {fileID: 212310796125799260}
+  - component: {fileID: 114803204460380842}
   - component: {fileID: 61307417948482110}
   - component: {fileID: 82743555050744386}
-  - component: {fileID: 114803204460380842}
   m_Layer: 0
   m_Name: WaterCooler
   m_TagString: WaterCooler
@@ -37,7 +37,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1417761263613902}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.678, y: -4.984, z: 0.1}
+  m_LocalPosition: {x: -9.5, y: -5, z: 0}
   m_LocalScale: {x: 0.8, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -60,7 +60,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1, y: 2}
-    newSize: {x: 1, y: 2}
+    newSize: {x: 0.25, y: 0.25}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -174,7 +174,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d92d76b15ec62e14f9b9d89dfce73c6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dispenseSound: {fileID: 8300000, guid: b94f1a96019fd724fb25df758524aae7, type: 3}
+  dispenseSound: {fileID: 8300000, guid: 0232058d1ebeac6439b27ec2d991835f, type: 3}
   outSound: {fileID: 8300000, guid: c9ff231a64da18a4280f608c37a38e72, type: 3}
   itemPickup: {fileID: 1431077138254094, guid: ba8917fbb29f17c47968193c9ae06cb0, type: 2}
   maxCount: 3
@@ -212,15 +212,15 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 902934831
-  m_SortingLayer: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: fafd97d58fd49044f835853227e82328, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 2}
+  m_Size: {x: 0.25, y: 0.25}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
