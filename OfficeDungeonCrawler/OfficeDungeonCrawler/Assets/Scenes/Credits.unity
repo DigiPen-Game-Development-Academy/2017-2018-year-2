@@ -181,8 +181,11 @@ TextMesh:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 997511075}
   m_Text: "All content \xA9 2019 DigiPen (USA) Corporation,\nAll rights reserved.\n\nGame
-    Director: Luke\nProducer: Justin\nTechnical Director: Myles\nArt Director: Elena\nExtra
-    Help: Kevin\nScape Goat: Myles"
+    Director: Luke Taranowski\nProducer: Justin Van Der Sluys\nTechnical Director:
+    Myles Busig\nArt Director: Elena Schefer\nExtra Help: Kevin Panasyuk\nScape Goat:
+    Myles Busig\n\nSpecial Thanks:\nClaude Comair\nRaymond Yan\nMichelle Yan\nJeffrey
+    Kumley\nOden Ocampo\nDoug Zwick\nChris Onorati\nSamir Abou Samra\nVince Espino\nGrace
+    Howard"
   m_OffsetZ: 0
   m_CharacterSize: 1
   m_LineSpacing: 1
@@ -238,11 +241,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 997511075}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -10, z: 0}
+  m_LocalPosition: {x: 0, y: -17, z: 0}
   m_LocalScale: {x: 0.1, y: 0.1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &997511079
 MonoBehaviour:
@@ -256,7 +259,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   max: 100
-  speed: 0.03
+  speed: 0.025
 --- !u!1 &1189094671
 GameObject:
   m_ObjectHideFlags: 0
@@ -269,7 +272,7 @@ GameObject:
   - component: {fileID: 1189094673}
   - component: {fileID: 1189094672}
   m_Layer: 0
-  m_Name: Text (1)
+  m_Name: TextShadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -287,7 +290,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   max: 100
-  speed: 0.03
+  speed: 0.025
 --- !u!102 &1189094673
 TextMesh:
   serializedVersion: 3
@@ -296,8 +299,11 @@ TextMesh:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1189094671}
   m_Text: "All content \xA9 2019 DigiPen (USA) Corporation,\nAll rights reserved.\n\nGame
-    Director: Luke\nProducer: Justin\nTechnical Director: Myles\nArt Director: Elena\nExtra
-    Help: Kevin\nScape Goat: Myles"
+    Director: Luke Taranowski\nProducer: Justin Van Der Sluys\nTechnical Director:
+    Myles Busig\nArt Director: Elena Schefer\nExtra Help: Kevin Panasyuk\nScape Goat:
+    Myles Busig\n\nSpecial Thanks:\nClaude Comair\nRaymond Yan\nMichelle Yan\nJeffrey
+    Kumley\nOden Ocampo\nDoug Zwick\nChris Onorati\nSamir Abou Samra\nVince Espino\nGrace
+    Howard"
   m_OffsetZ: 0
   m_CharacterSize: 1
   m_LineSpacing: 1
@@ -353,7 +359,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1189094671}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.05, y: -9.95, z: 1}
+  m_LocalPosition: {x: 0.05, y: -16.95, z: 1}
   m_LocalScale: {x: 0.1, y: 0.1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -473,7 +479,7 @@ Transform:
   m_Children:
   - {fileID: 1731371942}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1551541884
 GameObject:

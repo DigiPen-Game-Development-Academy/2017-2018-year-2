@@ -26,7 +26,7 @@ public class Music : MonoBehaviour
 
 		if (current != lastLevel)
 		{
-			if (src.clip != arrival && (current == "SplashScreen" || current == "MainMenu"))
+			if (src.clip != arrival && (current == "SplashScreen" || current == "MainMenu" || current == "Credits"))
 			{
 				src.clip = arrival;
 
