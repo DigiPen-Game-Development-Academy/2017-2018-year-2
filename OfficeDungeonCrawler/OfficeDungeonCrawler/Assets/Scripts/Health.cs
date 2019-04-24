@@ -43,6 +43,8 @@ public class Health : MonoBehaviour
     public float shakeDuration = 0;
     public float shakeIntensity = 0;
 
+	public static float staticHealth = 0.0f;
+
     public GameObject healParticle;
     // The SpriteRenderer of the entity
     SpriteRenderer spriteRenderer;
@@ -71,8 +73,11 @@ public class Health : MonoBehaviour
             healthBarAnchor = healthBarAnchorObj.GetComponent<Bar>();
         }
 
-        // Set the current health to the max health
-        currentHealth = maxHealth;
+		// Set the current health to the max health
+		currentHealth = maxHealth;
+
+		if (staticHealth > 0.0f && gameObject.tag == "Player")
+			currentHealth = staticHealth;
 
         // Update the health bar
         UpdateHealthBar();
@@ -83,6 +88,9 @@ public class Health : MonoBehaviour
 
     void Update()
     {
+		if (gameObject.tag == "Player")
+			staticHealth = currentHealth;
+
 		timeTillBeat -= Time.deltaTime;
 
 		if (timeTillBeat <= 0.0f && currentHealth <= 4.0f && gameObject.tag == "Player")
@@ -123,7 +131,7 @@ public class Health : MonoBehaviour
 			damageScreenIMG.color = c;
 		}
 
-        if (hurtSound != null)
+        if (hurtSound != null && !noFlash)
             audioSource.PlayOneShot(hurtSound, vol);
 
         //if (camera != null)
@@ -180,8 +188,11 @@ public class Health : MonoBehaviour
     {
         Debug.Log("DESTROYING " + gameObject.name);
 
-        if (gameObject.tag == "Player")
-            GetComponent<HPMeter>().Update();
+		if (gameObject.tag == "Player")
+		{
+			staticHealth = 0.0f;
+			GetComponent<HPMeter>().Update();
+		}
 
 		if (Settings.memeMode)
 		{

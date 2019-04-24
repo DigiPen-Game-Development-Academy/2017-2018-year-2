@@ -594,6 +594,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 66
       objectReference: {fileID: 0}
+    - target: {fileID: 114121436185922728, guid: 046000ff772429145b31bdabf2e7e157,
+        type: 2}
+      propertyPath: nextRoom
+      value: CubicleRoom1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 046000ff772429145b31bdabf2e7e157, type: 2}
   m_IsPrefabAsset: 0
