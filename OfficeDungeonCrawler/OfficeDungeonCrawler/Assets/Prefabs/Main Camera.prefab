@@ -37,7 +37,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1097042747198026}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.04, y: -0.2, z: -10}
+  m_LocalPosition: {x: -7.68, y: 2.61, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -105,6 +105,8 @@ MonoBehaviour:
   speed: 3
   directionMultiplier: 2.5
   type: 1
+  screenShakeOffset: {x: 0.75, y: 0.75}
+  screenShakeTime: 0
 --- !u!114 &114525939532206788
 MonoBehaviour:
   m_ObjectHideFlags: 1
