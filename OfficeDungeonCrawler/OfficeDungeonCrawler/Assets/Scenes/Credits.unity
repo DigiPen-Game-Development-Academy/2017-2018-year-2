@@ -182,10 +182,10 @@ TextMesh:
   m_GameObject: {fileID: 997511075}
   m_Text: "All content \xA9 2019 DigiPen (USA) Corporation,\nAll rights reserved.\n\nGame
     Director: Luke Taranowski\nProducer: Justin Van Der Sluys\nTechnical Director:
-    Myles Busig\nArt Director: Elena Schefer\nExtra Help: Kevin Panasyuk\nScape Goat:
-    Myles Busig\n\nSpecial Thanks:\nClaude Comair\nRaymond Yan\nMichelle Yan\nJeffrey
-    Kumley\nOden Ocampo\nDoug Zwick\nChris Onorati\nSamir Abou Samra\nVince Espino\nGrace
-    Howard"
+    Myles Busig\nArt Director: Elena Schefer\nExtra Help: Kevin Panasyuk\n\nSpecial
+    Thanks:\nClaude Comair\nRaymond Yan\nMichelle Yan\nJeffrey Kumley\nOden Ocampo\nDoug
+    Zwick\nChris Onorati\nSamir Abou Samra\nVince Espino\nGrace Howard\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n(This
+    is the part where you press the back button)"
   m_OffsetZ: 0
   m_CharacterSize: 1
   m_LineSpacing: 1
@@ -241,7 +241,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 997511075}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -14, z: 0}
+  m_LocalPosition: {x: 0, y: -22, z: 0}
   m_LocalScale: {x: 0.07, y: 0.07, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -258,7 +258,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04b3613c58004f645ac8c5b7de6dfed1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  max: 100
+  max: 15.5
   speed: 0.025
 --- !u!1 &1189094671
 GameObject:
@@ -289,7 +289,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04b3613c58004f645ac8c5b7de6dfed1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  max: 100
+  max: 15.45
   speed: 0.025
 --- !u!102 &1189094673
 TextMesh:
@@ -300,10 +300,10 @@ TextMesh:
   m_GameObject: {fileID: 1189094671}
   m_Text: "All content \xA9 2019 DigiPen (USA) Corporation,\nAll rights reserved.\n\nGame
     Director: Luke Taranowski\nProducer: Justin Van Der Sluys\nTechnical Director:
-    Myles Busig\nArt Director: Elena Schefer\nExtra Help: Kevin Panasyuk\nScape Goat:
-    Myles Busig\n\nSpecial Thanks:\nClaude Comair\nRaymond Yan\nMichelle Yan\nJeffrey
-    Kumley\nOden Ocampo\nDoug Zwick\nChris Onorati\nSamir Abou Samra\nVince Espino\nGrace
-    Howard"
+    Myles Busig\nArt Director: Elena Schefer\nExtra Help: Kevin Panasyuk\n\nSpecial
+    Thanks:\nClaude Comair\nRaymond Yan\nMichelle Yan\nJeffrey Kumley\nOden Ocampo\nDoug
+    Zwick\nChris Onorati\nSamir Abou Samra\nVince Espino\nGrace Howard\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n(This
+    is the part where you press the back button)"
   m_OffsetZ: 0
   m_CharacterSize: 1
   m_LineSpacing: 1
@@ -359,7 +359,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1189094671}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.05, y: -13.95, z: 1}
+  m_LocalPosition: {x: 0.05, y: -21.95, z: 1}
   m_LocalScale: {x: 0.07, y: 0.07, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
