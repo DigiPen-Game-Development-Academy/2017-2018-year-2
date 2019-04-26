@@ -3637,7 +3637,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tEvent: 0
-  time: 10
+  time: 1.5
   lerpSpeed: 1.5
   lerpOutSpeed: 1.5
   maxAlha: 0.5
