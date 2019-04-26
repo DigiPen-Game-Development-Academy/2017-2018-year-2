@@ -693,7 +693,7 @@ Prefab:
     - target: {fileID: 114121436185922728, guid: 046000ff772429145b31bdabf2e7e157,
         type: 2}
       propertyPath: nextRoom
-      value: Credits
+      value: E's room1
       objectReference: {fileID: 0}
     - target: {fileID: 114121436185922728, guid: 046000ff772429145b31bdabf2e7e157,
         type: 2}
