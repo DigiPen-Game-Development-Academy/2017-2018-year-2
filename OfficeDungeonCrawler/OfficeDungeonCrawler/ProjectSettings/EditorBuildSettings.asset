@@ -39,6 +39,11 @@ EditorBuildSettings:
     path: Assets/Scenes/Rooms/Tutorial/Tutorial3.unity
     guid: 20d9a7de7dc97a84586b0258660bbfd7
   - enabled: 1
+<<<<<<< HEAD
     path: Assets/Scenes/HowToPlay.unity
     guid: 82b05294e2862814989ff39eb8b257ca
+=======
+    path: Assets/Scenes/Rooms/boss Lvl.unity
+    guid: 099f189ce48e327459ef40451d89079e
+>>>>>>> dde8d559220e221ebc7a89ae1fdeb3929528c27b
   m_configObjects: {}
