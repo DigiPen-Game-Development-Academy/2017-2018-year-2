@@ -14,6 +14,8 @@ public class Button : MonoBehaviour
 {
 	public ButtonType buttonType = ButtonType.SwitchLevel;
 	public string level;
+	public Sprite normal;
+	public Sprite hover;
 
 	bool isOver = false;
 
@@ -24,6 +26,11 @@ public class Button : MonoBehaviour
 	
 	void Update()
 	{
+		if (isOver)
+			GetComponent<SpriteRenderer>().sprite = hover;
+		else
+			GetComponent<SpriteRenderer>().sprite = normal;
+
 		if (isOver && Input.GetMouseButtonDown(0))
 		{
 			switch (buttonType)

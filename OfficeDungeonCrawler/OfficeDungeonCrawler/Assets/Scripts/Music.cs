@@ -26,13 +26,13 @@ public class Music : MonoBehaviour
 
 		if (current != lastLevel)
 		{
-			if (src.clip != arrival && (current == "SplashScreen" || current == "MainMenu" || current == "Credits"))
+			if (src.clip != arrival && (current == "SplashScreen" || current == "MainMenu" || current == "Credits" || current == "Tutorial" || current == "Tutorial3"))
 			{
 				src.clip = arrival;
 
 				src.Play();
 			}
-			else if (src.clip != survival && (current == "CubicleRoom1"))
+			else if (src.clip != survival && (current == "CubicleRoom1" || current == "Tutorial1" || current == "Tutorial2"))
 			{
 				src.clip = survival;
 

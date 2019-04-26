@@ -52,7 +52,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1428185799576610}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 30.98, y: -4.501, z: 0.1}
+  m_LocalPosition: {x: -2.5, y: -1.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4631666406851000}
@@ -66,7 +66,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1285177039259702}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.283, y: -0.218, z: -1}
+  m_LocalPosition: {x: 0.283, y: -0.218, z: -0.05}
   m_LocalScale: {x: 0.875, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4091597353228520}
@@ -108,7 +108,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4da50517c1b8dc42bad56f39561dae4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextRoom: MylesPreProductionPresentation
+  nextRoom: Tutorial2
   locked: 1
   unlockMode: 0
   obj: {fileID: 0}

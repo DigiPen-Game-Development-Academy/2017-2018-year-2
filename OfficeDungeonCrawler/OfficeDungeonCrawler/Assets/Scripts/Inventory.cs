@@ -21,6 +21,7 @@ public class Inventory : MonoBehaviour
 	public Sprite slotBackgroundDeselectedR;
 
 	public static List<Item> staticItems = new List<Item>();
+	public static bool clear = false;
 
 	Health health;
 
@@ -47,6 +48,9 @@ public class Inventory : MonoBehaviour
 		//	++it;
 		//}
 
+		if (clear)
+			items = new List<Item>();
+
 		if (Input.GetKeyDown(KeyCode.Q))
 		{
 			if (selectedSlot > 0)
@@ -62,7 +66,7 @@ public class Inventory : MonoBehaviour
 				selectedSlot = 0;
 		}
 		
-		if (Input.GetMouseButtonDown(1))
+		if (Input.GetMouseButtonDown(1) && selectedSlot < items.Count)
 		{
 			if (items[selectedSlot].itemType == ItemType.HealthItem)
 			{

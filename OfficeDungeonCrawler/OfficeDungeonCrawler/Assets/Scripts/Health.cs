@@ -44,6 +44,7 @@ public class Health : MonoBehaviour
     public float shakeIntensity = 0;
 
 	public static float staticHealth = 0.0f;
+	public static bool alwaysLow = false;
 
     public GameObject healParticle;
     // The SpriteRenderer of the entity
@@ -81,6 +82,9 @@ public class Health : MonoBehaviour
 
         // Update the health bar
         UpdateHealthBar();
+
+		if (alwaysLow && gameObject.tag == "Player")
+			currentHealth = 1.0f;
 
         if (damageScreen != null)
             damageScreenIMG = damageScreen.GetComponent<Image>();

@@ -48,7 +48,7 @@ public class PrinterScript : MonoBehaviour
         }
 		timer = firerate;
 		shotsLeft = burstSize;
-		fireRate = Time.deltaTime * fireRate;
+		fireRate = 0.0175f * fireRate;
 		if (burstTimeCoolDown > 0)
 			burstTimeCoolDown = -burstTimeCoolDown;
 	}
@@ -88,7 +88,7 @@ public class PrinterScript : MonoBehaviour
 			}
 			if (lineOfSight)
 			{
-				Vector3 difference = player.transform.position - transform.position;
+				Vector3 difference = new Vector3(player.transform.position.x, player.transform.position.y, transform.position.z) - transform.position;
 				Vector3 newRotation = Vector3.RotateTowards(transform.right, difference, Mathf.Deg2Rad * turnSpeedInDegrees * Time.deltaTime, Vector3.Distance(transform.position, player.transform.position));
 				transform.right = newRotation;
 				if (bossConditions)

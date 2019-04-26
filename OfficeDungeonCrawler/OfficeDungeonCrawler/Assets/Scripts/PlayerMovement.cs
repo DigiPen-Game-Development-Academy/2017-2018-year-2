@@ -70,6 +70,11 @@ public class PlayerMovement : MonoBehaviour
 	[HideInInspector]
 	public float timeTillCanMove = 0.0f;
 
+	bool acceptingPassword = false;
+	bool acceptingPassword2 = false;
+	int passwordLevel = 0;
+	int passwordLevel2 = 0;
+
 	SpriteRenderer spriteRenderer;
 	Animator animator;
 	AudioSource audioSource;
@@ -92,7 +97,7 @@ public class PlayerMovement : MonoBehaviour
 		timeTillPlaySound -= Time.deltaTime;
 		timeTillPlaySound2 -= Time.deltaTime;
 
-        Vector2 direction = Vector2.zero;
+		Vector2 direction = Vector2.zero;
 		if (Input.GetKey(Settings.KeyBinds.down))
 			direction.y -= 1;
 		if (Input.GetKey(Settings.KeyBinds.up))
@@ -129,7 +134,7 @@ public class PlayerMovement : MonoBehaviour
 				animator.SetBool("DashRight", true);
 				animator.SetBool("DashBack", false);
 				animator.SetBool("DashFront", false);
-				
+
 				spriteRenderer.flipX = false;
 			}
 			else if (direction.x < 0.0f)
@@ -142,7 +147,7 @@ public class PlayerMovement : MonoBehaviour
 				animator.SetBool("DashRight", true);
 				animator.SetBool("DashBack", false);
 				animator.SetBool("DashFront", false);
-				
+
 				spriteRenderer.flipX = true;
 			}
 			else if (direction.y > 0.0f)
@@ -155,7 +160,7 @@ public class PlayerMovement : MonoBehaviour
 				animator.SetBool("DashRight", false);
 				animator.SetBool("DashBack", true);
 				animator.SetBool("DashFront", false);
-				
+
 				spriteRenderer.flipX = false;
 			}
 			else if (direction.y < 0.0f)
@@ -168,10 +173,10 @@ public class PlayerMovement : MonoBehaviour
 				animator.SetBool("DashRight", false);
 				animator.SetBool("DashBack", false);
 				animator.SetBool("DashFront", true);
-				
+
 				spriteRenderer.flipX = false;
 			}
-			
+
 			if (dashTimeRemaining % 0.025f <= 0.1f)
 			{
 				GameObject newOnionSkin = Instantiate(onionSkin, transform.position, transform.rotation);
@@ -198,9 +203,9 @@ public class PlayerMovement : MonoBehaviour
 			rb.velocity = direction.normalized * currentSpeed;
 		else
 			rb.velocity = Vector2.zero;
-            timeTillCanMove -= Time.deltaTime;
+		timeTillCanMove -= Time.deltaTime;
 
-        if (direction != Vector2.zero)
+		if (direction != Vector2.zero)
 			currentDirection = direction.normalized;
 
 		if (direction.x == -1 && dashTimeRemaining < 0)
@@ -222,7 +227,6 @@ public class PlayerMovement : MonoBehaviour
 			animator.SetBool("MovingUp", false);
 			animator.SetBool("MovingDown", false);
 			spriteRenderer.flipX = false;
-
 		}
 		else if (direction.y == -1 && dashTimeRemaining < 0)
 		{
@@ -295,8 +299,86 @@ public class PlayerMovement : MonoBehaviour
 		else
 			eTime = 0.0f;
 
-		if (eTime >= 10.0f || (System.DateTime.Today.Day == 1 && System.DateTime.Today.Month == 4))
+		if (eTime >= 10.0f)
+		{
+			acceptingPassword = true;
+			acceptingPassword2 = true;
+		}
+
+		if (acceptingPassword)
+		{
+			foreach (KeyCode key in System.Enum.GetValues(typeof(KeyCode)))
+			{
+				if (Input.GetKeyDown(key))
+				{
+					if (key == KeyCode.S && passwordLevel == 0)
+						++passwordLevel;
+					else if (key == KeyCode.U && passwordLevel == 1)
+						++passwordLevel;
+					else if (key == KeyCode.B && passwordLevel == 2)
+						++passwordLevel;
+					else if (key == KeyCode.Alpha2 && passwordLevel == 3)
+						++passwordLevel;
+					else if (key == KeyCode.P && (passwordLevel == 4 || passwordLevel == 10))
+						++passwordLevel;
+					else if (key == KeyCode.E && (passwordLevel == 5 || passwordLevel == 9 || passwordLevel == 12))
+						++passwordLevel;
+					else if (key == KeyCode.W && passwordLevel == 6)
+						++passwordLevel;
+					else if (key == KeyCode.D && passwordLevel == 7)
+						++passwordLevel;
+					else if (key == KeyCode.I && (passwordLevel == 8 || passwordLevel == 11))
+						++passwordLevel;
+					else
+					{
+						passwordLevel = 0;
+						acceptingPassword = false;
+					}
+				}
+			}
+		}
+		if (acceptingPassword2)
+		{
+			foreach (KeyCode key in System.Enum.GetValues(typeof(KeyCode)))
+			{
+				if (Input.GetKeyDown(key))
+				{
+					if (key == KeyCode.S && passwordLevel2 == 0 || passwordLevel2 == 5 || passwordLevel2 == 10)
+						++passwordLevel2;
+					else if (key == KeyCode.U && passwordLevel2 == 1)
+						++passwordLevel2;
+					else if (key == KeyCode.B && passwordLevel2 == 2)
+						++passwordLevel2;
+					else if (key == KeyCode.Alpha2 && passwordLevel2 == 3)
+						++passwordLevel2;
+					else if (key == KeyCode.T && passwordLevel2 == 4)
+						++passwordLevel2;
+					else if (key == KeyCode.E && (passwordLevel2 == 6 || passwordLevel2 == 9))
+						++passwordLevel2;
+					else if (key == KeyCode.R && passwordLevel2 == 7)
+						++passwordLevel2;
+					else if (key == KeyCode.I && passwordLevel2 == 8)
+						++passwordLevel2;
+					else
+					{
+						passwordLevel2 = 0;
+						acceptingPassword2 = false;
+					}
+				}
+			}
+		}
+
+		if (passwordLevel >= 13 || (System.DateTime.Today.Day == 1 && System.DateTime.Today.Month == 4))
+		{
 			Settings.memeMode = true;
+			acceptingPassword = false;
+		}
+		if (passwordLevel2 >= 11)
+		{
+			Inventory.clear = true;
+			Health.alwaysLow = true;
+			UnityEngine.SceneManagement.SceneManager.LoadScene("SplashScreen");
+		}
 
 		if (Settings.memeMode)
 		{
