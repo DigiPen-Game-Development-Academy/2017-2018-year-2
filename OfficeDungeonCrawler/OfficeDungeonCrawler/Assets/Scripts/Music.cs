@@ -32,7 +32,7 @@ public class Music : MonoBehaviour
 
 				src.Play();
 			}
-			else if (src.clip != survival && (current == "CubicleRoom1" || current == "Tutorial1" || current == "Tutorial2"))
+			else if (src.clip != survival && (current == "CubicleRoom1" || current == "Tutorial1" || current == "Tutorial2" || current == "Room1" || current == "E's room1"))
 			{
 				src.clip = survival;
 
